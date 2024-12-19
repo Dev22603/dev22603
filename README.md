@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on a PDF editor using Python and a Ecommerce website.<br>👯 I’m looking to collaborate on Kaggle competitions and full stack web applications.<br>🤝 I’m looking for help with finding a good job in the following domains: Backend, Machine Learning, and Full Stack roles.<br>🌱 /*I’m currently learning backend using python frameworks like FastAPI.*/ <br>⚡ Fun fact: I am also a Chess Enthusiast. 
+🔭 I’m currently working on a PDF editor using Python and a Ecommerce website.<br>👯 I’m looking to collaborate on Kaggle competitions and full stack web applications.<br>🤝 I’m looking for help with finding a good job in the following domains: Backend, Machine Learning, and Full Stack roles. <br>⚡ Fun fact: I am also a Chess Enthusiast. 
 
 
 ## 🌐 Socials:
