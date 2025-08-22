@@ -27,7 +27,6 @@ export function Layout({
 	fadeToColor = "bg-background",
 	fadePercentage = 50,
 }) {
-	const DARK_BG = "0d0b0f";
 
 	return (
 		<div

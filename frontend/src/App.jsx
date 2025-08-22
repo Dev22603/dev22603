@@ -12,6 +12,7 @@ export default function App() {
 
 	return (
 		<BrowserRouter>
+			<AnnouncementBar />
 			<Layout
 				dotColor={{ light: "#d4d4d4", dark: "#404040" }}
 				dotSize={1}
