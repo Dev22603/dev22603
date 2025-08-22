@@ -78,18 +78,21 @@
 			"Dart",
 			"SQL"
 		],
-		"Libraries & Frameworks": [
+		"librariesFrameworks": [
 			"ReactJS",
 			"Express.js",
+			"FastAPI",
+			"SuperTokens",
+			"Keycloak",
 			"NodeJS",
 			"Flutter",
 			"Tailwind CSS",
 			"TensorFlow"
 		],
-		"Databases & ORMs": ["MongoDB", "PostgreSQL"],
-		"Tools & Platforms": ["Git", "GitHub", "Postman", "Docker", "VSCode"],
-		"Agents and LLMS": ["LangFlow", "Cursor", "Windsurf", "Flowise"],
-		"Soft Skills": [
+		"databasesORMs": ["MongoDB", "PostgreSQL"],
+		"toolsPlatforms": ["Git", "GitHub", "Postman", "Docker", "VSCode"],
+		"agentsLLMS": ["LangFlow", "Cursor", "Windsurf", "Flowise"],
+		"softSkills": [
 			"Fast Learner",
 			"Persistence",
 			"Teamwork",
