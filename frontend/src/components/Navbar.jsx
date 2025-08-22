@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Home", shortcut: "h" },
@@ -9,7 +10,7 @@ const navItems = [
   { name: "Guestbook", shortcut: "g" },
 ];
 
-export default function Navbar() {
+export default function Navbar({className}) {
   const [active, setActive] = useState("Home");
   const [hovered, setHovered] = useState(null);
 
@@ -30,7 +31,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="flex items-center rounded-xl space-x-6 bg-black px-6 py-3 gap-2 text-white relative">
+    <nav className={cn("flex items-center rounded-xl space-x-6 bg-black px-6 py-3 gap-2 text-white relative", className)}>
       {navItems.map((item) => (
         <button
           key={item.name}
