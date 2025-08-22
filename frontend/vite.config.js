@@ -7,12 +7,24 @@ import path from "path";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@/components": path.resolve(__dirname, "./src/components"),
-      "@/lib": path.resolve(__dirname, "./src/lib"),
-      "@/pages": path.resolve(__dirname, "./src/pages"),
-    },
+    alias: [
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, 'src')
+      },
+      {
+        find: '@components',
+        replacement: path.resolve(__dirname, 'src/components')
+      },
+      {
+        find: '@lib',
+        replacement: path.resolve(__dirname, 'src/lib')
+      },
+      {
+        find: '@pages',
+        replacement: path.resolve(__dirname, 'src/pages')
+      }
+    ]
   },
   server: {
     host: "127.0.0.1",
