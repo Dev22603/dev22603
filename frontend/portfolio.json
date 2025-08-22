@@ -1,0 +1,128 @@
+{
+	"personalInfo": {
+		"name": "Dev Bachani",
+		"email": "devbachani08@gmail.com",
+		"linkedin": "https://linkedin.com/in/devbachani",
+		"github": "https://github.com/dev22603",
+		"objective": "A computer science graduate with a background in building production applications, leveraging my skills to architect and develop backend solutions at scale in the field of agentic AI."
+	},
+	"education": [
+		{
+			"institution": "Institute of Technology, Nirma University, Ahmedabad",
+			"degree": "B.Tech in Computer Science and Engineering",
+			"startYear": 2021,
+			"endYear": 2025
+		}
+	],
+	"experience": [
+		{
+			"company": "Zymr, Inc.",
+			"role": "Software Engineer",
+			"startDate": "July 2025",
+			"endDate": "Present",
+			"details": [
+				"Contributor to a project focused on developing Agentic AI systems"
+			]
+		},
+		{
+			"company": "Medkart Pharmacy Pvt Ltd",
+			"role": "Flutter Developer Intern",
+			"startDate": "Jan 2025",
+			"endDate": "June 2025",
+			"details": [
+				"Revamped 9 core app screens in 12 weeks, increasing engagement rates for 50,000+ users.",
+				"Improved product discovery and boosted conversion rates via comprehensive sorting/filtering system.",
+				"Reduced customer support response time by 30% by developing Contact Us module with form validation.",
+				"Decreased bounce rates by 28% with responsive loading skeletons on 12+ pages.",
+				"Achieved 75% workflow efficiency improvement by collapsing a 4-step task to 1 tap using Flutter intents."
+			]
+		}
+	],
+	"projects": [
+		{
+			"name": "EduScraper",
+			"link": "",
+			"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs."
+		},
+		{
+			"name": "E-Commerce website",
+			"link": "",
+			"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs."
+		},
+		{
+			"name": "Audio Language Classification using Deep Learning",
+			"link": "",
+			"description": "Built a BiLSTM model in TensorFlow for spoken language classification, achieving 75.46% test accuracy, with MFCC feature extraction from 40,000+ audio samples."
+		}
+	],
+	"skills": {
+		"Languages": [
+			"Python",
+			"JavaScript",
+			"TypeScript",
+			"HTML",
+			"CSS",
+			"C++",
+			"C",
+			"Java",
+			"Dart",
+			"SQL"
+		],
+		"Libraries & Frameworks": [
+			"ReactJS",
+			"Express.js",
+			"NodeJS",
+			"Flutter",
+			"Tailwind CSS",
+			"TensorFlow"
+		],
+		"Databases & ORMs": ["MongoDB", "PostgreSQL"],
+		"Tools & Platforms": ["Git", "GitHub", "Postman"],
+		"Soft Skills": [
+			"Fast Learner",
+			"Persistence",
+			"Teamwork",
+			"Adaptability",
+			"Problem-Solving",
+			"Grit"
+		]
+	},
+	"programmingProfiles": {
+		"codeforces": {
+			"handle": "Dev_Bachani",
+			"link": "https://codeforces.com/profile/Dev_Bachani",
+			"maxRating": 1018,
+			"problemsSolved": 500
+		},
+		"leetcode": {
+			"handle": "Dev22603",
+			"link": "https://leetcode.com/Dev22603/",
+			"maxRating": 1538,
+			"problemsSolved": 300
+		},
+		"hackerrank": {
+			"handle": "Dev22603",
+			"link": "https://www.hackerrank.com/profile/Dev22603",
+			"stars": {
+				"problemSolving": 5,
+				"python": 5
+			}
+		},
+		"codechef": {
+			"handle": "Dev22603",
+			"link": "https://www.codechef.com/users/dev22603",
+			"stars": 2,
+			"maxRating": 1476
+		}
+	},
+	"certificates": [
+		{
+			"title": "JavaScript (Intermediate) Certificate",
+			"link": "https://www.hackerrank.com/certificates/692ea16532b2"
+		},
+		{
+			"title": "Python Language Course",
+			"link": "https://olympus1.mygreatlearning.com/course_certificate/BCEFFFJL"
+		}
+	]
+}
