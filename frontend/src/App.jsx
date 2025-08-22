@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 // import Contact from "@/pages/Contact";
 // import GuestBook from "@/pages/GuestBook";
 import { Layout } from "@/components/Layout";
+import { AnnouncementBar } from "./components/AnnouncementBar";
 
 export default function App() {
     const DARK_BG = "#0d0b0f";
