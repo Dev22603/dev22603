@@ -31,7 +31,7 @@ export function Layout({
 	return (
 		<div
 			className={cn(
-				"relative flex min-h-screen overflow-y-auto overflow-x-hidden w-screen max-w-none items-center justify-center",
+				"relative flex min-h-screen overflow-y-auto overflow-x-hidden w-screen max-w-none pt-20 justify-center",
 				className
 			)}
 			style={{
