@@ -27,7 +27,7 @@
 		{
 			"company": "Medkart Pharmacy Pvt Ltd",
 			"role": "Flutter Developer Intern",
-			"startDate": "Jan 2025",
+			"startDate": "January 2025",
 			"endDate": "June 2025",
 			"details": [
 				"Revamped 9 core app screens in 12 weeks, increasing engagement rates for 50,000+ users.",
@@ -53,6 +53,16 @@
 			"name": "Audio Language Classification using Deep Learning",
 			"link": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms",
 			"description": "Built a BiLSTM model in TensorFlow for spoken language classification, achieving 75.46% test accuracy, with MFCC feature extraction from 40,000+ audio samples."
+		},
+		{
+			"name": "Decentralized Exchange (FastAPI + React)",
+			"link": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
+			"description": "Full-stack decentralized exchange project with FastAPI backend and React frontend. Key features include order management, trade execution, modern UI, and SuperTokens authentication."
+		},
+		{
+			"name": "DSA Progress Tracker",
+			"link": "https://github.com/Dev22603/DSA-Progress-Tracker",
+			"description": "Currently under development: A progress tracking tool for the A2Z DSA sheet, allowing users to mark question status, add notes, and access multiple reference links including LeetCode, GeeksforGeeks, Code360, and Hackerrank for comprehensive practice and study."
 		}
 	],
 	"skills": {
@@ -77,8 +87,8 @@
 			"TensorFlow"
 		],
 		"Databases & ORMs": ["MongoDB", "PostgreSQL"],
-		"Tools & Platforms": ["Git", "GitHub", "Postman", "Docker","VSCode"],
-        "Agents and LLMS":["LangFlow","Cursor","Windsurf","Flowise"]
+		"Tools & Platforms": ["Git", "GitHub", "Postman", "Docker", "VSCode"],
+		"Agents and LLMS": ["LangFlow", "Cursor", "Windsurf", "Flowise"],
 		"Soft Skills": [
 			"Fast Learner",
 			"Persistence",
