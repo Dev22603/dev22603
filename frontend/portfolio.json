@@ -41,17 +41,17 @@
 	"projects": [
 		{
 			"name": "EduScraper",
-			"link": "",
+			"link": "https://github.com/Dev22603/EduScraper",
 			"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs."
 		},
 		{
 			"name": "E-Commerce website",
-			"link": "",
+			"link": "https://github.com/Dev22603/ecommerce",
 			"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs."
 		},
 		{
 			"name": "Audio Language Classification using Deep Learning",
-			"link": "",
+			"link": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms",
 			"description": "Built a BiLSTM model in TensorFlow for spoken language classification, achieving 75.46% test accuracy, with MFCC feature extraction from 40,000+ audio samples."
 		}
 	],
@@ -77,7 +77,8 @@
 			"TensorFlow"
 		],
 		"Databases & ORMs": ["MongoDB", "PostgreSQL"],
-		"Tools & Platforms": ["Git", "GitHub", "Postman"],
+		"Tools & Platforms": ["Git", "GitHub", "Postman", "Docker","VSCode"],
+        "Agents and LLMS":["LangFlow","Cursor","Windsurf","Flowise"]
 		"Soft Skills": [
 			"Fast Learner",
 			"Persistence",
