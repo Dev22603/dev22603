@@ -30,16 +30,17 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="flex items-center space-x-6 bg-black px-6 py-4 text-white relative">
+    <nav className="flex items-center rounded-xl space-x-6 bg-black px-6 py-3 gap-2 text-white relative">
       {navItems.map((item) => (
         <button
           key={item.name}
           onClick={() => setActive(item.name)}
           onMouseEnter={() => setHovered(item.name)}
           onMouseLeave={() => setHovered(null)}
-          className={`relative pb-1 transition-colors cursor-pointer ${
-            active === item.name ? "text-white font-semibold" : "text-gray-400"
+          className={`relative pb-1 transition-colors cursor-pointer font-medium ${
+            active === item.name ? "text-white" : "text-gray-400"
           }`}
+          
         >
           {item.name}{" "}
           <span className="text-sm text-gray-500">({item.shortcut})</span>
