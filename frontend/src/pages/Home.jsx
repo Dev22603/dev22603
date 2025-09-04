@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import banner from "../../public/banner.jpg";
-import headshot from "../../public/headshot.jpg";
+const banner = "/banner.jpg";
+const headshot = "/headshot.jpg";
 const Home = () => {
 	return (
-		<div className="flex flex-col items-center h-screen">
+		<div className="flex flex-col items-center min-h-screen">
 			<Navbar className="mb-10" />
 
 			<div className="w-[1200px] sm:w-[80%] md:w-[75%] md:border-2 p-4 rounded-xl ">
@@ -19,7 +19,7 @@ const Home = () => {
 						<img
 							src={headshot}
 							alt=""
-							className="rounded-full w-60 h-60 border-6 border-neutral-950 -mt-30 ml-10 inline-block"
+							className="rounded-full w-30 h-30 border-6 border-neutral-950 -mt-15 ml-10 inline-block"
 						/>
 					</div>
 				</div>

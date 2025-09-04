@@ -31,7 +31,7 @@ export function Layout({
 	return (
 		<div
 			className={cn(
-				"relative flex min-h-screen overflow-y-auto overflow-x-hidden w-screen max-w-none pt-20 justify-center",
+				"relative flex min-h-screen h-auto overflow-y-auto overflow-x-hidden w-screen max-w-none pt-20 justify-center",
 				className
 			)}
 			style={{
@@ -76,7 +76,7 @@ export function Layout({
 			{/* Gradient overlay */}
 			<div
 				className={cn(
-					`absolute inset-0 bg-gradient-to-b from-transparent from-0% via-${fadeToColor}/50 via-30% to-${fadeToColor} to-${fadePercentage}%`,
+					`absolute inset-0 bg-gradient-to-b from-transparent from-0% via-${fadeToColor.startsWith('#') ? `[${fadeToColor}]` : fadeToColor}/50 via-30% to-${fadeToColor.startsWith('#') ? `[${fadeToColor}]` : fadeToColor} to-[${fadePercentage}%]`,
 					containerClassName
 				)}
 			/>
