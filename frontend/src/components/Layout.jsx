@@ -27,7 +27,6 @@ export function Layout({
 	fadeToColor = "bg-background",
 	fadePercentage = 50,
 }) {
-
 	return (
 		<div
 			className={cn(
@@ -35,53 +34,63 @@ export function Layout({
 				className
 			)}
 			style={{
-				backgroundColor: fadeToColor.startsWith('#') ? fadeToColor : undefined,
+				backgroundColor: fadeToColor.startsWith("#")
+					? fadeToColor
+					: undefined,
 			}}
 		>
-			{/* Dot pattern */}
-			<div
-				className={cn(
-					"absolute inset-0",
-					"[--dot-size:1px]",
-					"[--dot-spacing:20px]",
-					"[--dot-color-light:#d4d4d4]",
-					"[--dot-color-dark:#404040]"
-				)}
-				style={{
-					backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
-					backgroundImage: `radial-gradient(
-            ${dotColor.light}33 ${dotSize}px, 
-            transparent ${dotSize}px
-          )`,
-				}}
-			/>
+			{/* Fixed background container */}
+			<div className="fixed inset-0 z-0 bg-background">	
+				{/* Dot pattern */}
+				<div
+					className={cn(
+						"absolute inset-0",
+						"[--dot-size:1px]",
+						"[--dot-spacing:20px]",
+						"[--dot-color-light:#d4d4d4]",
+						"[--dot-color-dark:#404040]"
+					)}
+					style={{
+						backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
+						backgroundImage: `radial-gradient(${dotColor.light}33 ${dotSize}px, transparent ${dotSize}px)`,
+					}}
+				/>
 
-			{/* Dark mode dot pattern */}
-			<div
-				className={cn(
-					"absolute inset-0 hidden dark:block",
-					"[--dot-size:1px]",
-					"[--dot-spacing:20px]"
-				)}
-				style={{
-					backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
-					backgroundImage: `radial-gradient(
-            ${dotColor.dark}80 ${dotSize}px, 
-            transparent ${dotSize}px
-          )`,
-					opacity: 0.5,
-				}}
-			/>
+				{/* Dark mode dot pattern */}
+				<div
+					className={cn(
+						"absolute inset-0 hidden dark:block",
+						"[--dot-size:1px]",
+						"[--dot-spacing:20px]"
+					)}
+					style={{
+						backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
+						backgroundImage: `radial-gradient(${dotColor.dark}80 ${dotSize}px, transparent ${dotSize}px)`,
+						opacity: 0.5,
+					}}
+				/>
 
-			{/* Gradient overlay */}
-			<div
-				className={cn(
-					`absolute inset-0 bg-gradient-to-b from-transparent from-0% via-${fadeToColor.startsWith('#') ? `[${fadeToColor}]` : fadeToColor}/50 via-30% to-${fadeToColor.startsWith('#') ? `[${fadeToColor}]` : fadeToColor} to-[${fadePercentage}%]`,
-					containerClassName
-				)}
-			/>
+				{/* Gradient overlay */}
+				<div
+					className={cn(
+						`absolute inset-0 bg-gradient-to-b from-transparent from-0% via-${
+							fadeToColor.startsWith("#")
+								? `[${fadeToColor}]`
+								: fadeToColor
+						}/50 via-30% to-${
+							fadeToColor.startsWith("#")
+								? `[${fadeToColor}]`
+								: fadeToColor
+						} to-[${fadePercentage}%]`,
+						containerClassName
+					)}
+				/>
+			</div>
 
-			{children}
+			{/* Scrollable content */}
+			<div className="relative z-10 flex min-h-screen h-auto overflow-y-auto overflow-x-hidden w-full max-w-none pt-20 justify-center bg-transparent">
+				{children}
+			</div>
 		</div>
 	);
 }
