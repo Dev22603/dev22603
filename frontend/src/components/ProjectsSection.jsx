@@ -10,13 +10,18 @@ export default function ProjectsSection() {
 	const [selectedProject, setSelectedProject] = useState(null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
-	const tabs = [
-		{ id: "personal", label: "Personal Projects" },
-		{ id: "client", label: "Client Work" },
-	];
+	// Control whether to show Client Work tab (set to false if you have no client work)
+	const SHOW_CLIENT_WORK_TAB = false;
 
 	// Control whether clicking a card opens modal (true) or redirects to link (false)
 	const USE_MODAL_ON_CLICK = true;
+
+	const tabs = SHOW_CLIENT_WORK_TAB
+		? [
+				{ id: "personal", label: "Personal Projects" },
+				{ id: "client", label: "Client Work" },
+		  ]
+		: [{ id: "personal", label: "Personal Projects" }];
 
 	// Get projects based on active tab
 	const displayedProjects =
@@ -47,12 +52,14 @@ export default function ProjectsSection() {
 				</p>
 			</div>
 
-			{/* Tab Navigation */}
-			<TabNavigation
-				tabs={tabs}
-				activeTab={activeTab}
-				onTabChange={setActiveTab}
-			/>
+			{/* Tab Navigation - Only show if client work tab is enabled */}
+			{SHOW_CLIENT_WORK_TAB && (
+				<TabNavigation
+					tabs={tabs}
+					activeTab={activeTab}
+					onTabChange={setActiveTab}
+				/>
+			)}
 
 			{/* Projects Grid */}
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
