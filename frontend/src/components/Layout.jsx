@@ -21,7 +21,7 @@ export function Layout({
 			}}
 		>
 			{/* Fixed dot pattern background */}
-			<div className="absolute inset-0 z-0 pointer-events-none">
+			<div className="fixed inset-0 z-0 pointer-events-none">
 				{/* Light mode dot pattern (hidden by default in dark mode) */}
 				<div
 					className="absolute inset-0 opacity-30"
