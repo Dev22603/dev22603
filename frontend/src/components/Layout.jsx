@@ -45,10 +45,10 @@ export function Layout({
 				<div
 					className={cn(
 						"absolute inset-0",
-						"[--dot-size:1px]",
-						"[--dot-spacing:20px]",
-						"[--dot-color-light:#d4d4d4]",
-						"[--dot-color-dark:#404040]"
+						// "[--dot-size:1px]",
+						// "[--dot-spacing:20px]",
+						// "[--dot-color-light:#d4d4d4]",
+						// "[--dot-color-dark:#404040]"
 					)}
 					style={{
 						backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
@@ -60,8 +60,8 @@ export function Layout({
 				<div
 					className={cn(
 						"absolute inset-0 hidden dark:block",
-						"[--dot-size:1px]",
-						"[--dot-spacing:20px]"
+						// "[--dot-size:1px]",
+						// "[--dot-spacing:20px]"
 					)}
 					style={{
 						backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
