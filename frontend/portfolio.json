@@ -115,28 +115,12 @@
 	},
 	"blogs": [
 		{
-			"id": "process-env",
-			"title": "When process.env Bites Back: A Node.js Performance Lesson",
-			"excerpt": "During a past job, I was working on optimizing an internal API service. Here's what we had:",
-			"date": "2025-05-04",
-			"slug": "#",
-			"tags": ["Node.js", "Performance", "Backend"]
-		},
-		{
-			"id": "cookie-auth",
-			"title": "Cookie-based Authentication: A Simple Guide for Secure Sessions",
-			"excerpt": "What is Authentication? Authentication is the process of verifying the identity of a user, device, or entity in a system. It ensures that...",
-			"date": "2024-07-12",
-			"slug": "#",
-			"tags": ["Authentication", "Security", "Web Development"]
-		},
-		{
-			"id": "typescript-objects",
-			"title": "Understanding TypeScript's Handling of Object Literal Types",
-			"excerpt": "Did you know that TypeScript's handling of object literals can sometimes lead to unexpected behavior? When I started learning...",
-			"date": "2024-06-20",
-			"slug": "#",
-			"tags": ["TypeScript", "JavaScript", "Programming"]
+			"id": "python-logging",
+			"title": "Python Logging: Colored and Boxed Loggers for Readable Outputs",
+			"excerpt": "A comprehensive guide to creating visually appealing and readable Python loggers with colored and boxed formatting for better debugging and monitoring.",
+			"date": "2024-11-15",
+			"slug": "https://medium.com/@devcodes2206/python-logging-colored-and-boxed-loggers-for-readable-outputs-4e57102a3ec5",
+			"tags": ["Python", "Logging", "Development"]
 		}
 	],
 	"skills": {
