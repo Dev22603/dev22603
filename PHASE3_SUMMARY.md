@@ -65,7 +65,7 @@ Hero Component (92 lines)
 {
   name: "Dev Bachani",
   role: "Full Stack Engineer",
-  location: "21, Ahmedabad",
+  location: "22, Ahmedabad",
   bio: "A computer science graduate...",
   profileImage: "/headshot.jpg",
   email: "devbachani08@gmail.com",
@@ -463,7 +463,7 @@ Home Page:
 ├── Hero Section
 │   ├── Profile Image (Dev's headshot)
 │   ├── "Hi, I'm Dev" (dynamic)
-│   ├── "21, Ahmedabad | Full Stack Engineer"
+│   ├── "22, Ahmedabad | Full Stack Engineer"
 │   ├── Social Icons (mobile)
 │   └── Full bio paragraph
 └── Future sections (placeholders)
