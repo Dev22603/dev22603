@@ -4,12 +4,16 @@ import { ExternalLink } from "lucide-react";
 import TechTag from "./TechTag";
 import { cn } from "@/lib/utils";
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, useModal = false, onModalClick }) {
 	const hasGithubLink = project.links.github;
 	const hasLiveLink = project.links.live;
 
 	const handleCardClick = () => {
-		if (hasGithubLink) {
+		if (useModal && onModalClick) {
+			// Open modal
+			onModalClick();
+		} else if (hasGithubLink) {
+			// Open GitHub link directly
 			window.open(project.links.github, "_blank", "noopener,noreferrer");
 		}
 	};
