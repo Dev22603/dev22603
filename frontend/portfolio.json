@@ -16,12 +16,29 @@
 	},
 	"experience": [
 		{
+			"id": "hyperlab",
+			"company": "Hyperlab Sportech Pvt Ltd",
+			"role": "Software Engineer",
+			"startDate": "September 2025",
+			"endDate": "Present",
+			"status": "Current",
+			"location": "Remote",
+			"shortDescription": "Developing detection algorithms and UI flows for exercise tracking system.",
+			"icon": "🏋️",
+			"techStack": ["Lua", "Algorithm Design", "State Machines", "Peak Detection"],
+			"keyAchievements": [
+				"Developed detection algorithms for 35+ exercises using state machines, peak detection and movement thresholds",
+				"Built complete UI flows and integrated all exercises into a unified Lua system",
+				"Led most of the development, creating new exercises and improving existing ones for accuracy and consistency"
+			]
+		},
+		{
 			"id": "zymr",
 			"company": "Zymr, Inc.",
 			"role": "Software Engineer",
 			"startDate": "July 2025",
-			"endDate": "Present",
-			"status": "Current",
+			"endDate": "September 2025",
+			"status": "Completed",
 			"location": "Remote",
 			"shortDescription": "Building Agentic AI systems and contributing to cutting-edge AI development projects.",
 			"icon": "💼",
