@@ -39,6 +39,9 @@ export function Layout({
 						backgroundImage: `radial-gradient(${dotColorDark} ${dotSize}px, transparent ${dotSize}px)`,
 					}}
 				/>
+
+				{/* Subtle gradient for depth - much lighter than before */}
+				<div className="absolute inset-0 bg-gradient-to-b from-transparent from-0% via-transparent via-60% to-[var(--color-background-primary)]/30 to-100%" />
 			</div>
 
 			{/* Main content container with max-width */}
