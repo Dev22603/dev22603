@@ -21,7 +21,7 @@ export function Layout({
 			}}
 		>
 			{/* Fixed dot pattern background */}
-			<div className="fixed inset-0 z-0">
+			<div className="fixed left-0 top-0 bottom-0 right-0 z-0 pointer-events-none" style={{ right: '16px' }}>
 				{/* Light mode dot pattern (hidden by default in dark mode) */}
 				<div
 					className="absolute inset-0 opacity-30"
@@ -41,7 +41,7 @@ export function Layout({
 				/>
 
 				{/* Gradient fade overlay - creates depth */}
-				<div className="absolute inset-0 bg-gradient-to-b from-transparent from-0% via-[var(--color-background-primary)]/50 via-40% to-[var(--color-background-primary)] to-90%" />
+				<div className="absolute inset-0 bg-gradient-to-b from-transparent from-0% via-[var(--color-background-primary)]/50 via-35% to-[var(--color-background-primary)] to-95%" />
 			</div>
 
 			{/* Main content container with max-width */}

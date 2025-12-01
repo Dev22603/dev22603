@@ -4,23 +4,36 @@ import { ExternalLink } from "lucide-react";
 import TechTag from "./TechTag";
 import { cn } from "@/lib/utils";
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, useModal = false, onModalClick }) {
 	const hasGithubLink = project.links.github;
 	const hasLiveLink = project.links.live;
+
+	const handleCardClick = () => {
+		if (useModal && onModalClick) {
+			// Open modal
+			onModalClick();
+		} else if (hasGithubLink) {
+			// Open GitHub link directly
+			window.open(project.links.github, "_blank", "noopener,noreferrer");
+		}
+	};
 
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			exit={{ opacity: 0, y: 20 }}
+			whileHover={{ scale: 1.02 }}
+			whileTap={{ scale: 0.98 }}
 			transition={{ duration: 0.3 }}
+			onClick={handleCardClick}
 			className={cn(
-				"group relative",
+				"group relative cursor-pointer",
 				"bg-[var(--color-background-secondary)] rounded-xl",
 				"border border-[var(--color-border-primary)]",
 				"p-6 transition-all duration-200",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-lg"
+				"hover:shadow-lg hover:brightness-125"
 			)}
 		>
 			{/* Status Badge */}
