@@ -34,7 +34,7 @@ export default function Footer() {
 	];
 
 	return (
-		<footer className="w-full border-t border-[var(--color-border-primary)] bg-[var(--color-background-primary)] mt-24 md:mt-32">
+		<footer className="relative z-20 w-full border-t border-[var(--color-border-primary)] bg-[var(--color-background-primary)] mt-24 md:mt-32">
 			<div className="w-full px-6 py-6 sm:px-8 lg:px-12">
 				{/* Footer Content */}
 				<div className="flex flex-col items-center space-y-3">
