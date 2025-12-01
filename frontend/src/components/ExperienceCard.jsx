@@ -14,7 +14,7 @@ export default function ExperienceCard({ experience, onClick }) {
 				"border border-[var(--color-border-primary)]",
 				"p-6 transition-all duration-200",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-lg"
+				"hover:shadow-lg hover:brightness-125"
 			)}
 			onClick={onClick}
 		>
@@ -52,25 +52,6 @@ export default function ExperienceCard({ experience, onClick }) {
 					<p className="text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-2">
 						{experience.shortDescription}
 					</p>
-				</div>
-			</div>
-
-			{/* Click indicator */}
-			<div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-				<div className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--color-primary)]/10">
-					<svg
-						className="w-4 h-4 text-[var(--color-primary)]"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M9 5l7 7-7 7"
-						/>
-					</svg>
 				</div>
 			</div>
 		</motion.div>

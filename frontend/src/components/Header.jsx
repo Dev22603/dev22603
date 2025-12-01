@@ -5,6 +5,14 @@ import portfolioData from "../../portfolio.json";
 export default function Header({ className }) {
 	const { name, socialLinks } = portfolioData.personalInfo;
 
+	const handleBlogClick = (e) => {
+		e.preventDefault();
+		const blogsSection = document.getElementById("blogs");
+		if (blogsSection) {
+			blogsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+		}
+	};
+
 	const socialIcons = [
 		{
 			name: "Twitter",
@@ -15,8 +23,9 @@ export default function Header({ className }) {
 		{
 			name: "Blog",
 			icon: Calendar,
-			href: socialLinks.blog,
+			href: "#blogs",
 			ariaLabel: "Read my blog",
+			onClick: handleBlogClick,
 		},
 		{
 			name: "Email",
@@ -35,7 +44,7 @@ export default function Header({ className }) {
 	return (
 		<header
 			className={cn(
-				"fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-[var(--color-background-primary)]/80 border-b border-[var(--color-border-primary)]",
+				"w-full z-50 backdrop-blur-sm bg-[var(--color-background-primary)]/80 border-b border-[var(--color-border-primary)]",
 				className
 			)}
 		>
@@ -55,8 +64,9 @@ export default function Header({ className }) {
 							<a
 								key={social.name}
 								href={social.href}
-								target={social.name !== "Email" ? "_blank" : undefined}
-								rel={social.name !== "Email" ? "noopener noreferrer" : undefined}
+								target={social.name !== "Email" && social.name !== "Blog" ? "_blank" : undefined}
+								rel={social.name !== "Email" && social.name !== "Blog" ? "noopener noreferrer" : undefined}
+								onClick={social.onClick}
 								aria-label={social.ariaLabel}
 								className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200"
 							>
