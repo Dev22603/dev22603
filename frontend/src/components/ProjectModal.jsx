@@ -55,7 +55,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 							{/* Close Button */}
 							<button
 								onClick={onClose}
-								className="absolute top-4 right-4 z-10 p-2 rounded-full bg-[var(--color-background-primary)]/80 hover:bg-[var(--color-background-primary)] transition-colors border border-[var(--color-border-primary)]"
+								className="absolute top-4 right-4 z-10 p-2 rounded-full bg-[var(--color-background-primary)]/80 hover:bg-[var(--color-background-primary)] transition-colors border border-[var(--color-border-primary)] cursor-pointer"
 								aria-label="Close modal"
 							>
 								<X className="w-5 h-5 text-[var(--color-text-secondary)]" />
@@ -131,7 +131,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 													href={project.links.github}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-background-primary)] hover:bg-[var(--color-primary)] text-[var(--color-text-primary)] rounded-lg border border-[var(--color-border-primary)] hover:border-[var(--color-primary)] transition-all"
+													className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-background-primary)] hover:brightness-125 text-[var(--color-text-primary)] rounded-lg border border-[var(--color-border-primary)] hover:border-[var(--color-border-secondary)] transition-all"
 												>
 													<svg
 														className="w-5 h-5"
