@@ -35,7 +35,7 @@ export default function Header({ className }) {
 	return (
 		<header
 			className={cn(
-				"fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-[var(--color-background-primary)]/80 border-b border-[var(--color-border-primary)]",
+				"w-full z-50 backdrop-blur-sm bg-[var(--color-background-primary)]/80 border-b border-[var(--color-border-primary)]",
 				className
 			)}
 		>
