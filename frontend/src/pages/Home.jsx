@@ -1,19 +1,11 @@
 import React from "react";
+import Hero from "@/components/Hero";
 
 const Home = () => {
 	return (
 		<div className="w-full">
-			{/* Hero Section - Placeholder for Phase 3 */}
-			<section className="mb-24">
-				<div className="text-center">
-					<h1 className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] mb-4">
-						Welcome
-					</h1>
-					<p className="text-lg text-[var(--color-text-secondary)]">
-						Portfolio redesign in progress - Phase 2 complete
-					</p>
-				</div>
-			</section>
+			{/* Hero Section */}
+			<Hero />
 
 			{/* Placeholder sections for future phases */}
 			<section className="mb-24">
