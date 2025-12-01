@@ -1,115 +1,55 @@
 import { cn } from "@/lib/utils";
 
-// interface LayoutProps {
-//   children?: React.ReactNode;
-//   className?: string;
-//   containerClassName?: string;
-//   dotColor?: {
-//     light: string;
-//     dark: string;
-//   };
-//   dotSize?: number;
-//   dotSpacing?: number;
-//   fadeToColor?: string;
-//   fadePercentage?: number;
-// }
-
 export function Layout({
 	children,
 	className,
-	containerClassName,
-	dotColor = {
-		light: "#d4d4d4",
-		dark: "#232323",
-	},
 	dotSize = 1,
 	dotSpacing = 20,
-	fadeToColor = "bg-background",
-	fadePercentage = 50,
 }) {
+	const backgroundColor = "var(--color-background-primary)";
+	const dotColorLight = "var(--color-dot-light)";
+	const dotColorDark = "var(--color-dot-dark)";
+
 	return (
 		<div
 			className={cn(
-				"relative flex min-h-screen h-auto overflow-y-auto overflow-x-hidden w-screen max-w-none pt-20 justify-center",
+				"relative min-h-screen w-full overflow-x-hidden",
 				className
 			)}
 			style={{
-				backgroundColor: fadeToColor.startsWith("#")
-					? fadeToColor
-					: undefined,
+				backgroundColor: backgroundColor,
 			}}
 		>
-			{/* Fixed background container */}
-			<div className="fixed inset-0 z-0 bg-background">	
-				{/* Dot pattern */}
+			{/* Fixed dot pattern background */}
+			<div className="fixed inset-0 z-0">
+				{/* Light mode dot pattern (hidden by default in dark mode) */}
 				<div
-					className={cn(
-						"absolute inset-0",
-						// "[--dot-size:1px]",
-						// "[--dot-spacing:20px]",
-						// "[--dot-color-light:#d4d4d4]",
-						// "[--dot-color-dark:#404040]"
-					)}
+					className="absolute inset-0 opacity-30"
 					style={{
 						backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
-						backgroundImage: `radial-gradient(${dotColor.light}33 ${dotSize}px, transparent ${dotSize}px)`,
+						backgroundImage: `radial-gradient(${dotColorLight} ${dotSize}px, transparent ${dotSize}px)`,
 					}}
 				/>
 
-				{/* Dark mode dot pattern */}
+				{/* Dark mode dot pattern overlay */}
 				<div
-					className={cn(
-						"absolute inset-0 hidden dark:block",
-						// "[--dot-size:1px]",
-						// "[--dot-spacing:20px]"
-					)}
+					className="absolute inset-0 opacity-50"
 					style={{
 						backgroundSize: `${dotSpacing}px ${dotSpacing}px`,
-						backgroundImage: `radial-gradient(${dotColor.dark}80 ${dotSize}px, transparent ${dotSize}px)`,
-						opacity: 0.5,
+						backgroundImage: `radial-gradient(${dotColorDark} ${dotSize}px, transparent ${dotSize}px)`,
 					}}
 				/>
 
-				{/* Gradient overlay */}
-				<div
-					className={cn(
-						`absolute inset-0 bg-gradient-to-b from-transparent from-0% via-${
-							fadeToColor.startsWith("#")
-								? `[${fadeToColor}]`
-								: fadeToColor
-						}/50 via-30% to-${
-							fadeToColor.startsWith("#")
-								? `[${fadeToColor}]`
-								: fadeToColor
-						} to-[${fadePercentage}%]`,
-						containerClassName
-					)}
-				/>
+				{/* Gradient fade overlay - creates depth */}
+				<div className="absolute inset-0 bg-gradient-to-b from-transparent from-0% via-[var(--color-background-primary)]/50 via-40% to-[var(--color-background-primary)] to-90%" />
 			</div>
 
-			{/* Scrollable content */}
-			<div className="relative z-10 flex min-h-screen h-auto overflow-y-auto overflow-x-hidden w-full max-w-none pt-20 justify-center bg-transparent">
-				{children}
+			{/* Main content container with max-width */}
+			<div className="relative z-10 min-h-screen">
+				<div className="max-w-5xl mx-auto px-6 py-24 sm:px-8 lg:px-12">
+					{children}
+				</div>
 			</div>
 		</div>
 	);
 }
-
-// Usage example:
-/*
-import { Layout } from './components/Layout';
-
-function App() {
-  return (
-    <Layout 
-      dotColor={{ light: '#d4d4d4', dark: '#404040' }}
-      dotSize={1}
-      dotSpacing={20}
-      fadeToColor="bg-background"
-      fadePercentage={50}
-    >
-      Your content here
-    </Layout>
-  );
-}
-*/
