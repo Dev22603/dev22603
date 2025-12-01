@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/Hero";
+import ExperienceSection from "@/components/ExperienceSection";
 
 const Home = () => {
 	return (
@@ -7,16 +8,10 @@ const Home = () => {
 			{/* Hero Section */}
 			<Hero />
 
-			{/* Placeholder sections for future phases */}
-			<section className="mb-24">
-				<h2 className="text-3xl font-bold text-[var(--color-primary)] mb-6">
-					Experience
-				</h2>
-				<p className="text-[var(--color-text-secondary)]">
-					Experience section coming in Phase 4
-				</p>
-			</section>
+			{/* Experience Section */}
+			<ExperienceSection />
 
+			{/* Placeholder sections for future phases */}
 			<section className="mb-24">
 				<h2 className="text-3xl font-bold text-[var(--color-primary)] mb-6">
 					Projects
