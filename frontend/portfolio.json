@@ -86,6 +86,28 @@
 					"github": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms",
 					"live": null
 				}
+			},
+			{
+				"id": "ecommerce-personal",
+				"name": "E-Commerce Platform",
+				"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs.",
+				"status": "Completed",
+				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
+				"links": {
+					"github": "https://github.com/Dev22603/ecommerce",
+					"live": null
+				}
+			},
+			{
+				"id": "dex-fastapi-personal",
+				"name": "Decentralized Exchange",
+				"description": "Full-stack decentralized exchange project with FastAPI backend and React frontend. Key features include order management, trade execution, modern UI, and SuperTokens authentication.",
+				"status": "Completed",
+				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript"],
+				"links": {
+					"github": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
+					"live": null
+				}
 			}
 		],
 		"client": [

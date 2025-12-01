@@ -6,7 +6,7 @@ export default function BlogsSection() {
 	const blogs = portfolioData.blogs;
 
 	return (
-		<section className="w-full mb-24 md:mb-32">
+		<section id="blogs" className="w-full mb-24 md:mb-32">
 			{/* Section Header */}
 			<div className="mb-8">
 				<h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-3">
