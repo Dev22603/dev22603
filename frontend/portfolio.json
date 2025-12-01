@@ -1,72 +1,146 @@
 {
 	"personalInfo": {
 		"name": "Dev Bachani",
+		"role": "Full Stack Engineer",
+		"location": "21, Ahmedabad",
+		"bio": "A computer science graduate with a background in building production applications, leveraging my skills to architect and develop backend solutions at scale in the field of agentic AI.",
+		"profileImage": "/headshot.jpg",
 		"email": "devbachani08@gmail.com",
-		"linkedin": "https://linkedin.com/in/devbachani",
-		"github": "https://github.com/dev22603",
-		"objective": "A computer science graduate with a background in building production applications, leveraging my skills to architect and develop backend solutions at scale in the field of agentic AI."
-	},
-	"education": [
-		{
-			"institution": "Institute of Technology, Nirma University, Ahmedabad",
-			"degree": "B.Tech in Computer Science and Engineering",
-			"startYear": 2021,
-			"endYear": 2025
+		"socialLinks": {
+			"twitter": "https://twitter.com/dev22603",
+			"github": "https://github.com/dev22603",
+			"linkedin": "https://linkedin.com/in/devbachani",
+			"blog": "#blogs",
+			"calendar": "https://calendly.com/devbachani08"
 		}
-	],
+	},
 	"experience": [
 		{
+			"id": "zymr",
 			"company": "Zymr, Inc.",
 			"role": "Software Engineer",
 			"startDate": "July 2025",
 			"endDate": "Present",
-			"details": [
-				"Contributor to a project focused on developing Agentic AI systems"
+			"status": "Current",
+			"location": "Remote",
+			"shortDescription": "Building Agentic AI systems and contributing to cutting-edge AI development projects.",
+			"icon": "💼",
+			"techStack": ["Python", "FastAPI", "LangChain", "React", "TypeScript", "Docker"],
+			"keyAchievements": [
+				"Contributor to a project focused on developing Agentic AI systems",
+				"Working on scalable backend solutions for AI-powered applications",
+				"Implementing advanced AI workflows and integrations"
 			]
 		},
 		{
+			"id": "medkart",
 			"company": "Medkart Pharmacy Pvt Ltd",
 			"role": "Flutter Developer Intern",
 			"startDate": "January 2025",
 			"endDate": "June 2025",
-			"details": [
-				"Revamped 9 core app screens in 12 weeks, increasing engagement rates for 50,000+ users.",
-				"Improved product discovery and boosted conversion rates via comprehensive sorting/filtering system.",
-				"Reduced customer support response time by 30% by developing Contact Us module with form validation.",
-				"Decreased bounce rates by 28% with responsive loading skeletons on 12+ pages.",
-				"Achieved 75% workflow efficiency improvement by collapsing a 4-step task to 1 tap using Flutter intents."
+			"status": "Completed",
+			"location": "Ahmedabad, India",
+			"shortDescription": "Revamped core app features and improved user engagement for 50,000+ users.",
+			"icon": "📱",
+			"techStack": ["Flutter", "Dart", "Firebase", "REST APIs"],
+			"keyAchievements": [
+				"Revamped 9 core app screens in 12 weeks, increasing engagement rates for 50,000+ users",
+				"Improved product discovery and boosted conversion rates via comprehensive sorting/filtering system",
+				"Reduced customer support response time by 30% by developing Contact Us module with form validation",
+				"Decreased bounce rates by 28% with responsive loading skeletons on 12+ pages",
+				"Achieved 75% workflow efficiency improvement by collapsing a 4-step task to 1 tap using Flutter intents"
 			]
 		}
 	],
-	"projects": [
+	"projects": {
+		"personal": [
+			{
+				"id": "dsa-tracker",
+				"name": "DSA Progress Tracker",
+				"description": "A progress tracking tool for the A2Z DSA sheet, allowing users to mark question status, add notes, and access multiple reference links including LeetCode, GeeksforGeeks, Code360, and Hackerrank for comprehensive practice and study.",
+				"status": "Paused",
+				"techStack": ["React", "Node.js", "MongoDB", "Express.js"],
+				"links": {
+					"github": "https://github.com/Dev22603/DSA-Progress-Tracker",
+					"live": null
+				}
+			},
+			{
+				"id": "eduscraper",
+				"name": "EduScraper",
+				"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs.",
+				"status": "Completed",
+				"techStack": ["Python", "Beautiful Soup", "React", "JavaScript"],
+				"links": {
+					"github": "https://github.com/Dev22603/EduScraper",
+					"live": null
+				}
+			},
+			{
+				"id": "audio-classification",
+				"name": "Audio Language Classification using Deep Learning",
+				"description": "Built a BiLSTM model in TensorFlow for spoken language classification, achieving 75.46% test accuracy, with MFCC feature extraction from 40,000+ audio samples.",
+				"status": "Completed",
+				"techStack": ["Python", "TensorFlow", "Keras", "NumPy"],
+				"links": {
+					"github": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms",
+					"live": null
+				}
+			}
+		],
+		"client": [
+			{
+				"id": "ecommerce",
+				"name": "E-Commerce Platform",
+				"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs.",
+				"status": "Completed",
+				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
+				"links": {
+					"github": "https://github.com/Dev22603/ecommerce",
+					"live": null
+				}
+			},
+			{
+				"id": "dex-fastapi",
+				"name": "Decentralized Exchange",
+				"description": "Full-stack decentralized exchange project with FastAPI backend and React frontend. Key features include order management, trade execution, modern UI, and SuperTokens authentication.",
+				"status": "Completed",
+				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript"],
+				"links": {
+					"github": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
+					"live": null
+				}
+			}
+		]
+	},
+	"blogs": [
 		{
-			"name": "EduScraper",
-			"link": "https://github.com/Dev22603/EduScraper",
-			"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs."
+			"id": "process-env",
+			"title": "When process.env Bites Back: A Node.js Performance Lesson",
+			"excerpt": "During a past job, I was working on optimizing an internal API service. Here's what we had:",
+			"date": "2025-05-04",
+			"slug": "#",
+			"tags": ["Node.js", "Performance", "Backend"]
 		},
 		{
-			"name": "E-Commerce website",
-			"link": "https://github.com/Dev22603/ecommerce",
-			"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs."
+			"id": "cookie-auth",
+			"title": "Cookie-based Authentication: A Simple Guide for Secure Sessions",
+			"excerpt": "What is Authentication? Authentication is the process of verifying the identity of a user, device, or entity in a system. It ensures that...",
+			"date": "2024-07-12",
+			"slug": "#",
+			"tags": ["Authentication", "Security", "Web Development"]
 		},
 		{
-			"name": "Audio Language Classification using Deep Learning",
-			"link": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms",
-			"description": "Built a BiLSTM model in TensorFlow for spoken language classification, achieving 75.46% test accuracy, with MFCC feature extraction from 40,000+ audio samples."
-		},
-		{
-			"name": "Decentralized Exchange (FastAPI + React)",
-			"link": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
-			"description": "Full-stack decentralized exchange project with FastAPI backend and React frontend. Key features include order management, trade execution, modern UI, and SuperTokens authentication."
-		},
-		{
-			"name": "DSA Progress Tracker",
-			"link": "https://github.com/Dev22603/DSA-Progress-Tracker",
-			"description": "Currently under development: A progress tracking tool for the A2Z DSA sheet, allowing users to mark question status, add notes, and access multiple reference links including LeetCode, GeeksforGeeks, Code360, and Hackerrank for comprehensive practice and study."
+			"id": "typescript-objects",
+			"title": "Understanding TypeScript's Handling of Object Literal Types",
+			"excerpt": "Did you know that TypeScript's handling of object literals can sometimes lead to unexpected behavior? When I started learning...",
+			"date": "2024-06-20",
+			"slug": "#",
+			"tags": ["TypeScript", "JavaScript", "Programming"]
 		}
 	],
 	"skills": {
-		"Languages": [
+		"languages": [
 			"Python",
 			"JavaScript",
 			"TypeScript",
@@ -101,6 +175,14 @@
 			"Grit"
 		]
 	},
+	"education": [
+		{
+			"institution": "Institute of Technology, Nirma University, Ahmedabad",
+			"degree": "B.Tech in Computer Science and Engineering",
+			"startYear": 2021,
+			"endYear": 2025
+		}
+	],
 	"programmingProfiles": {
 		"codeforces": {
 			"handle": "Dev_Bachani",
