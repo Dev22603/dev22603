@@ -48,7 +48,8 @@ export default function ProjectsSection() {
 				</h2>
 				<p className="text-base md:text-lg text-[var(--color-text-secondary)] max-w-3xl">
 					A collection of my work spanning from blockchain applications to
-					full-stack projects, both personal and professional.
+					full-stack projects
+					{SHOW_CLIENT_WORK_TAB && ", both personal and professional"}.
 				</p>
 			</div>
 
