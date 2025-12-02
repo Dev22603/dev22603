@@ -52,12 +52,14 @@ export default function ProjectsSection() {
 				</p>
 			</div>
 
-			{/* Tab Navigation */}
-			<TabNavigation
-				tabs={tabs}
-				activeTab={activeTab}
-				onTabChange={setActiveTab}
-			/>
+			{/* Tab Navigation - Only show when there are multiple tabs */}
+			{SHOW_CLIENT_WORK_TAB && (
+				<TabNavigation
+					tabs={tabs}
+					activeTab={activeTab}
+					onTabChange={setActiveTab}
+				/>
+			)}
 
 			{/* Projects Grid */}
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
