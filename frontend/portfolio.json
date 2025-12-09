@@ -157,9 +157,17 @@
 			"id": "python-logging",
 			"title": "Python Logging: Colored and Boxed Loggers for Readable Outputs",
 			"excerpt": "A comprehensive guide to creating visually appealing and readable Python loggers with colored and boxed formatting for better debugging and monitoring.",
-			"date": "2024-11-15",
+			"date": "2025-09-23",
 			"slug": "https://medium.com/@devcodes2206/python-logging-colored-and-boxed-loggers-for-readable-outputs-4e57102a3ec5",
 			"tags": ["Python", "Logging", "Development"]
+		},
+		{
+			"id": "nodejs-backend",
+			"title": "Modern Node.js Backend: Build It Like a Pro",
+			"excerpt": "Build a professional-grade REST API with Node.js, Express, and MongoDB using clean architecture patterns. From JWT authentication to Zod validation, learn the exact structure and conventions that make backends maintainable, secure, and production-ready.",
+			"date": "2025-12-09",
+			"slug": "https://medium.com/@devcodes2206/modern-node-js-backend-build-it-like-a-pro-6c5cdcab918f",
+			"tags": ["NodeJS", "Backend", "Good Coding Practices"]
 		}
 	],
 	"skills": {
