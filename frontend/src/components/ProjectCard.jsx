@@ -31,17 +31,17 @@ export default function ProjectCard({ project, useModal = false, onModalClick })
 				"group relative cursor-pointer",
 				"bg-[var(--color-background-secondary)] rounded-xl",
 				"border border-[var(--color-border-primary)]",
-				"p-6 transition-all duration-200",
+				"p-4 sm:p-5 md:p-6 transition-all duration-200",
 				"hover:border-[var(--color-border-secondary)]",
 				"hover:shadow-lg hover:brightness-125"
 			)}
 		>
 			{/* Status Badge */}
 			{project.status && (
-				<div className="absolute top-4 right-4">
+				<div className="absolute top-3 right-3 sm:top-4 sm:right-4">
 					<span
 						className={cn(
-							"px-2 py-1 text-xs font-medium rounded-full",
+							"px-2 py-0.5 sm:py-1 text-xs font-medium rounded-full whitespace-nowrap",
 							project.status === "Paused"
 								? "bg-yellow-500/10 text-yellow-500 border border-yellow-500/20"
 								: project.status === "Completed"
@@ -55,22 +55,22 @@ export default function ProjectCard({ project, useModal = false, onModalClick })
 			)}
 
 			{/* Project Name with Link */}
-			<div className="flex items-start gap-3 mb-3 pr-20">
-				<h3 className="text-lg font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors flex-1">
+			<div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3 pr-16 sm:pr-20">
+				<h3 className="text-base sm:text-lg font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors flex-1 break-words">
 					{project.name}
 				</h3>
 				{(hasGithubLink || hasLiveLink) && (
-					<ExternalLink className="w-4 h-4 text-[var(--color-text-tertiary)] flex-shrink-0 mt-1" />
+					<ExternalLink className="w-4 h-4 text-[var(--color-text-tertiary)] flex-shrink-0 mt-0.5 sm:mt-1" />
 				)}
 			</div>
 
 			{/* Description */}
-			<p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4 line-clamp-3">
+			<p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-3 sm:mb-4 line-clamp-3">
 				{project.description}
 			</p>
 
 			{/* Tech Stack */}
-			<div className="flex flex-wrap gap-2 mb-4">
+			<div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
 				{project.techStack.map((tech, index) => (
 					<TechTag key={index} technology={tech} />
 				))}
@@ -78,17 +78,17 @@ export default function ProjectCard({ project, useModal = false, onModalClick })
 
 			{/* Links */}
 			{(hasGithubLink || hasLiveLink) && (
-				<div className="flex gap-3 pt-4 border-t border-[var(--color-border-primary)]">
+				<div className="flex flex-wrap gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-[var(--color-border-primary)]">
 					{hasGithubLink && (
 						<a
 							href={project.links.github}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-1"
+							className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-1.5 py-1.5 px-0.5 -mx-0.5"
 							onClick={(e) => e.stopPropagation()}
 						>
 							<svg
-								className="w-4 h-4"
+								className="w-4 h-4 flex-shrink-0"
 								fill="currentColor"
 								viewBox="0 0 24 24"
 							>
@@ -106,10 +106,10 @@ export default function ProjectCard({ project, useModal = false, onModalClick })
 							href={project.links.live}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-1"
+							className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-1.5 py-1.5 px-0.5 -mx-0.5"
 							onClick={(e) => e.stopPropagation()}
 						>
-							<ExternalLink className="w-4 h-4" />
+							<ExternalLink className="w-4 h-4 flex-shrink-0" />
 							Live Demo
 						</a>
 					)}

@@ -44,34 +44,34 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 					/>
 
 					{/* Modal */}
-					<div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+					<div className="fixed inset-0 z-50 flex items-center justify-center p-5 sm:p-6 md:p-8 pointer-events-none mt-8">
 						<motion.div
 							initial={{ opacity: 0, scale: 0.95, y: 20 }}
 							animate={{ opacity: 1, scale: 1, y: 0 }}
 							exit={{ opacity: 0, scale: 0.95, y: 20 }}
 							transition={{ duration: 0.2, ease: "easeOut" }}
-							className="relative w-full max-w-2xl bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
+							className="relative w-full max-w-2xl max-h-[85vh] sm:max-h-[88vh] md:max-h-[92vh] bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
 						>
 							{/* Close Button */}
 							<button
 								onClick={onClose}
-								className="absolute top-4 right-4 z-10 p-2 rounded-full bg-[var(--color-background-primary)]/80 hover:bg-[var(--color-background-primary)] transition-colors border border-[var(--color-border-primary)] cursor-pointer"
+								className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-10 h-10 sm:w-9 sm:h-9 rounded-full bg-[var(--color-background-primary)]/80 hover:bg-[var(--color-background-primary)] transition-colors border border-[var(--color-border-primary)] cursor-pointer flex items-center justify-center"
 								aria-label="Close modal"
 							>
 								<X className="w-5 h-5 text-[var(--color-text-secondary)]" />
 							</button>
 
-							{/* Modal Content */}
-							<div className="max-h-[80vh] overflow-y-auto p-8">
+							{/* Modal Content - Scrollable */}
+							<div className="max-h-[90vh] overflow-y-auto p-4 sm:p-6 md:p-8">
 								{/* Header */}
-								<div className="mb-6 pr-8">
-									<div className="flex items-start justify-between gap-4 mb-3">
-										<h2 className="text-2xl font-bold text-[var(--color-text-primary)]">
+								<div className="mb-5 sm:mb-6 pr-10 sm:pr-12">
+									<div className="flex items-start justify-between gap-3 sm:gap-4 mb-2.5 sm:mb-3">
+										<h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text-primary)] break-words">
 											{project.name}
 										</h2>
 										{project.status && (
 											<span
-												className={`px-3 py-1 text-xs font-medium rounded-full whitespace-nowrap ${
+												className={`px-2.5 sm:px-3 py-0.5 sm:py-1 text-xs font-medium rounded-full whitespace-nowrap flex-shrink-0 ${
 													project.status === "Paused"
 														? "bg-yellow-500/10 text-yellow-500 border border-yellow-500/20"
 														: project.status === "Completed"
@@ -85,17 +85,17 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 									</div>
 
 									{/* Description */}
-									<p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
+									<p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed break-words">
 										{project.description}
 									</p>
 								</div>
 
 								{/* Tech Stack */}
-								<div className="mb-6">
-									<h3 className="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-3">
+								<div className="mb-5 sm:mb-6">
+									<h3 className="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2.5 sm:mb-3">
 										Tech Stack
 									</h3>
-									<div className="flex flex-wrap gap-2">
+									<div className="flex flex-wrap gap-1.5 sm:gap-2">
 										{project.techStack?.map((tech, index) => (
 											<TechTag key={index} technology={tech} />
 										))}
@@ -104,18 +104,18 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
 								{/* Key Features (if available) */}
 								{project.features && project.features.length > 0 && (
-									<div className="mb-6">
-										<h3 className="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-3">
+									<div className="mb-5 sm:mb-6">
+										<h3 className="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2.5 sm:mb-3">
 											Key Features
 										</h3>
 										<ul className="space-y-2">
 											{project.features.map((feature, index) => (
 												<li
 													key={index}
-													className="flex items-start gap-3 text-sm text-[var(--color-text-secondary)]"
+													className="flex items-start gap-2.5 sm:gap-3 text-sm text-[var(--color-text-secondary)]"
 												>
-													<span className="text-[var(--color-primary)] mt-1">•</span>
-													<span className="flex-1">{feature}</span>
+													<span className="text-[var(--color-primary)] mt-0.5 sm:mt-1 flex-shrink-0">•</span>
+													<span className="flex-1 break-words">{feature}</span>
 												</li>
 											))}
 										</ul>
@@ -124,17 +124,17 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
 								{/* Links */}
 								{(hasGithubLink || hasLiveLink) && (
-									<div className="pt-6 border-t border-[var(--color-border-primary)]">
-										<div className="flex flex-wrap gap-3">
+									<div className="pt-4 sm:pt-5 md:pt-6 border-t border-[var(--color-border-primary)]">
+										<div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
 											{hasGithubLink && (
 												<a
 													href={project.links.github}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-background-primary)] hover:brightness-125 text-[var(--color-text-primary)] rounded-lg border border-[var(--color-border-primary)] hover:border-[var(--color-border-secondary)] transition-all"
+													className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 bg-[var(--color-background-primary)] hover:brightness-125 text-[var(--color-text-primary)] rounded-lg border border-[var(--color-border-primary)] hover:border-[var(--color-border-secondary)] transition-all text-sm font-medium"
 												>
 													<svg
-														className="w-5 h-5"
+														className="w-5 h-5 flex-shrink-0"
 														fill="currentColor"
 														viewBox="0 0 24 24"
 													>
@@ -152,9 +152,9 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 													href={project.links.live}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white rounded-lg transition-all"
+													className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white rounded-lg transition-all text-sm font-medium"
 												>
-													<ExternalLink className="w-5 h-5" />
+													<ExternalLink className="w-5 h-5 flex-shrink-0" />
 													Visit Live Demo
 												</a>
 											)}
