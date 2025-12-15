@@ -44,13 +44,13 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 					/>
 
 					{/* Modal */}
-					<div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 pointer-events-none">
+					<div className="fixed inset-0 z-50 flex items-center justify-center p-5 sm:p-6 md:p-8 pointer-events-none">
 						<motion.div
 							initial={{ opacity: 0, scale: 0.95, y: 20 }}
 							animate={{ opacity: 1, scale: 1, y: 0 }}
 							exit={{ opacity: 0, scale: 0.95, y: 20 }}
 							transition={{ duration: 0.2, ease: "easeOut" }}
-							className="relative w-full max-w-2xl max-h-[90vh] bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
+							className="relative w-full max-w-2xl max-h-[80vh] sm:max-h-[85vh] md:max-h-[90vh] bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
 						>
 							{/* Close Button */}
 							<button
