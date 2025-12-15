@@ -50,7 +50,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 							animate={{ opacity: 1, scale: 1, y: 0 }}
 							exit={{ opacity: 0, scale: 0.95, y: 20 }}
 							transition={{ duration: 0.2, ease: "easeOut" }}
-							className="relative w-full max-w-2xl max-h-[80vh] sm:max-h-[85vh] md:max-h-[90vh] bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
+							className="relative w-full max-w-2xl max-h-[85vh] sm:max-h-[88vh] md:max-h-[92vh] bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
 						>
 							{/* Close Button */}
 							<button
