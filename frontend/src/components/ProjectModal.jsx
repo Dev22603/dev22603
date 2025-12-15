@@ -44,25 +44,25 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 					/>
 
 					{/* Modal */}
-					<div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 pointer-events-none">
+					<div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 pointer-events-none">
 						<motion.div
 							initial={{ opacity: 0, scale: 0.95, y: 20 }}
 							animate={{ opacity: 1, scale: 1, y: 0 }}
 							exit={{ opacity: 0, scale: 0.95, y: 20 }}
 							transition={{ duration: 0.2, ease: "easeOut" }}
-							className="relative w-full max-w-2xl bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
+							className="relative w-full max-w-2xl max-h-[90vh] bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
 						>
 							{/* Close Button */}
 							<button
 								onClick={onClose}
-								className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 p-2 sm:p-2 w-10 h-10 sm:w-9 sm:h-9 rounded-full bg-[var(--color-background-primary)]/80 hover:bg-[var(--color-background-primary)] transition-colors border border-[var(--color-border-primary)] cursor-pointer flex items-center justify-center"
+								className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-10 h-10 sm:w-9 sm:h-9 rounded-full bg-[var(--color-background-primary)]/80 hover:bg-[var(--color-background-primary)] transition-colors border border-[var(--color-border-primary)] cursor-pointer flex items-center justify-center"
 								aria-label="Close modal"
 							>
 								<X className="w-5 h-5 text-[var(--color-text-secondary)]" />
 							</button>
 
-							{/* Modal Content */}
-							<div className="max-h-[80vh] overflow-y-auto p-4 sm:p-6 md:p-8">
+							{/* Modal Content - Scrollable */}
+							<div className="max-h-[90vh] overflow-y-auto p-4 sm:p-6 md:p-8">
 								{/* Header */}
 								<div className="mb-5 sm:mb-6 pr-10 sm:pr-12">
 									<div className="flex items-start justify-between gap-3 sm:gap-4 mb-2.5 sm:mb-3">
