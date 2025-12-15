@@ -46,7 +46,7 @@ export function Layout({
 
 			{/* Main content container with max-width */}
 			<div className="relative z-10 min-h-screen">
-				<div className="max-w-5xl mx-auto px-6 py-24 sm:px-8 lg:px-12">
+				<div className="max-w-5xl mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:px-12">
 					{children}
 				</div>
 			</div>
