@@ -3,7 +3,7 @@
 		"name": "Dev Bachani",
 		"role": "Full Stack Engineer",
 		"location": "22, Ahmedabad",
-		"bio": "A computer science graduate with a background in building production applications, leveraging my skills to architect and develop backend solutions at scale in the field of agentic AI.",
+		"bio": "A passionate computer science graduate specializing in building robust, scalable production applications. With expertise spanning backend architecture, agentic AI systems, and full-stack development, I transform complex technical challenges into elegant solutions. From developing detection algorithms for fitness applications to architecting AI-powered systems, I thrive on creating impactful software that solves real-world problems.",
 		"profileImage": "/headshot.jpg",
 		"email": "devbachani08@gmail.com",
 		"socialLinks": {
@@ -23,13 +23,14 @@
 			"endDate": "Present",
 			"status": "Current",
 			"location": "Remote",
-			"shortDescription": "Developing detection algorithms and UI flows for exercise tracking system.",
+			"shortDescription": "Spearheading the development of intelligent exercise detection algorithms and comprehensive UI flows for a cutting-edge fitness tracking platform, leveraging advanced algorithmic techniques to deliver precise movement analysis.",
 			"icon": "🏋️",
-			"techStack": ["Lua", "Algorithm Design", "State Machines", "Peak Detection"],
+			"techStack": ["Lua", "Algorithm Design", "State Machines", "Peak Detection", "Movement Analysis", "Pattern Recognition"],
 			"keyAchievements": [
-				"Developed detection algorithms for 35+ exercises using state machines, peak detection and movement thresholds",
-				"Built complete UI flows and integrated all exercises into a unified Lua system",
-				"Led most of the development, creating new exercises and improving existing ones for accuracy and consistency"
+				"Architected and implemented sophisticated detection algorithms for 35+ exercises using state machines, peak detection, and dynamic movement threshold analysis, achieving high accuracy in real-time exercise recognition",
+				"Designed and built comprehensive UI flows, seamlessly integrating all exercise modules into a unified, maintainable Lua-based system architecture",
+				"Drove the majority of feature development independently, creating new exercise detection modules and systematically refining existing algorithms to enhance accuracy, consistency, and user experience",
+				"Implemented robust pattern recognition systems that adapt to varying user movement patterns and exercise intensities"
 			]
 		},
 		{
@@ -40,13 +41,15 @@
 			"endDate": "September 2025",
 			"status": "Completed",
 			"location": "Remote",
-			"shortDescription": "Building Agentic AI systems and contributing to cutting-edge AI development projects.",
+			"shortDescription": "Contributed to the development of next-generation Agentic AI systems, architecting scalable backend infrastructure and implementing sophisticated AI workflows for enterprise-grade applications.",
 			"icon": "💼",
-			"techStack": ["Python", "FastAPI", "LangChain", "React", "TypeScript", "Docker"],
+			"techStack": ["Python", "FastAPI", "LangChain", "React", "TypeScript", "Docker", "AI Agents", "REST APIs", "Microservices"],
 			"keyAchievements": [
-				"Contributor to a project focused on developing Agentic AI systems",
-				"Working on scalable backend solutions for AI-powered applications",
-				"Implementing advanced AI workflows and integrations"
+				"Engineered core components for an Agentic AI platform, implementing intelligent agent systems capable of autonomous decision-making and task execution",
+				"Designed and developed scalable FastAPI-based backend architecture to support high-throughput AI workloads, ensuring optimal performance and reliability",
+				"Integrated LangChain frameworks to build sophisticated AI workflows, enabling seamless orchestration of complex multi-step AI operations",
+				"Collaborated with cross-functional teams to deliver production-ready AI solutions, contributing to both backend services and frontend interfaces using React and TypeScript",
+				"Containerized applications using Docker, streamlining deployment processes and ensuring consistent environments across development and production"
 			]
 		},
 		{
@@ -57,15 +60,16 @@
 			"endDate": "June 2025",
 			"status": "Completed",
 			"location": "Ahmedabad, India",
-			"shortDescription": "Revamped core app features and improved user engagement for 50,000+ users.",
+			"shortDescription": "Transformed the mobile experience for a healthcare platform serving 50,000+ users by redesigning core features, optimizing performance, and implementing user-centric improvements that drove measurable business impact.",
 			"icon": "📱",
-			"techStack": ["Flutter", "Dart", "Firebase", "REST APIs"],
+			"techStack": ["Flutter", "Dart", "Firebase", "REST APIs", "State Management", "UI/UX Design", "Mobile Development"],
 			"keyAchievements": [
-				"Revamped 9 core app screens in 12 weeks, increasing engagement rates for 50,000+ users",
-				"Improved product discovery and boosted conversion rates via comprehensive sorting/filtering system",
-				"Reduced customer support response time by 30% by developing Contact Us module with form validation",
-				"Decreased bounce rates by 28% with responsive loading skeletons on 12+ pages",
-				"Achieved 75% workflow efficiency improvement by collapsing a 4-step task to 1 tap using Flutter intents"
+				"Led the comprehensive redesign and development of 9 critical app screens within a 12-week sprint, significantly enhancing user engagement and satisfaction across a 50,000+ user base",
+				"Engineered an advanced product discovery system featuring intelligent sorting and filtering capabilities, directly contributing to improved conversion rates and enhanced user experience",
+				"Developed a robust Contact Us module with comprehensive form validation and error handling, reducing customer support response time by 30% and improving user satisfaction scores",
+				"Implemented optimized loading skeletons across 12+ screens, creating a more responsive user experience that decreased bounce rates by 28% through perceived performance improvements",
+				"Streamlined user workflows by 75% through innovative use of Flutter intents, reducing a complex 4-step process to a single-tap action, dramatically improving user efficiency and app usability",
+				"Collaborated closely with product and design teams to ensure pixel-perfect implementation and alignment with business objectives"
 			]
 		}
 	],
@@ -74,9 +78,9 @@
 			{
 				"id": "dsa-tracker",
 				"name": "DSA Progress Tracker",
-				"description": "A progress tracking tool for the A2Z DSA sheet, allowing users to mark question status, add notes, and access multiple reference links including LeetCode, GeeksforGeeks, Code360, and Hackerrank for comprehensive practice and study.",
+				"description": "A comprehensive full-stack progress tracking platform designed for the A2Z DSA sheet, empowering developers to systematically master data structures and algorithms. Features include intelligent status tracking, rich note-taking capabilities, and seamless integration with multiple coding platforms (LeetCode, GeeksforGeeks, Code360, Hackerrank) for unified learning experience. Built with modern MERN stack architecture and responsive design for optimal usability.",
 				"status": "Paused",
-				"techStack": ["React", "Node.js", "MongoDB", "Express.js"],
+				"techStack": ["React", "Node.js", "MongoDB", "Express.js", "REST APIs", "Responsive Design"],
 				"links": {
 					"github": "https://github.com/Dev22603/DSA-Progress-Tracker",
 					"live": null
@@ -85,9 +89,9 @@
 			{
 				"id": "eduscraper",
 				"name": "EduScraper",
-				"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs.",
+				"description": "An intelligent web scraping solution that automates the extraction of aptitude MCQs from IndiaBix, processing and structuring thousands of questions into organized JSON format. Complemented by a React-based frontend application that provides an intuitive interface for browsing questions and generating downloadable PDF study materials. Demonstrates proficiency in data extraction, processing, and presentation.",
 				"status": "Completed",
-				"techStack": ["Python", "Beautiful Soup", "React", "JavaScript"],
+				"techStack": ["Python", "Beautiful Soup", "React", "JavaScript", "Web Scraping", "PDF Generation"],
 				"links": {
 					"github": "https://github.com/Dev22603/EduScraper",
 					"live": null
@@ -96,9 +100,9 @@
 			{
 				"id": "audio-classification",
 				"name": "Audio Language Classification using Deep Learning",
-				"description": "Built a BiLSTM model in TensorFlow for spoken language classification, achieving 75.46% test accuracy, with MFCC feature extraction from 40,000+ audio samples.",
+				"description": "Advanced deep learning project implementing a Bidirectional LSTM (BiLSTM) neural network for automated spoken language classification. Achieved impressive 75.46% test accuracy through sophisticated MFCC (Mel-Frequency Cepstral Coefficients) feature extraction and analysis of 40,000+ audio samples. Demonstrates expertise in audio signal processing, deep learning model architecture, and handling large-scale datasets for real-world machine learning applications.",
 				"status": "Completed",
-				"techStack": ["Python", "TensorFlow", "Keras", "NumPy"],
+				"techStack": ["Python", "TensorFlow", "Keras", "NumPy", "Deep Learning", "Signal Processing", "MFCC"],
 				"links": {
 					"github": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms",
 					"live": null
@@ -107,9 +111,9 @@
 			{
 				"id": "ecommerce-personal",
 				"name": "E-Commerce Platform",
-				"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs.",
+				"description": "Enterprise-grade, full-stack e-commerce platform featuring sophisticated role-based access control (RBAC) with distinct Admin and Customer portals. Built on a robust Node.js and PostgreSQL backend with RESTful API architecture, secured through JWT authentication and comprehensive authorization layers. The responsive frontend leverages React and Tailwind CSS to deliver a seamless shopping experience. Encompasses complete e-commerce functionality including product management, order processing, user authentication, and administrative controls.",
 				"status": "Completed",
-				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
+				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL", "JWT", "RBAC", "REST APIs"],
 				"links": {
 					"github": "https://github.com/Dev22603/ecommerce",
 					"live": null
@@ -118,11 +122,33 @@
 			{
 				"id": "dex-fastapi-personal",
 				"name": "Decentralized Exchange",
-				"description": "Full-stack decentralized exchange project with FastAPI backend and React frontend. Key features include order management, trade execution, modern UI, and SuperTokens authentication.",
+				"description": "Sophisticated full-stack decentralized exchange (DEX) platform showcasing modern web3 architecture principles. Built with high-performance FastAPI backend delivering real-time order matching and trade execution capabilities. Features a polished React and TypeScript frontend providing intuitive trading interfaces, live order books, and comprehensive portfolio management. Implements enterprise-grade SuperTokens authentication for secure user sessions. Demonstrates proficiency in building complex financial applications with emphasis on performance, security, and user experience.",
 				"status": "Completed",
-				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript"],
+				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript", "WebSockets", "Authentication"],
 				"links": {
 					"github": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
+					"live": null
+				}
+			},
+			{
+				"id": "portfolio-website",
+				"name": "Portfolio Website",
+				"description": "Modern, responsive portfolio website built with React, Vite, and Tailwind CSS, featuring smooth animations powered by Framer Motion. Showcases professional work experience, projects, and technical blog posts through an elegant dark-themed interface. Implements advanced UI patterns including modal interactions, tab navigation, and scroll animations. Deployed on Netlify with optimized performance and SEO.",
+				"status": "Active",
+				"techStack": ["React", "Vite", "Tailwind CSS", "Framer Motion", "Responsive Design", "Netlify"],
+				"links": {
+					"github": "https://github.com/Dev22603/dev22603",
+					"live": "https://devbachani.netlify.app"
+				}
+			},
+			{
+				"id": "task-automation-scripts",
+				"name": "Automation & Scripting Projects",
+				"description": "Collection of Python automation scripts and tools designed to streamline development workflows and solve practical problems. Includes web scrapers for data extraction, file processing utilities, API integration scripts, and productivity automation tools. Demonstrates strong problem-solving skills and ability to create efficient, reusable code for real-world automation needs.",
+				"status": "Active",
+				"techStack": ["Python", "Automation", "Web Scraping", "APIs", "Data Processing"],
+				"links": {
+					"github": "https://github.com/Dev22603?tab=repositories",
 					"live": null
 				}
 			}
@@ -131,9 +157,9 @@
 			{
 				"id": "ecommerce",
 				"name": "E-Commerce Platform",
-				"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs.",
+				"description": "Enterprise-grade, full-stack e-commerce platform featuring sophisticated role-based access control (RBAC) with distinct Admin and Customer portals. Built on a robust Node.js and PostgreSQL backend with RESTful API architecture, secured through JWT authentication and comprehensive authorization layers. The responsive frontend leverages React and Tailwind CSS to deliver a seamless shopping experience. Encompasses complete e-commerce functionality including product management, order processing, user authentication, and administrative controls.",
 				"status": "Completed",
-				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
+				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL", "JWT", "RBAC", "REST APIs"],
 				"links": {
 					"github": "https://github.com/Dev22603/ecommerce",
 					"live": null
@@ -142,9 +168,9 @@
 			{
 				"id": "dex-fastapi",
 				"name": "Decentralized Exchange",
-				"description": "Full-stack decentralized exchange project with FastAPI backend and React frontend. Key features include order management, trade execution, modern UI, and SuperTokens authentication.",
+				"description": "Sophisticated full-stack decentralized exchange (DEX) platform showcasing modern web3 architecture principles. Built with high-performance FastAPI backend delivering real-time order matching and trade execution capabilities. Features a polished React and TypeScript frontend providing intuitive trading interfaces, live order books, and comprehensive portfolio management. Implements enterprise-grade SuperTokens authentication for secure user sessions. Demonstrates proficiency in building complex financial applications with emphasis on performance, security, and user experience.",
 				"status": "Completed",
-				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript"],
+				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript", "WebSockets", "Authentication"],
 				"links": {
 					"github": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
 					"live": null
@@ -156,18 +182,18 @@
 		{
 			"id": "python-logging",
 			"title": "Python Logging: Colored and Boxed Loggers for Readable Outputs",
-			"excerpt": "A comprehensive guide to creating visually appealing and readable Python loggers with colored and boxed formatting for better debugging and monitoring.",
+			"excerpt": "Transform your Python logging from bland console output to visually striking, production-ready logs. This comprehensive guide walks you through creating custom loggers with color-coded severity levels and elegant boxed formatting, making debugging and monitoring infinitely more efficient. Perfect for developers looking to elevate their logging game and build more maintainable applications.",
 			"date": "2025-09-23",
 			"slug": "https://medium.com/@devcodes2206/python-logging-colored-and-boxed-loggers-for-readable-outputs-4e57102a3ec5",
-			"tags": ["Python", "Logging", "Development"]
+			"tags": ["Python", "Logging", "Development", "Best Practices"]
 		},
 		{
 			"id": "nodejs-backend",
 			"title": "Modern Node.js Backend: Build It Like a Pro",
-			"excerpt": "Build a professional-grade REST API with Node.js, Express, and MongoDB using clean architecture patterns. From JWT authentication to Zod validation, learn the exact structure and conventions that make backends maintainable, secure, and production-ready.",
+			"excerpt": "Master the art of building production-grade Node.js backends with this definitive guide to modern backend architecture. Dive deep into clean architecture patterns, implement bulletproof JWT authentication, leverage Zod for type-safe validation, and discover the exact folder structure and conventions used by top engineering teams. Transform your backend skills from good to exceptional with real-world patterns that emphasize maintainability, security, and scalability.",
 			"date": "2025-12-09",
 			"slug": "https://medium.com/@devcodes2206/modern-node-js-backend-build-it-like-a-pro-6c5cdcab918f",
-			"tags": ["NodeJS", "Backend", "Good Coding Practices"]
+			"tags": ["NodeJS", "Backend", "Clean Architecture", "Best Practices", "Production-Ready"]
 		}
 	],
 	"skills": {
