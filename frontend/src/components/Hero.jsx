@@ -1,5 +1,5 @@
 import React from "react";
-import { Twitter, Github, Mail, Calendar } from "lucide-react";
+import { Twitter, Github, Mail, Calendar, FileText } from "lucide-react";
 import portfolioData from "../../portfolio.json";
 
 export default function Hero() {
@@ -81,6 +81,19 @@ export default function Hero() {
 					<p className="text-sm sm:text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
 						{bio}
 					</p>
+				</div>
+
+				{/* Resume Button */}
+				<div className="mt-6 sm:mt-8">
+					<a
+						href="https://drive.google.com/file/d/1Ob4cwvz48bxTV0ibECAQVCMqtuQW1kE4/view?usp=sharing"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3.5 bg-[var(--color-primary)] text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+					>
+						<FileText className="w-5 h-5" strokeWidth={2} />
+						<span className="text-sm sm:text-base">View Resume</span>
+					</a>
 				</div>
 			</div>
 		</section>
