@@ -86,7 +86,7 @@ export default function Hero() {
 				{/* Resume Button */}
 				<div className="mt-6 sm:mt-8">
 					<a
-						href="https://drive.google.com/file/d/1Ob4cwvz48bxTV0ibECAQVCMqtuQW1kE4/view?usp=sharing"
+						href="https://drive.google.com/file/d/1L95IXLneqM80R52aKJmKj0Pu7QSfZcIi/view"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3.5 bg-[var(--color-primary)] text-white font-medium rounded-lg hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
