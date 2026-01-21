@@ -79,7 +79,9 @@
 				"techStack": ["React", "TypeScript", "MathQuill", "KaTeX", "Vite"],
 				"links": {
 					"github": "https://github.com/Dev22603/MathEx",
-					"live": null
+					"live": null,
+					"npm": "https://www.npmjs.com/package/mathex-editor",
+					"kaggle": null
 				}
 			},
 			{
@@ -90,7 +92,9 @@
 				"techStack": ["React", "Node.js", "MongoDB", "Express.js"],
 				"links": {
 					"github": "https://github.com/Dev22603/DSA-Progress-Tracker",
-					"live": null
+					"live": null,
+					"npm": null,
+					"kaggle": null
 				}
 			},
 			{
@@ -101,7 +105,9 @@
 				"techStack": ["Python", "Beautiful Soup", "React", "JavaScript"],
 				"links": {
 					"github": "https://github.com/Dev22603/EduScraper",
-					"live": null
+					"live": null,
+					"npm": null,
+					"kaggle": null
 				}
 			},
 			{
@@ -111,8 +117,10 @@
 				"status": "Completed",
 				"techStack": ["Python", "TensorFlow", "Keras", "NumPy"],
 				"links": {
-					"github": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms",
-					"live": null
+					"github": null,
+					"live": null,
+					"npm": null,
+					"kaggle": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms"
 				}
 			},
 			{
@@ -123,7 +131,9 @@
 				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
 				"links": {
 					"github": "https://github.com/Dev22603/ecommerce",
-					"live": null
+					"live": null,
+					"npm": null,
+					"kaggle": null
 				}
 			},
 			{
@@ -134,7 +144,9 @@
 				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript"],
 				"links": {
 					"github": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
-					"live": null
+					"live": null,
+					"npm": null,
+					"kaggle": null
 				}
 			}
 		],
@@ -147,7 +159,9 @@
 				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
 				"links": {
 					"github": "https://github.com/Dev22603/ecommerce",
-					"live": null
+					"live": null,
+					"npm": null,
+					"kaggle": null
 				}
 			},
 			{
@@ -158,7 +172,9 @@
 				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript"],
 				"links": {
 					"github": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
-					"live": null
+					"live": null,
+					"npm": null,
+					"kaggle": null
 				}
 			}
 		]
