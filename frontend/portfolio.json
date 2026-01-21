@@ -73,7 +73,7 @@
 		"personal": [
 			{
 				"id": "mathex",
-				"name": "MathEx - Math Equation Editor Library",
+				"name": "Mathex-Editor",
 				"description": "A React component library for building math equation editors with automatic keyboard routing to focused input fields. Features 13 function categories including Trig, Calculus, Statistics, Probability, and Geometry with subscript/superscript mode. Packaged as a tree-shakeable npm library with full TypeScript support.",
 				"status": "Completed",
 				"techStack": ["React", "TypeScript", "MathQuill", "KaTeX", "Vite"],
