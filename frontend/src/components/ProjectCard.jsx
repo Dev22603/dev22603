@@ -5,8 +5,10 @@ import TechTag from "./TechTag";
 import { cn } from "@/lib/utils";
 
 export default function ProjectCard({ project, useModal = false, onModalClick }) {
-	const hasGithubLink = project.links.github;
-	const hasLiveLink = project.links.live;
+	const hasGithubLink = project.links?.github;
+	const hasLiveLink = project.links?.live;
+	const hasNpmLink = project.links?.npm;
+	const hasKaggleLink = project.links?.kaggle;
 
 	const handleCardClick = () => {
 		if (useModal && onModalClick) {
@@ -54,14 +56,11 @@ export default function ProjectCard({ project, useModal = false, onModalClick })
 				</div>
 			)}
 
-			{/* Project Name with Link */}
+			{/* Project Name */}
 			<div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3 pr-16 sm:pr-20">
 				<h3 className="text-base sm:text-lg font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors flex-1 break-words">
 					{project.name}
 				</h3>
-				{(hasGithubLink || hasLiveLink) && (
-					<ExternalLink className="w-4 h-4 text-[var(--color-text-tertiary)] flex-shrink-0 mt-0.5 sm:mt-1" />
-				)}
 			</div>
 
 			{/* Description */}
@@ -77,7 +76,7 @@ export default function ProjectCard({ project, useModal = false, onModalClick })
 			</div>
 
 			{/* Links */}
-			{(hasGithubLink || hasLiveLink) && (
+			{(hasGithubLink || hasLiveLink || hasNpmLink || hasKaggleLink) && (
 				<div className="flex flex-wrap gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-[var(--color-border-primary)]">
 					{hasGithubLink && (
 						<a
@@ -99,6 +98,42 @@ export default function ProjectCard({ project, useModal = false, onModalClick })
 								/>
 							</svg>
 							GitHub
+						</a>
+					)}
+					{hasNpmLink && (
+						<a
+							href={project.links.npm}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-1.5 py-1.5 px-0.5 -mx-0.5"
+							onClick={(e) => e.stopPropagation()}
+						>
+							<svg
+								className="w-4 h-4 flex-shrink-0"
+								fill="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"/>
+							</svg>
+							npm
+						</a>
+					)}
+					{hasKaggleLink && (
+						<a
+							href={project.links.kaggle}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-1.5 py-1.5 px-0.5 -mx-0.5"
+							onClick={(e) => e.stopPropagation()}
+						>
+							<svg
+								className="w-4 h-4 flex-shrink-0"
+								fill="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.28.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.076.339"/>
+							</svg>
+							Kaggle
 						</a>
 					)}
 					{hasLiveLink && (
