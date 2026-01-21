@@ -72,6 +72,17 @@
 	"projects": {
 		"personal": [
 			{
+				"id": "mathex",
+				"name": "MathEx - Math Equation Editor Library",
+				"description": "A React component library for building math equation editors with automatic keyboard routing to focused input fields. Features 13 function categories including Trig, Calculus, Statistics, Probability, and Geometry with subscript/superscript mode. Packaged as a tree-shakeable npm library with full TypeScript support.",
+				"status": "Completed",
+				"techStack": ["React", "TypeScript", "MathQuill", "KaTeX", "Vite"],
+				"links": {
+					"github": "https://github.com/Dev22603/MathEx",
+					"live": null
+				}
+			},
+			{
 				"id": "dsa-tracker",
 				"name": "DSA Progress Tracker",
 				"description": "A progress tracking tool for the A2Z DSA sheet, allowing users to mark question status, add notes, and access multiple reference links including LeetCode, GeeksforGeeks, Code360, and Hackerrank for comprehensive practice and study.",
