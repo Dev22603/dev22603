@@ -24,7 +24,8 @@
 			"status": "Current",
 			"location": "Remote",
 			"shortDescription": "Developing detection algorithms and UI flows for exercise tracking system.",
-			"icon": "🏋️",
+			"icon": "HL",
+			"logo": "/hyperlab_logo.svg",
 			"techStack": ["Lua", "Algorithm Design", "State Machines", "Peak Detection"],
 			"keyAchievements": [
 				"Developed detection algorithms for 35+ exercises using state machines, peak detection and movement thresholds",
@@ -41,7 +42,8 @@
 			"status": "Completed",
 			"location": "Remote",
 			"shortDescription": "Building Agentic AI systems and contributing to cutting-edge AI development projects.",
-			"icon": "💼",
+			"icon": "ZM",
+			"logo": "/zymr_logo.jpeg",
 			"techStack": ["Python", "FastAPI", "LangChain", "React", "TypeScript", "Docker"],
 			"keyAchievements": [
 				"Contributor to a project focused on developing Agentic AI systems",
@@ -58,7 +60,8 @@
 			"status": "Completed",
 			"location": "Ahmedabad, India",
 			"shortDescription": "Revamped core app features and improved user engagement for 50,000+ users.",
-			"icon": "📱",
+			"icon": "MK",
+			"logo": "/medkart_logo.jpeg",
 			"techStack": ["Flutter", "Dart", "Firebase", "REST APIs"],
 			"keyAchievements": [
 				"Revamped 9 core app screens in 12 weeks, increasing engagement rates for 50,000+ users",
