@@ -24,39 +24,15 @@ export default function ExperienceSection() {
 		<section className="w-full mb-24 md:mb-32">
 			{/* Section Header */}
 			<div className="mb-12">
-				<motion.div
-					initial={{ opacity: 0, x: -20 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					viewport={{ once: true }}
-					className="flex items-center gap-3 mb-4"
-				>
-					<div className="h-[1px] w-12 bg-[var(--color-primary)]" />
-					<span className="font-mono text-sm text-[var(--color-primary)] tracking-wider uppercase">
-						Career Path
-					</span>
-				</motion.div>
-
 				<motion.h2
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					transition={{ delay: 0.1 }}
-					className="text-3xl md:text-4xl lg:text-5xl mb-4"
+					className="text-3xl md:text-4xl lg:text-5xl"
 					style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
 				>
-					Professional <span className="text-[var(--color-primary)]">Experience</span>
+					<span className="text-[var(--color-primary)]">Experience</span>
 				</motion.h2>
-
-				<motion.p
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ delay: 0.2 }}
-					className="text-base md:text-lg text-[var(--color-text-secondary)] max-w-2xl"
-				>
-					A timeline of my professional journey, showcasing roles and contributions
-					across full-stack development and AI engineering.
-				</motion.p>
 			</div>
 
 			{/* Experience Timeline */}
