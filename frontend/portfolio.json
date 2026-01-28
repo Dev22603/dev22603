@@ -201,39 +201,54 @@
 		}
 	],
 	"skills": {
+		"backend": [
+			"Node.js",
+			"Express.js",
+			"FastAPI",
+			"MongoDB",
+			"PostgreSQL",
+			"SuperTokens",
+			"Keycloak",
+			"REST APIs"
+		],
+		"frontend": [
+			"React",
+			"Flutter",
+			"Tailwind CSS",
+			"HTML",
+			"CSS",
+			"Framer Motion"
+		],
 		"languages": [
+			"C",
+			"C++",
 			"Python",
 			"JavaScript",
 			"TypeScript",
-			"HTML",
-			"CSS",
-			"C++",
-			"C",
 			"Java",
 			"Dart",
-			"SQL"
+			"SQL",
+			"Lua"
 		],
-		"librariesFrameworks": [
-			"ReactJS",
-			"Express.js",
-			"FastAPI",
-			"SuperTokens",
-			"Keycloak",
-			"NodeJS",
-			"Flutter",
-			"Tailwind CSS",
-			"TensorFlow"
+		"mlDl": [
+			"TensorFlow",
+			"Keras",
+			"NumPy",
+			"Pandas",
+			"Scikit-learn",
+			"MFCC",
+			"BiLSTM"
 		],
-		"databasesORMs": ["MongoDB", "PostgreSQL"],
-		"toolsPlatforms": ["Git", "GitHub", "Postman", "Docker", "VSCode"],
-		"agentsLLMS": ["LangFlow", "Cursor", "Windsurf", "Flowise"],
-		"softSkills": [
-			"Fast Learner",
-			"Persistence",
-			"Teamwork",
-			"Adaptability",
-			"Problem-Solving",
-			"Grit"
+		"tools": [
+			"Git",
+			"GitHub",
+			"Docker",
+			"Postman",
+			"VSCode",
+			"Cursor",
+			"Windsurf",
+			"LangFlow",
+			"Flowise"
 		]
 	},
 	"education": [
