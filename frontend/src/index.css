@@ -35,6 +35,10 @@
   --color-grid-line: #152028;
   --color-grid-accent: #1a3040;
 
+  /* Dot Pattern */
+  --color-dot-light: #5a7872;
+  --color-dot-dark: #253540;
+
   /* Custom Spacing */
   --spacing-section: 8rem;
   --spacing-card: 2rem;
