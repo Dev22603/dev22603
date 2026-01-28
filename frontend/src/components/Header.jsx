@@ -44,20 +44,34 @@ export default function Header({ className }) {
 	return (
 		<header
 			className={cn(
-				"w-full z-50 backdrop-blur-sm bg-[var(--color-background-primary)]/80 border-b border-[var(--color-border-primary)]",
+				"w-full z-50 backdrop-blur-md border-b",
+				"bg-[var(--color-background-primary)]/90",
+				"border-[var(--color-border-primary)]",
 				className
 			)}
 		>
-			<div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2">
-				{/* Name/Logo */}
-				<div className="flex items-center">
-					<span className="text-base sm:text-lg font-semibold text-[var(--color-text-primary)] hover:text-[var(--color-primary)] transition-colors cursor-pointer">
-						{name}
+			{/* Accent line at top */}
+			<div
+				className="absolute top-0 left-0 right-0 h-[1px]"
+				style={{
+					background: 'linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-primary))',
+					opacity: 0.5,
+				}}
+			/>
+
+			<div className="max-w-6xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between gap-4">
+				{/* Name/Logo with decorative brackets */}
+				<div className="flex items-center gap-2">
+					<span className="text-[var(--color-primary)] font-mono text-sm opacity-60">[</span>
+					<span className="text-base sm:text-lg font-semibold text-[var(--color-text-primary)] hover:text-[var(--color-primary)] transition-all duration-300 cursor-pointer tracking-tight">
+						{name.split(' ')[0]}
+						<span className="text-[var(--color-primary)]">.</span>
 					</span>
+					<span className="text-[var(--color-primary)] font-mono text-sm opacity-60">]</span>
 				</div>
 
 				{/* Social Links */}
-				<nav className="flex items-center gap-2 sm:gap-4" aria-label="Social media links">
+				<nav className="flex items-center gap-1 sm:gap-2" aria-label="Social media links">
 					{socialIcons.map((social) => {
 						const Icon = social.icon;
 						return (
@@ -68,9 +82,22 @@ export default function Header({ className }) {
 								rel={social.name !== "Email" && social.name !== "Blog" ? "noopener noreferrer" : undefined}
 								onClick={social.onClick}
 								aria-label={social.ariaLabel}
-								className="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200 p-2 -m-2"
+								className={cn(
+									"relative p-2.5 rounded-lg",
+									"text-[var(--color-text-tertiary)]",
+									"hover:text-[var(--color-primary)]",
+									"hover:bg-[var(--color-primary-dim)]",
+									"transition-all duration-300",
+									"group"
+								)}
 							>
-								<Icon className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2} />
+								<Icon className="w-5 h-5" strokeWidth={1.5} />
+								{/* Hover glow effect */}
+								<span className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+									style={{
+										boxShadow: '0 0 20px var(--color-primary-dim)',
+									}}
+								/>
 							</a>
 						);
 					})}

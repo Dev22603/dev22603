@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Calendar } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
 import TechTag from "./TechTag";
 import { cn } from "@/lib/utils";
 
 export default function BlogCard({ blog, index }) {
 	const formattedDate = new Date(blog.date).toLocaleDateString("en-US", {
 		year: "numeric",
-		month: "long",
+		month: "short",
 		day: "numeric",
 	});
 
@@ -16,51 +16,66 @@ export default function BlogCard({ blog, index }) {
 			href={blog.slug}
 			target="_blank"
 			rel="noopener noreferrer"
-			initial={{ opacity: 0, y: 20 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.3, delay: index * 0.1 }}
+			whileHover={{ y: -4 }}
 			className={cn(
-				"group block",
-				"bg-[var(--color-background-secondary)] rounded-xl",
+				"group block h-full relative",
+				"bg-[var(--color-background-card)]",
 				"border border-[var(--color-border-primary)]",
-				"p-4 sm:p-5 md:p-6 transition-all duration-200",
+				"rounded-xl overflow-hidden",
+				"transition-all duration-400",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-lg",
-				"cursor-pointer"
+				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]"
 			)}
 		>
-			{/* Header with Title and External Link Icon */}
-			<div className="flex items-start justify-between gap-2.5 sm:gap-3 mb-2.5 sm:mb-3">
-				<h3 className="text-lg sm:text-xl font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors flex-1 leading-tight break-words">
-					{blog.title}
-				</h3>
-				<ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-primary)] transition-colors flex-shrink-0 mt-0.5 sm:mt-1" />
+			{/* Hover gradient overlay */}
+			<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+				<div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-dim)] via-transparent to-transparent" />
 			</div>
 
-			{/* Date */}
-			<div className="flex items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4">
-				<Calendar className="w-4 h-4 text-[var(--color-text-tertiary)] flex-shrink-0" />
-				<time
-					dateTime={blog.date}
-					className="text-xs sm:text-sm text-[var(--color-text-tertiary)]"
-				>
-					{formattedDate}
-				</time>
+			{/* Article number */}
+			<div className="absolute top-4 right-4 font-mono text-4xl font-bold text-[var(--color-border-secondary)] group-hover:text-[var(--color-primary-dim)] transition-colors duration-300">
+				{String(index + 1).padStart(2, '0')}
 			</div>
 
-			{/* Excerpt/Description */}
-			<p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed mb-3 sm:mb-4 line-clamp-3 break-words">
-				{blog.excerpt}
-			</p>
-
-			{/* Tags */}
-			{blog.tags && blog.tags.length > 0 && (
-				<div className="flex flex-wrap gap-1.5 sm:gap-2">
-					{blog.tags.map((tag, idx) => (
-						<TechTag key={idx} technology={tag} />
-					))}
+			<div className="relative p-5 sm:p-6">
+				{/* Date */}
+				<div className="flex items-center gap-2 mb-4">
+					<Calendar className="w-4 h-4 text-[var(--color-text-tertiary)]" />
+					<time
+						dateTime={blog.date}
+						className="text-sm font-mono text-[var(--color-text-tertiary)]"
+					>
+						{formattedDate}
+					</time>
 				</div>
-			)}
+
+				{/* Title */}
+				<div className="flex items-start justify-between gap-3 mb-3 pr-8">
+					<h3 className="text-lg sm:text-xl font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors leading-tight">
+						{blog.title}
+					</h3>
+				</div>
+
+				{/* Excerpt */}
+				<p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4 line-clamp-2">
+					{blog.excerpt}
+				</p>
+
+				{/* Tags */}
+				{blog.tags && blog.tags.length > 0 && (
+					<div className="flex flex-wrap gap-1.5 mb-4">
+						{blog.tags.map((tag, idx) => (
+							<TechTag key={idx} technology={tag} size="sm" />
+						))}
+					</div>
+				)}
+
+				{/* Read more link */}
+				<div className="flex items-center gap-2 text-sm text-[var(--color-primary)] font-medium pt-4 border-t border-[var(--color-border-primary)]">
+					<span>Read article</span>
+					<ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+				</div>
+			</div>
 		</motion.a>
 	);
 }

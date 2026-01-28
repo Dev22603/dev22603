@@ -1,25 +1,21 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink } from "lucide-react";
+import { X, ExternalLink, Github } from "lucide-react";
 import TechTag from "./TechTag";
 
 export default function ProjectModal({ project, isOpen, onClose }) {
-	// Close modal on ESC key press
 	useEffect(() => {
-		const handleEscape = (e) => {
-			if (e.key === "Escape") {
-				onClose();
-			}
+		const handleEsc = (e) => {
+			if (e.key === "Escape") onClose();
 		};
 
 		if (isOpen) {
-			document.addEventListener("keydown", handleEscape);
-			// Prevent body scroll when modal is open
+			document.addEventListener("keydown", handleEsc);
 			document.body.style.overflow = "hidden";
 		}
 
 		return () => {
-			document.removeEventListener("keydown", handleEscape);
+			document.removeEventListener("keydown", handleEsc);
 			document.body.style.overflow = "unset";
 		};
 	}, [isOpen, onClose]);
@@ -31,176 +27,146 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 	const hasNpmLink = project.links?.npm;
 	const hasKaggleLink = project.links?.kaggle;
 
+	const statusColors = {
+		Paused: { bg: "bg-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30" },
+		Completed: { bg: "bg-[var(--color-primary-dim)]", text: "text-[var(--color-primary)]", border: "border-[var(--color-primary)]/30" },
+		Active: { bg: "bg-blue-500/10", text: "text-blue-400", border: "border-blue-500/30" },
+	};
+
+	const status = statusColors[project.status] || statusColors.Active;
+
 	return (
 		<AnimatePresence>
 			{isOpen && (
-				<>
+				<div className="fixed inset-0 z-50 flex items-center justify-center p-4">
 					{/* Backdrop */}
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						transition={{ duration: 0.2 }}
-						className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+						transition={{ duration: 0.3 }}
+						className="absolute inset-0 bg-[var(--color-background-primary)]/90 backdrop-blur-md"
 						onClick={onClose}
 					/>
 
 					{/* Modal */}
-					<div className="fixed inset-0 z-50 flex items-center justify-center p-5 sm:p-6 md:p-8 pointer-events-none mt-8">
-						<motion.div
-							initial={{ opacity: 0, scale: 0.95, y: 20 }}
-							animate={{ opacity: 1, scale: 1, y: 0 }}
-							exit={{ opacity: 0, scale: 0.95, y: 20 }}
-							transition={{ duration: 0.2, ease: "easeOut" }}
-							className="relative w-full max-w-2xl max-h-[85vh] sm:max-h-[88vh] md:max-h-[92vh] bg-[var(--color-background-secondary)] rounded-2xl border border-[var(--color-border-primary)] shadow-2xl pointer-events-auto overflow-hidden"
-						>
-							{/* Close Button */}
-							<button
-								onClick={onClose}
-								className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-10 h-10 sm:w-9 sm:h-9 rounded-full bg-[var(--color-background-primary)]/80 hover:bg-[var(--color-background-primary)] transition-colors border border-[var(--color-border-primary)] cursor-pointer flex items-center justify-center"
-								aria-label="Close modal"
-							>
-								<X className="w-5 h-5 text-[var(--color-text-secondary)]" />
-							</button>
+					<motion.div
+						initial={{ opacity: 0, scale: 0.95, y: 20 }}
+						animate={{ opacity: 1, scale: 1, y: 0 }}
+						exit={{ opacity: 0, scale: 0.95, y: 20 }}
+						transition={{ duration: 0.3, ease: "easeOut" }}
+						className="relative w-full max-w-2xl max-h-[85vh] overflow-hidden bg-[var(--color-background-card)] border border-[var(--color-border-primary)] rounded-2xl shadow-2xl"
+					>
+						{/* Header accent */}
+						<div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]" />
 
-							{/* Modal Content - Scrollable */}
-							<div className="max-h-[90vh] overflow-y-auto p-4 sm:p-6 md:p-8">
-								{/* Header */}
-								<div className="mb-5 sm:mb-6 pr-10 sm:pr-12">
-									<div className="flex items-start justify-between gap-3 sm:gap-4 mb-2.5 sm:mb-3">
-										<h2 className="text-xl sm:text-2xl font-bold text-[var(--color-text-primary)] break-words">
-											{project.name}
-										</h2>
-										{project.status && (
-											<span
-												className={`px-2.5 sm:px-3 py-0.5 sm:py-1 text-xs font-medium rounded-full whitespace-nowrap flex-shrink-0 ${
-													project.status === "Paused"
-														? "bg-yellow-500/10 text-yellow-500 border border-yellow-500/20"
-														: project.status === "Completed"
-														? "bg-green-500/10 text-green-500 border border-green-500/20"
-														: "bg-blue-500/10 text-blue-500 border border-blue-500/20"
-												}`}
+						{/* Close button */}
+						<button
+							onClick={onClose}
+							className="absolute top-4 right-4 p-2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-background-tertiary)] rounded-lg transition-all duration-200 z-10"
+						>
+							<X className="w-5 h-5" />
+						</button>
+
+						{/* Content */}
+						<div className="overflow-y-auto max-h-[85vh] p-6 sm:p-8">
+							{/* Header */}
+							<div className="mb-6">
+								{/* Status Badge */}
+								{project.status && (
+									<span className={`inline-block px-3 py-1 text-xs font-mono rounded-full mb-4 ${status.bg} ${status.text} border ${status.border}`}>
+										{project.status}
+									</span>
+								)}
+
+								<h2 className="text-2xl sm:text-3xl font-semibold text-[var(--color-text-primary)] mb-2">
+									{project.name}
+								</h2>
+							</div>
+
+							{/* Description */}
+							<div className="mb-6 pb-6 border-b border-[var(--color-border-primary)]">
+								<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-3">
+									About
+								</h3>
+								<p className="text-[var(--color-text-secondary)] leading-relaxed">
+									{project.description}
+								</p>
+							</div>
+
+							{/* Tech Stack */}
+							<div className="mb-6 pb-6 border-b border-[var(--color-border-primary)]">
+								<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-4">
+									Technologies
+								</h3>
+								<div className="flex flex-wrap gap-2">
+									{project.techStack.map((tech, index) => (
+										<TechTag key={index} technology={tech} />
+									))}
+								</div>
+							</div>
+
+							{/* Links */}
+							{(hasGithubLink || hasLiveLink || hasNpmLink || hasKaggleLink) && (
+								<div>
+									<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-4">
+										Links
+									</h3>
+									<div className="flex flex-wrap gap-3">
+										{hasGithubLink && (
+											<a
+												href={project.links.github}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-2 px-4 py-2.5 bg-[var(--color-background-tertiary)] border border-[var(--color-border-primary)] rounded-lg text-sm text-[var(--color-text-primary)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-all duration-300"
 											>
-												{project.status}
-											</span>
+												<Github className="w-4 h-4" />
+												View Source
+											</a>
+										)}
+										{hasNpmLink && (
+											<a
+												href={project.links.npm}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-2 px-4 py-2.5 bg-[var(--color-background-tertiary)] border border-[var(--color-border-primary)] rounded-lg text-sm text-[var(--color-text-primary)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-all duration-300"
+											>
+												<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+													<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"/>
+												</svg>
+												npm Package
+											</a>
+										)}
+										{hasKaggleLink && (
+											<a
+												href={project.links.kaggle}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-2 px-4 py-2.5 bg-[var(--color-background-tertiary)] border border-[var(--color-border-primary)] rounded-lg text-sm text-[var(--color-text-primary)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-all duration-300"
+											>
+												<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+													<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.28.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.076.339"/>
+												</svg>
+												View on Kaggle
+											</a>
+										)}
+										{hasLiveLink && (
+											<a
+												href={project.links.live}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-2 px-4 py-2.5 bg-[var(--color-primary)] text-[var(--color-background-primary)] rounded-lg text-sm font-medium hover:opacity-90 transition-all duration-300"
+											>
+												<ExternalLink className="w-4 h-4" />
+												Live Demo
+											</a>
 										)}
 									</div>
-
-									{/* Description */}
-									<p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed break-words">
-										{project.description}
-									</p>
 								</div>
-
-								{/* Tech Stack */}
-								<div className="mb-5 sm:mb-6">
-									<h3 className="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2.5 sm:mb-3">
-										Tech Stack
-									</h3>
-									<div className="flex flex-wrap gap-1.5 sm:gap-2">
-										{project.techStack?.map((tech, index) => (
-											<TechTag key={index} technology={tech} />
-										))}
-									</div>
-								</div>
-
-								{/* Key Features (if available) */}
-								{project.features && project.features.length > 0 && (
-									<div className="mb-5 sm:mb-6">
-										<h3 className="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-2.5 sm:mb-3">
-											Key Features
-										</h3>
-										<ul className="space-y-2">
-											{project.features.map((feature, index) => (
-												<li
-													key={index}
-													className="flex items-start gap-2.5 sm:gap-3 text-sm text-[var(--color-text-secondary)]"
-												>
-													<span className="text-[var(--color-primary)] mt-0.5 sm:mt-1 flex-shrink-0">•</span>
-													<span className="flex-1 break-words">{feature}</span>
-												</li>
-											))}
-										</ul>
-									</div>
-								)}
-
-								{/* Links */}
-								{(hasGithubLink || hasLiveLink || hasNpmLink || hasKaggleLink) && (
-									<div className="pt-4 sm:pt-5 md:pt-6 border-t border-[var(--color-border-primary)]">
-										<div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
-											{hasGithubLink && (
-												<a
-													href={project.links.github}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 bg-[var(--color-background-primary)] hover:brightness-125 text-[var(--color-text-primary)] rounded-lg border border-[var(--color-border-primary)] hover:border-[var(--color-border-secondary)] transition-all text-sm font-medium"
-												>
-													<svg
-														className="w-5 h-5 flex-shrink-0"
-														fill="currentColor"
-														viewBox="0 0 24 24"
-													>
-														<path
-															fillRule="evenodd"
-															d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-															clipRule="evenodd"
-														/>
-													</svg>
-													View on GitHub
-												</a>
-											)}
-											{hasNpmLink && (
-												<a
-													href={project.links.npm}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 bg-[var(--color-background-primary)] hover:brightness-125 text-[var(--color-text-primary)] rounded-lg border border-[var(--color-border-primary)] hover:border-[var(--color-border-secondary)] transition-all text-sm font-medium"
-												>
-													<svg
-														className="w-5 h-5 flex-shrink-0"
-														fill="currentColor"
-														viewBox="0 0 24 24"
-													>
-														<path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"/>
-													</svg>
-													View on npm
-												</a>
-											)}
-											{hasKaggleLink && (
-												<a
-													href={project.links.kaggle}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 bg-[var(--color-background-primary)] hover:brightness-125 text-[var(--color-text-primary)] rounded-lg border border-[var(--color-border-primary)] hover:border-[var(--color-border-secondary)] transition-all text-sm font-medium"
-												>
-													<svg
-														className="w-5 h-5 flex-shrink-0"
-														fill="currentColor"
-														viewBox="0 0 24 24"
-													>
-														<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.28.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.076.339"/>
-													</svg>
-													View on Kaggle
-												</a>
-											)}
-											{hasLiveLink && (
-												<a
-													href={project.links.live}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white rounded-lg transition-all text-sm font-medium"
-												>
-													<ExternalLink className="w-5 h-5 flex-shrink-0" />
-													Visit Live Demo
-												</a>
-											)}
-										</div>
-									</div>
-								)}
-							</div>
-						</motion.div>
-					</div>
-				</>
+							)}
+						</div>
+					</motion.div>
+				</div>
 			)}
 		</AnimatePresence>
 	);
