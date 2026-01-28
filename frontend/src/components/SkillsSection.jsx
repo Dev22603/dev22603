@@ -1,49 +1,43 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Code2, Database, Wrench, Bot, Brain, Sparkles } from "lucide-react";
+import { Code2, Server, Layout, Wrench, Brain } from "lucide-react";
 import portfolioData from "../../portfolio.json";
 
 const categoryConfig = {
+	backend: {
+		label: "Backend",
+		icon: Server,
+		color: "#00d4aa",
+		description: "Server-side technologies & databases"
+	},
+	frontend: {
+		label: "Frontend",
+		icon: Layout,
+		color: "#ff6b35",
+		description: "Client-side frameworks & styling"
+	},
 	languages: {
 		label: "Languages",
 		icon: Code2,
-		color: "#00d4aa",
-		description: "Core programming languages"
-	},
-	librariesFrameworks: {
-		label: "Frameworks",
-		icon: Sparkles,
-		color: "#ff6b35",
-		description: "Libraries and frameworks"
-	},
-	databasesORMs: {
-		label: "Databases",
-		icon: Database,
 		color: "#9b5de5",
-		description: "Data storage solutions"
+		description: "Programming languages"
 	},
-	toolsPlatforms: {
+	mlDl: {
+		label: "ML / DL",
+		icon: Brain,
+		color: "#f15bb5",
+		description: "Machine learning & deep learning"
+	},
+	tools: {
 		label: "Tools",
 		icon: Wrench,
 		color: "#00bbf9",
-		description: "Development tools"
-	},
-	agentsLLMS: {
-		label: "AI/LLMs",
-		icon: Bot,
-		color: "#f15bb5",
-		description: "AI and agent tools"
-	},
-	softSkills: {
-		label: "Soft Skills",
-		icon: Brain,
-		color: "#fee440",
-		description: "Professional skills"
+		description: "Development & productivity tools"
 	}
 };
 
 export default function SkillsSection() {
-	const [activeCategory, setActiveCategory] = useState("languages");
+	const [activeCategory, setActiveCategory] = useState("backend");
 	const skills = portfolioData.skills;
 
 	const categories = Object.keys(skills).filter(key => categoryConfig[key]);
@@ -52,39 +46,15 @@ export default function SkillsSection() {
 		<section className="w-full mb-24 md:mb-32">
 			{/* Section Header */}
 			<div className="mb-12">
-				<motion.div
-					initial={{ opacity: 0, x: -20 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					viewport={{ once: true }}
-					className="flex items-center gap-3 mb-4"
-				>
-					<div className="h-[1px] w-12 bg-[var(--color-primary)]" />
-					<span className="font-mono text-sm text-[var(--color-primary)] tracking-wider uppercase">
-						Technical Arsenal
-					</span>
-				</motion.div>
-
 				<motion.h2
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					transition={{ delay: 0.1 }}
-					className="text-3xl md:text-4xl lg:text-5xl mb-4"
+					className="text-3xl md:text-4xl lg:text-5xl"
 					style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
 				>
-					Skills & <span className="text-[var(--color-primary)]">Technologies</span>
+					<span className="text-[var(--color-primary)]">Skills</span>
 				</motion.h2>
-
-				<motion.p
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ delay: 0.2 }}
-					className="text-base md:text-lg text-[var(--color-text-secondary)] max-w-2xl"
-				>
-					A comprehensive toolkit refined through building production applications
-					and solving complex engineering challenges.
-				</motion.p>
 			</div>
 
 			{/* Category Navigation */}
@@ -233,33 +203,6 @@ export default function SkillsSection() {
 				</div>
 			</div>
 
-			{/* Stats row */}
-			<motion.div
-				initial={{ opacity: 0, y: 20 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true }}
-				transition={{ delay: 0.4 }}
-				className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4"
-			>
-				{[
-					{ label: "Languages", value: skills.languages?.length || 0 },
-					{ label: "Frameworks", value: skills.librariesFrameworks?.length || 0 },
-					{ label: "Tools", value: (skills.toolsPlatforms?.length || 0) + (skills.databasesORMs?.length || 0) },
-					{ label: "Years Coding", value: "4+" },
-				].map((stat, index) => (
-					<div
-						key={stat.label}
-						className="p-4 bg-[var(--color-background-card)] border border-[var(--color-border-primary)] rounded-xl text-center"
-					>
-						<div className="text-2xl md:text-3xl font-bold text-[var(--color-primary)] mb-1">
-							{stat.value}
-						</div>
-						<div className="text-xs text-[var(--color-text-tertiary)] font-mono uppercase tracking-wider">
-							{stat.label}
-						</div>
-					</div>
-				))}
-			</motion.div>
 		</section>
 	);
 }

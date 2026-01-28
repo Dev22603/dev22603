@@ -39,40 +39,15 @@ export default function ProjectsSection() {
 		<section className="w-full mb-24 md:mb-32">
 			{/* Section Header */}
 			<div className="mb-12">
-				<motion.div
-					initial={{ opacity: 0, x: -20 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					viewport={{ once: true }}
-					className="flex items-center gap-3 mb-4"
-				>
-					<div className="h-[1px] w-12 bg-[var(--color-primary)]" />
-					<span className="font-mono text-sm text-[var(--color-primary)] tracking-wider uppercase">
-						Featured Work
-					</span>
-				</motion.div>
-
 				<motion.h2
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					transition={{ delay: 0.1 }}
-					className="text-3xl md:text-4xl lg:text-5xl mb-4"
+					className="text-3xl md:text-4xl lg:text-5xl"
 					style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
 				>
-					Selected <span className="text-[var(--color-primary)]">Projects</span>
+					<span className="text-[var(--color-primary)]">Projects</span>
 				</motion.h2>
-
-				<motion.p
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ delay: 0.2 }}
-					className="text-base md:text-lg text-[var(--color-text-secondary)] max-w-2xl"
-				>
-					{SHOW_CLIENT_WORK_TAB
-						? "A collection of work spanning blockchain applications to full-stack projects, including personal initiatives and professional client engagements."
-						: "A showcase of my personal projects, ranging from npm libraries to full-stack web applications and machine learning experiments."}
-				</motion.p>
 			</div>
 
 			{/* Tab Navigation */}

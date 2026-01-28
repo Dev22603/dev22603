@@ -10,39 +10,15 @@ export default function BlogsSection() {
 		<section id="blogs" className="w-full mb-24 md:mb-32">
 			{/* Section Header */}
 			<div className="mb-12">
-				<motion.div
-					initial={{ opacity: 0, x: -20 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					viewport={{ once: true }}
-					className="flex items-center gap-3 mb-4"
-				>
-					<div className="h-[1px] w-12 bg-[var(--color-primary)]" />
-					<span className="font-mono text-sm text-[var(--color-primary)] tracking-wider uppercase">
-						Writing
-					</span>
-				</motion.div>
-
 				<motion.h2
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					transition={{ delay: 0.1 }}
-					className="text-3xl md:text-4xl lg:text-5xl mb-4"
+					className="text-3xl md:text-4xl lg:text-5xl"
 					style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
 				>
-					Latest <span className="text-[var(--color-primary)]">Articles</span>
+					<span className="text-[var(--color-primary)]">Blogs</span>
 				</motion.h2>
-
-				<motion.p
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ delay: 0.2 }}
-					className="text-base md:text-lg text-[var(--color-text-secondary)] max-w-2xl"
-				>
-					Sharing insights from my engineering journey - practical guides, lessons learned,
-					and deep dives into modern development practices.
-				</motion.p>
 			</div>
 
 			{/* Blogs Grid */}

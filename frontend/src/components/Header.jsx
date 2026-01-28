@@ -1,45 +1,39 @@
-import { Twitter, Github, Mail, Calendar } from "lucide-react";
+import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import portfolioData from "../../portfolio.json";
 
 export default function Header({ className }) {
-	const { name, socialLinks } = portfolioData.personalInfo;
+	const { name } = portfolioData.personalInfo;
 
-	const handleBlogClick = (e) => {
-		e.preventDefault();
-		const blogsSection = document.getElementById("blogs");
-		if (blogsSection) {
-			blogsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+	const navLinks = [
+		{ name: "Experience", shortcut: "e", sectionId: "experience" },
+		{ name: "Projects", shortcut: "p", sectionId: "projects" },
+		{ name: "Blogs", shortcut: "b", sectionId: "blogs" },
+	];
+
+	const scrollToSection = (sectionId) => {
+		const section = document.getElementById(sectionId);
+		if (section) {
+			section.scrollIntoView({ behavior: "smooth", block: "start" });
 		}
 	};
 
-	const socialIcons = [
-		{
-			name: "Twitter",
-			icon: Twitter,
-			href: socialLinks.twitter,
-			ariaLabel: "Visit my Twitter profile",
-		},
-		{
-			name: "Blog",
-			icon: Calendar,
-			href: "#blogs",
-			ariaLabel: "Read my blog",
-			onClick: handleBlogClick,
-		},
-		{
-			name: "Email",
-			icon: Mail,
-			href: `mailto:${portfolioData.personalInfo.email}`,
-			ariaLabel: "Send me an email",
-		},
-		{
-			name: "GitHub",
-			icon: Github,
-			href: socialLinks.github,
-			ariaLabel: "Visit my GitHub profile",
-		},
-	];
+	// Keyboard shortcuts
+	useEffect(() => {
+		const handleKeyDown = (e) => {
+			// Don't trigger if user is typing in an input
+			if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+
+			const link = navLinks.find((l) => l.shortcut === e.key.toLowerCase());
+			if (link) {
+				e.preventDefault();
+				scrollToSection(link.sectionId);
+			}
+		};
+
+		document.addEventListener("keydown", handleKeyDown);
+		return () => document.removeEventListener("keydown", handleKeyDown);
+	}, []);
 
 	return (
 		<header
@@ -70,38 +64,29 @@ export default function Header({ className }) {
 					<span className="text-[var(--color-primary)] font-mono text-sm opacity-60">]</span>
 				</div>
 
-				{/* Social Links */}
-				<nav className="flex items-center gap-1 sm:gap-2" aria-label="Social media links">
-					{socialIcons.map((social) => {
-						const Icon = social.icon;
-						return (
-							<a
-								key={social.name}
-								href={social.href}
-								target={social.name !== "Email" && social.name !== "Blog" ? "_blank" : undefined}
-								rel={social.name !== "Email" && social.name !== "Blog" ? "noopener noreferrer" : undefined}
-								onClick={social.onClick}
-								aria-label={social.ariaLabel}
-								className={cn(
-									"relative p-2.5 rounded-lg",
-									"text-[var(--color-text-tertiary)]",
-									"hover:text-[var(--color-primary)]",
-									"hover:bg-[var(--color-primary-dim)]",
-									"transition-all duration-300",
-									"group"
-								)}
-							>
-								<Icon className="w-5 h-5" strokeWidth={1.5} />
-								{/* Hover glow effect */}
-								<span className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-									style={{
-										boxShadow: '0 0 20px var(--color-primary-dim)',
-									}}
-								/>
-							</a>
-						);
-					})}
+				{/* Center Navigation */}
+				<nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6 sm:gap-8" aria-label="Section navigation">
+					{navLinks.map((link) => (
+						<button
+							key={link.name}
+							onClick={() => scrollToSection(link.sectionId)}
+							className={cn(
+								"text-sm text-[var(--color-text-secondary)]",
+								"hover:text-[var(--color-primary)]",
+								"transition-colors duration-300",
+								"flex items-center gap-1.5"
+							)}
+						>
+							<span>{link.name}</span>
+							<span className="text-xs font-mono text-[var(--color-text-tertiary)] opacity-60">
+								[{link.shortcut}]
+							</span>
+						</button>
+					))}
 				</nav>
+
+				{/* Empty div for flex spacing */}
+				<div className="w-20"></div>
 			</div>
 		</header>
 	);
