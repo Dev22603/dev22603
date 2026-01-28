@@ -38,7 +38,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 	return (
 		<AnimatePresence>
 			{isOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+				<div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
 					{/* Backdrop */}
 					<motion.div
 						initial={{ opacity: 0 }}
@@ -55,7 +55,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 						animate={{ opacity: 1, scale: 1, y: 0 }}
 						exit={{ opacity: 0, scale: 0.95, y: 20 }}
 						transition={{ duration: 0.3, ease: "easeOut" }}
-						className="relative w-full max-w-2xl max-h-[85vh] overflow-hidden bg-[var(--color-background-card)] border border-[var(--color-border-primary)] rounded-2xl shadow-2xl"
+						className="relative w-full max-w-3xl max-h-[78vh] overflow-hidden bg-[var(--color-background-card)] border border-[var(--color-border-primary)] rounded-2xl shadow-2xl mt-16"
 					>
 						{/* Header accent */}
 						<div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]" />
@@ -69,7 +69,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 						</button>
 
 						{/* Content */}
-						<div className="overflow-y-auto max-h-[85vh] p-6 sm:p-8">
+						<div className="overflow-y-auto max-h-[78vh] p-6 sm:p-8">
 							{/* Header */}
 							<div className="mb-6">
 								{/* Status Badge */}
