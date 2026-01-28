@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import portfolioData from "../../portfolio.json";
 
 export default function Header({ className }) {
 	const { name } = portfolioData.personalInfo;
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	const navLinks = [
 		{ name: "Experience", shortcut: "e", sectionId: "experience" },
@@ -16,6 +18,7 @@ export default function Header({ className }) {
 		if (section) {
 			section.scrollIntoView({ behavior: "smooth", block: "start" });
 		}
+		setMobileMenuOpen(false);
 	};
 
 	// Keyboard shortcuts
@@ -64,8 +67,8 @@ export default function Header({ className }) {
 					<span className="text-[var(--color-primary)] font-mono text-sm opacity-60">]</span>
 				</div>
 
-				{/* Center Navigation */}
-				<nav className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6 sm:gap-8" aria-label="Section navigation">
+				{/* Center Navigation - hidden on mobile */}
+				<nav className="hidden sm:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 sm:gap-8" aria-label="Section navigation">
 					{navLinks.map((link) => (
 						<button
 							key={link.name}
@@ -85,9 +88,35 @@ export default function Header({ className }) {
 					))}
 				</nav>
 
-				{/* Empty div for flex spacing */}
-				<div className="w-20"></div>
+				{/* Mobile menu button */}
+				<button
+					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+					className="sm:hidden p-2 text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors"
+					aria-label="Toggle menu"
+				>
+					{mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+				</button>
+
+				{/* Empty div for flex spacing - hidden on mobile */}
+				<div className="hidden sm:block w-20"></div>
 			</div>
+
+			{/* Mobile Navigation Menu */}
+			{mobileMenuOpen && (
+				<div className="sm:hidden border-t border-[var(--color-border-primary)] bg-[var(--color-background-primary)]/95 backdrop-blur-md">
+					<nav className="flex flex-col py-2">
+						{navLinks.map((link) => (
+							<button
+								key={link.name}
+								onClick={() => scrollToSection(link.sectionId)}
+								className="px-6 py-3 text-left text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:bg-[var(--color-primary-dim)] transition-colors"
+							>
+								{link.name}
+							</button>
+						))}
+					</nav>
+				</div>
+			)}
 		</header>
 	);
 }
