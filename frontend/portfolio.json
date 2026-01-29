@@ -101,19 +101,6 @@
 				}
 			},
 			{
-				"id": "eduscraper",
-				"name": "EduScraper",
-				"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs.",
-				"status": "Completed",
-				"techStack": ["Python", "Beautiful Soup", "React", "JavaScript"],
-				"links": {
-					"github": "https://github.com/Dev22603/EduScraper",
-					"live": null,
-					"npm": null,
-					"kaggle": null
-				}
-			},
-			{
 				"id": "audio-classification",
 				"name": "Audio Language Classification using Deep Learning",
 				"description": "Built a BiLSTM model in TensorFlow for spoken language classification, achieving 75.46% test accuracy, with MFCC feature extraction from 40,000+ audio samples.",
@@ -134,6 +121,19 @@
 				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
 				"links": {
 					"github": "https://github.com/Dev22603/ecommerce",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
+				"id": "eduscraper",
+				"name": "EduScraper",
+				"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs.",
+				"status": "Completed",
+				"techStack": ["Python", "Beautiful Soup", "React", "JavaScript"],
+				"links": {
+					"github": "https://github.com/Dev22603/EduScraper",
 					"live": null,
 					"npm": null,
 					"kaggle": null
