@@ -230,6 +230,7 @@
 		],
 		"mlDl": [
 			"TensorFlow",
+			"PyTorch",
 			"NumPy",
 			"Pandas",
 			"Scikit-learn"
