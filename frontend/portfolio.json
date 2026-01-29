@@ -208,7 +208,7 @@
 			"MongoDB",
 			"PostgreSQL",
 			"SuperTokens",
-			"Keycloak",
+			"Keycloak IAM",
 			"REST APIs"
 		],
 		"frontend": [
@@ -216,8 +216,7 @@
 			"Flutter",
 			"Tailwind CSS",
 			"HTML",
-			"CSS",
-			"Framer Motion"
+			"CSS"
 		],
 		"languages": [
 			"C",
@@ -227,17 +226,13 @@
 			"TypeScript",
 			"Java",
 			"Dart",
-			"SQL",
 			"Lua"
 		],
 		"mlDl": [
 			"TensorFlow",
-			"Keras",
 			"NumPy",
 			"Pandas",
-			"Scikit-learn",
-			"MFCC",
-			"BiLSTM"
+			"Scikit-learn"
 		],
 		"tools": [
 			"Git",
