@@ -127,6 +127,33 @@
 				}
 			},
 			{
+				"id": "crisplogs-py",
+				"name": "crisplogs (Python)",
+				"description": "A PyPI package that replaces Python's verbose logging setup with a single setup_logging() call. Features ANSI-colored output per log level, 4 box styles (default, short-fixed, short-dynamic, long-boxed), structured extras rendered as inline/json/pretty, dual console+file logging with automatic ANSI stripping, named loggers with inherited config, and a configurable LogFormatter for custom handlers. Zero runtime dependencies, supports Python 3.8–3.13.",
+				"status": "Completed",
+				"techStack": ["Python", "PyPI"],
+				"links": {
+					"github": "https://github.com/dev22603/crisplogs",
+					"live": null,
+					"npm": null,
+					"pypi": "https://pypi.org/project/crisplogs/",
+					"kaggle": null
+				}
+			},
+			{
+				"id": "crisplogs-js",
+				"name": "crisplogs (Node.js)",
+				"description": "An npm package that brings Python-style structured logging to Node.js backends with a single setupLogging() call. Features ANSI-colored output per log level, 4 box styles (default, short-fixed, short-dynamic, long-boxed), structured extras rendered as inline/json/pretty, async file logging via WriteStream with automatic ANSI stripping, named loggers, pluggable custom handlers, and full TypeScript types. Zero runtime dependencies, ships ESM + CJS builds.",
+				"status": "Completed",
+				"techStack": ["TypeScript", "Node.js", "npm"],
+				"links": {
+					"github": "https://github.com/dev22603/crisplogs-js",
+					"live": null,
+					"npm": "https://www.npmjs.com/package/crisplogs",
+					"kaggle": null
+				}
+			},
+			{
 				"id": "eduscraper",
 				"name": "EduScraper",
 				"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs.",
