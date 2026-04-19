@@ -117,7 +117,7 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 				</div>
 
 				{/* Links */}
-				{(hasGithubLink || hasLiveLink || hasNpmLink || hasKaggleLink) && (
+				{(hasGithubLink || hasLiveLink || hasNpmLink || hasKaggleLink || hasPypiLink) && (
 					<div className="flex flex-wrap items-center gap-4 pt-4 border-t border-[var(--color-border-primary)]">
 						{hasGithubLink && (
 							<a
