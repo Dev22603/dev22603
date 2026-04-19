@@ -159,6 +159,21 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 								<span>Kaggle</span>
 							</a>
 						)}
+						{hasPypiLink && (
+							<a
+								href={project.links.pypi}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex items-center gap-2 text-sm text-[var(--color-text-tertiary)] hover:text-[var(--color-primary)] transition-colors"
+								onClick={(e) => e.stopPropagation()}
+							>
+								<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12.001 0C5.698 0 6.042 2.724 6.042 2.724l.007 2.822h6.073v.847H3.788S0 5.953 0 12.32c0 6.366 3.537 6.138 3.537 6.138h2.112v-2.952s-.114-3.537 3.479-3.537h5.994s3.365.054 3.365-3.253V3.463S18.974 0 12.001 0zM8.703 2.01a1.088 1.088 0 1 1 0 2.176 1.088 1.088 0 0 1 0-2.176z"/>
+									<path d="M11.999 24c6.303 0 5.959-2.724 5.959-2.724l-.007-2.822h-6.073v-.847h8.334S24 18.047 24 11.68c0-6.366-3.537-6.138-3.537-6.138h-2.112v2.952s.114 3.537-3.479 3.537H8.878S5.513 12.977 5.513 16.284v5.253S4.526 24 11.999 24zm3.298-2.01a1.088 1.088 0 1 1 0-2.176 1.088 1.088 0 0 1 0 2.176z"/>
+								</svg>
+								<span>PyPI</span>
+							</a>
+						)}
 						{hasLiveLink && (
 							<a
 								href={project.links.live}
