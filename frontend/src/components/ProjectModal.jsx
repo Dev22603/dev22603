@@ -26,6 +26,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 	const hasLiveLink = project.links?.live;
 	const hasNpmLink = project.links?.npm;
 	const hasKaggleLink = project.links?.kaggle;
+	const hasPypiLink = project.links?.pypi;
 
 	const statusColors = {
 		Paused: { bg: "bg-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30" },
@@ -107,7 +108,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 							</div>
 
 							{/* Links */}
-							{(hasGithubLink || hasLiveLink || hasNpmLink || hasKaggleLink) && (
+							{(hasGithubLink || hasLiveLink || hasNpmLink || hasKaggleLink || hasPypiLink) && (
 								<div>
 									<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-4">
 										Links
@@ -148,6 +149,20 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 													<path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.28.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.076.339"/>
 												</svg>
 												View on Kaggle
+											</a>
+										)}
+										{hasPypiLink && (
+											<a
+												href={project.links.pypi}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center gap-2 px-4 py-2.5 bg-[var(--color-background-tertiary)] border border-[var(--color-border-primary)] rounded-lg text-sm text-[var(--color-text-primary)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-all duration-300"
+											>
+												<svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+													<path d="M12.001 0C5.698 0 6.042 2.724 6.042 2.724l.007 2.822h6.073v.847H3.788S0 5.953 0 12.32c0 6.366 3.537 6.138 3.537 6.138h2.112v-2.952s-.114-3.537 3.479-3.537h5.994s3.365.054 3.365-3.253V3.463S18.974 0 12.001 0zM8.703 2.01a1.088 1.088 0 1 1 0 2.176 1.088 1.088 0 0 1 0-2.176z"/>
+													<path d="M11.999 24c6.303 0 5.959-2.724 5.959-2.724l-.007-2.822h-6.073v-.847h8.334S24 18.047 24 11.68c0-6.366-3.537-6.138-3.537-6.138h-2.112v2.952s.114 3.537-3.479 3.537H8.878S5.513 12.977 5.513 16.284v5.253S4.526 24 11.999 24zm3.298-2.01a1.088 1.088 0 1 1 0-2.176 1.088 1.088 0 0 1 0 2.176z"/>
+												</svg>
+												PyPI Package
 											</a>
 										)}
 										{hasLiveLink && (
