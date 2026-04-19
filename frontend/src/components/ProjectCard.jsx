@@ -9,6 +9,7 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 	const hasLiveLink = project.links?.live;
 	const hasNpmLink = project.links?.npm;
 	const hasKaggleLink = project.links?.kaggle;
+	const hasPypiLink = project.links?.pypi;
 
 	const handleCardClick = () => {
 		if (useModal && onModalClick) {
