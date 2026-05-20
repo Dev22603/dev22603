@@ -18,13 +18,14 @@ export default function BlogCard({ blog, index }) {
 			rel="noopener noreferrer"
 			whileHover={{ y: -4 }}
 			className={cn(
-				"group block h-full relative",
+				"group block h-full relative outline-none",
 				"bg-[var(--color-background-card)]",
 				"border border-[var(--color-border-primary)]",
 				"rounded-xl overflow-hidden",
 				"transition-all duration-400",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]"
+				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]",
+				"focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background-primary)]"
 			)}
 		>
 			{/* Hover gradient overlay */}
