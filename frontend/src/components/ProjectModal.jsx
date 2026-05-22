@@ -64,6 +64,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 						{/* Close button */}
 						<button
 							onClick={onClose}
+							aria-label="Close project details"
 							className="absolute top-4 right-4 p-2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-background-tertiary)] rounded-lg transition-all duration-200 z-10"
 						>
 							<X className="w-5 h-5" />
