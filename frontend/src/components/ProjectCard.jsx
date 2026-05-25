@@ -19,6 +19,13 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 		}
 	};
 
+	const handleKeyDown = (e) => {
+		if (e.key === "Enter" || e.key === " ") {
+			e.preventDefault();
+			handleCardClick();
+		}
+	};
+
 	const statusColors = {
 		Paused: { bg: "bg-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30" },
 		Completed: { bg: "bg-[var(--color-primary-dim)]", text: "text-[var(--color-primary)]", border: "border-[var(--color-primary)]/30" },
@@ -29,16 +36,20 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 
 	return (
 		<motion.div
+			role="button"
+			tabIndex={0}
 			whileHover={{ y: -4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.3 }}
 			onClick={handleCardClick}
+			onKeyDown={handleKeyDown}
 			className={cn(
 				"group relative cursor-pointer h-full",
 				"bg-[var(--color-background-card)]",
 				"border border-[var(--color-border-primary)]",
 				"rounded-xl overflow-hidden",
 				"transition-all duration-400",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background-primary)]",
 				"hover:border-[var(--color-border-secondary)]",
 				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]",
 				featured && "md:flex md:items-stretch"
