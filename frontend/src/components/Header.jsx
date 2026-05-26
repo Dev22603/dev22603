@@ -58,14 +58,18 @@ export default function Header({ className }) {
 
 			<div className="max-w-6xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between gap-4">
 				{/* Name/Logo with decorative brackets */}
-				<div className="flex items-center gap-2">
+				<button
+					onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+					className="flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus:outline-none rounded-sm"
+					aria-label="Scroll to top"
+				>
 					<span className="text-[var(--color-primary)] font-mono text-sm opacity-60">[</span>
-					<span className="text-base sm:text-lg font-semibold text-[var(--color-text-primary)] hover:text-[var(--color-primary)] transition-all duration-300 cursor-pointer tracking-tight">
+					<span className="text-base sm:text-lg font-semibold text-[var(--color-text-primary)] hover:text-[var(--color-primary)] transition-all duration-300 tracking-tight">
 						{name.split(' ')[0]}
 						<span className="text-[var(--color-primary)]">.</span>
 					</span>
 					<span className="text-[var(--color-primary)] font-mono text-sm opacity-60">]</span>
-				</div>
+				</button>
 
 				{/* Center Navigation - hidden on mobile */}
 				<nav className="hidden sm:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 sm:gap-8" aria-label="Section navigation">
@@ -91,8 +95,10 @@ export default function Header({ className }) {
 				{/* Mobile menu button */}
 				<button
 					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-					className="sm:hidden p-2 text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors"
+					className="sm:hidden p-2 text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus:outline-none rounded-sm"
 					aria-label="Toggle menu"
+					aria-expanded={mobileMenuOpen}
+					aria-controls="mobile-menu"
 				>
 					{mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
 				</button>
@@ -103,7 +109,10 @@ export default function Header({ className }) {
 
 			{/* Mobile Navigation Menu */}
 			{mobileMenuOpen && (
-				<div className="sm:hidden border-t border-[var(--color-border-primary)] bg-[var(--color-background-primary)]/95 backdrop-blur-md">
+				<div
+					id="mobile-menu"
+					className="sm:hidden border-t border-[var(--color-border-primary)] bg-[var(--color-background-primary)]/95 backdrop-blur-md"
+				>
 					<nav className="flex flex-col py-2">
 						{navLinks.map((link) => (
 							<button
