@@ -1,0 +1,305 @@
+{
+	"personalInfo": {
+		"name": "Dev Bachani",
+		"role": "Full Stack Engineer",
+		"location": "Ahmedabad, Gujarat, India",
+		"bio": "I use code to solve real life problems. Delivering software solutions for real life problem statements.",
+		"profileImage": "/headshot.jpg",
+		"email": "devbachani08@gmail.com",
+		"socialLinks": {
+			"twitter": "https://twitter.com/dev_by_dev_",
+			"github": "https://github.com/dev22603",
+			"linkedin": "https://linkedin.com/in/devbachani",
+			"blog": "#blogs",
+			"calendar": "https://calendly.com/devbachani08"
+		}
+	},
+	"experience": [
+		{
+			"id": "hyperlab",
+			"company": "Hyperlab Sportech Pvt Ltd",
+			"role": "Contract Job - Software Engineer",
+			"startDate": "September 2025",
+			"endDate": "Present",
+			"status": "Current",
+			"location": "Hybrid",
+			"shortDescription": "Developing detection algorithms and UI flows for exercise tracking system.",
+			"icon": "HL",
+			"logo": "/hyperlab_logo.svg",
+			"techStack": ["Lua", "Algorithm Design", "State Machines", "Peak Detection"],
+			"keyAchievements": [
+				"Developed detection algorithms for 35+ exercises using state machines, peak detection and movement thresholds",
+				"Built complete UI flows and integrated all exercises into a unified Lua system",
+				"Led most of the development, creating new exercises and improving existing ones for accuracy and consistency"
+			]
+		},
+		{
+			"id": "medkart",
+			"company": "Medkart Pharmacy Pvt Ltd",
+			"role": "Flutter Developer Intern",
+			"startDate": "January 2025",
+			"endDate": "June 2025",
+			"status": "Completed",
+			"location": "Ahmedabad, India",
+			"shortDescription": "Revamped core app features and improved user engagement for 50,000+ users.",
+			"icon": "MK",
+			"logo": "/medkart_logo.jpeg",
+			"techStack": ["Flutter", "Dart", "Firebase", "REST APIs"],
+			"keyAchievements": [
+				"Revamped 9 core app screens in 12 weeks, increasing engagement rates for 50,000+ users",
+				"Improved product discovery and boosted conversion rates via comprehensive sorting/filtering system",
+				"Reduced customer support response time by 30% by developing Contact Us module with form validation",
+				"Decreased bounce rates by 28% with responsive loading skeletons on 12+ pages",
+				"Achieved 75% workflow efficiency improvement by collapsing a 4-step task to 1 tap using Flutter intents"
+			]
+		}
+	],
+	"projects": {
+		"personal": [
+			{
+				"id": "mathex",
+				"name": "Mathex-Editor",
+				"description": "A React component library for building math equation editors with automatic keyboard routing to focused input fields. Features 13 function categories including Trig, Calculus, Statistics, Probability, and Geometry with subscript/superscript mode. Packaged as a tree-shakeable npm library with full TypeScript support.",
+				"status": "Completed",
+				"techStack": ["React", "TypeScript", "MathQuill", "KaTeX", "Vite"],
+				"links": {
+					"github": "https://github.com/Dev22603/MathEx",
+					"live": null,
+					"npm": "https://www.npmjs.com/package/mathex-editor",
+					"kaggle": null
+				}
+			},
+			{
+				"id": "dsa-tracker",
+				"name": "DSA Progress Tracker",
+				"description": "A progress tracking tool for the A2Z DSA sheet, allowing users to mark question status, add notes, and access multiple reference links including LeetCode, GeeksforGeeks, Code360, and Hackerrank for comprehensive practice and study.",
+				"status": "Paused",
+				"techStack": ["React", "Node.js", "MongoDB", "Express.js"],
+				"links": {
+					"github": "https://github.com/Dev22603/DSA-Progress-Tracker",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
+				"id": "audio-classification",
+				"name": "Audio Language Classification using Deep Learning",
+				"description": "Built a BiLSTM model in TensorFlow for spoken language classification, achieving 75.46% test accuracy, with MFCC feature extraction from 40,000+ audio samples.",
+				"status": "Completed",
+				"techStack": ["Python", "TensorFlow", "Keras", "NumPy"],
+				"links": {
+					"github": null,
+					"live": null,
+					"npm": null,
+					"kaggle": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms"
+				}
+			},
+			{
+				"id": "ecommerce-personal",
+				"name": "E-Commerce Platform",
+				"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs.",
+				"status": "Completed",
+				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
+				"links": {
+					"github": "https://github.com/Dev22603/ecommerce",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
+				"id": "crisplogs-py",
+				"name": "crisplogs (Python)",
+				"description": "A PyPI package that replaces Python's verbose logging setup with a single setup_logging() call. Features ANSI-colored output per log level, 4 box styles (default, short-fixed, short-dynamic, long-boxed), structured extras rendered as inline/json/pretty, dual console+file logging with automatic ANSI stripping, named loggers with inherited config, and a configurable LogFormatter for custom handlers. Zero runtime dependencies, supports Python 3.8–3.13.",
+				"status": "Completed",
+				"techStack": ["Python", "PyPI"],
+				"links": {
+					"github": "https://github.com/dev22603/crisplogs",
+					"live": null,
+					"npm": null,
+					"pypi": "https://pypi.org/project/crisplogs/",
+					"kaggle": null
+				}
+			},
+			{
+				"id": "crisplogs-js",
+				"name": "crisplogs (Node.js)",
+				"description": "An npm package that brings Python-style structured logging to Node.js backends with a single setupLogging() call. Features ANSI-colored output per log level, 4 box styles (default, short-fixed, short-dynamic, long-boxed), structured extras rendered as inline/json/pretty, async file logging via WriteStream with automatic ANSI stripping, named loggers, pluggable custom handlers, and full TypeScript types. Zero runtime dependencies, ships ESM + CJS builds.",
+				"status": "Completed",
+				"techStack": ["TypeScript", "Node.js", "npm"],
+				"links": {
+					"github": "https://github.com/dev22603/crisplogs-js",
+					"live": null,
+					"npm": "https://www.npmjs.com/package/crisplogs",
+					"kaggle": null
+				}
+			},
+			{
+				"id": "eduscraper",
+				"name": "EduScraper",
+				"description": "Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file. Built a React app to display/download MCQ PDFs.",
+				"status": "Completed",
+				"techStack": ["Python", "Beautiful Soup", "React", "JavaScript"],
+				"links": {
+					"github": "https://github.com/Dev22603/EduScraper",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
+				"id": "dex-fastapi-personal",
+				"name": "Decentralized Exchange",
+				"description": "Full-stack decentralized exchange project with FastAPI backend and React frontend. Key features include order management, trade execution, modern UI, and SuperTokens authentication.",
+				"status": "Completed",
+				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript"],
+				"links": {
+					"github": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			}
+		],
+		"client": [
+			{
+				"id": "ecommerce",
+				"name": "E-Commerce Platform",
+				"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs.",
+				"status": "Completed",
+				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
+				"links": {
+					"github": "https://github.com/Dev22603/ecommerce",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
+				"id": "dex-fastapi",
+				"name": "Decentralized Exchange",
+				"description": "Full-stack decentralized exchange project with FastAPI backend and React frontend. Key features include order management, trade execution, modern UI, and SuperTokens authentication.",
+				"status": "Completed",
+				"techStack": ["FastAPI", "React", "Python", "SuperTokens", "TypeScript"],
+				"links": {
+					"github": "https://github.com/Dev22603/Decentralized-Exchange-FastAPI",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			}
+		]
+	},
+	"blogs": [
+		{
+			"id": "python-logging",
+			"title": "Python Logging: Colored and Boxed Loggers for Readable Outputs",
+			"excerpt": "A comprehensive guide to creating visually appealing and readable Python loggers with colored and boxed formatting for better debugging and monitoring.",
+			"date": "2025-09-23",
+			"slug": "https://medium.com/@devcodes2206/python-logging-colored-and-boxed-loggers-for-readable-outputs-4e57102a3ec5",
+			"tags": ["Python", "Logging", "Development"]
+		},
+		{
+			"id": "nodejs-backend",
+			"title": "Modern Node.js Backend: Build It Like a Pro",
+			"excerpt": "Build a professional-grade REST API with Node.js, Express, and MongoDB using clean architecture patterns. From JWT authentication to Zod validation, learn the exact structure and conventions that make backends maintainable, secure, and production-ready.",
+			"date": "2025-12-09",
+			"slug": "https://medium.com/@devcodes2206/modern-node-js-backend-build-it-like-a-pro-6c5cdcab918f",
+			"tags": ["NodeJS", "Backend", "Good Coding Practices"]
+		}
+	],
+	"skills": {
+		"backend": [
+			"Node.js",
+			"Express.js",
+			"FastAPI",
+			"MongoDB",
+			"PostgreSQL",
+			"SuperTokens",
+			"Keycloak IAM",
+			"REST APIs"
+		],
+		"frontend": [
+			"React",
+			"Flutter",
+			"Tailwind CSS",
+			"HTML",
+			"CSS"
+		],
+		"languages": [
+			"C",
+			"C++",
+			"Python",
+			"JavaScript",
+			"TypeScript",
+			"Java",
+			"Dart",
+			"Lua"
+		],
+		"mlDl": [
+			"TensorFlow",
+			"PyTorch",
+			"NumPy",
+			"Pandas",
+			"Scikit-learn"
+		],
+		"tools": [
+			"Git",
+			"GitHub",
+			"Docker",
+			"Postman",
+			"VSCode",
+			"Cursor",
+			"Windsurf",
+			"LangFlow",
+			"Flowise"
+		]
+	},
+	"education": [
+		{
+			"institution": "Institute of Technology, Nirma University, Ahmedabad",
+			"degree": "B.Tech in Computer Science and Engineering",
+			"startYear": 2021,
+			"endYear": 2025
+		}
+	],
+	"programmingProfiles": {
+		"codeforces": {
+			"handle": "Dev_Bachani",
+			"link": "https://codeforces.com/profile/Dev_Bachani",
+			"maxRating": 1018,
+			"problemsSolved": 500
+		},
+		"leetcode": {
+			"handle": "Dev22603",
+			"link": "https://leetcode.com/Dev22603/",
+			"maxRating": 1538,
+			"problemsSolved": 300
+		},
+		"hackerrank": {
+			"handle": "Dev22603",
+			"link": "https://www.hackerrank.com/profile/Dev22603",
+			"stars": {
+				"problemSolving": 5,
+				"python": 5
+			}
+		},
+		"codechef": {
+			"handle": "Dev22603",
+			"link": "https://www.codechef.com/users/dev22603",
+			"stars": 2,
+			"maxRating": 1476
+		}
+	},
+	"certificates": [
+		{
+			"title": "JavaScript (Intermediate) Certificate",
+			"link": "https://www.hackerrank.com/certificates/692ea16532b2"
+		},
+		{
+			"title": "Python Language Course",
+			"link": "https://olympus1.mygreatlearning.com/course_certificate/BCEFFFJL"
+		}
+	]
+}
