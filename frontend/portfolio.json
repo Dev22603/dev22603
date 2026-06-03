@@ -3,7 +3,7 @@
 		"name": "Dev Bachani",
 		"role": "Full Stack Engineer",
 		"location": "Ahmedabad, Gujarat, India",
-		"bio": "A computer science graduate with a background in building production applications, leveraging my skills to architect and develop backend solutions at scale in the field of agentic AI.",
+		"bio": "I use code to solve real life problems. Delivering software solutions for real life problem statements.",
 		"profileImage": "/headshot.jpg",
 		"email": "devbachani08@gmail.com",
 		"socialLinks": {
@@ -18,11 +18,11 @@
 		{
 			"id": "hyperlab",
 			"company": "Hyperlab Sportech Pvt Ltd",
-			"role": "Software Engineer",
+			"role": "Contract Job - Software Engineer",
 			"startDate": "September 2025",
 			"endDate": "Present",
 			"status": "Current",
-			"location": "Remote",
+			"location": "Hybrid",
 			"shortDescription": "Developing detection algorithms and UI flows for exercise tracking system.",
 			"icon": "HL",
 			"logo": "/hyperlab_logo.svg",
@@ -31,24 +31,6 @@
 				"Developed detection algorithms for 35+ exercises using state machines, peak detection and movement thresholds",
 				"Built complete UI flows and integrated all exercises into a unified Lua system",
 				"Led most of the development, creating new exercises and improving existing ones for accuracy and consistency"
-			]
-		},
-		{
-			"id": "zymr",
-			"company": "Zymr, Inc.",
-			"role": "Software Engineer",
-			"startDate": "July 2025",
-			"endDate": "September 2025",
-			"status": "Completed",
-			"location": "Remote",
-			"shortDescription": "Building Agentic AI systems and contributing to cutting-edge AI development projects.",
-			"icon": "ZM",
-			"logo": "/zymr_logo.jpeg",
-			"techStack": ["Python", "FastAPI", "LangChain", "React", "TypeScript", "Docker"],
-			"keyAchievements": [
-				"Contributor to a project focused on developing Agentic AI systems",
-				"Working on scalable backend solutions for AI-powered applications",
-				"Implementing advanced AI workflows and integrations"
 			]
 		},
 		{
