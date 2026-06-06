@@ -5,19 +5,30 @@ import TechTag from "./TechTag";
 import { cn } from "@/lib/utils";
 
 export default function ExperienceCard({ experience, onClick }) {
+	const handleKeyDown = (e) => {
+		if (e.key === "Enter" || e.key === " ") {
+			e.preventDefault();
+			onClick?.();
+		}
+	};
+
 	return (
 		<motion.div
+			role="button"
+			tabIndex={0}
+			onKeyDown={handleKeyDown}
 			whileHover={{ x: 4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.2 }}
 			className={cn(
-				"relative cursor-pointer group",
+				"relative cursor-pointer group outline-none",
 				"bg-[var(--color-background-card)]",
 				"border border-[var(--color-border-primary)]",
 				"rounded-xl overflow-hidden",
 				"transition-all duration-300",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-[0_10px_40px_-15px_var(--color-primary-dim)]"
+				"hover:shadow-[0_10px_40px_-15px_var(--color-primary-dim)]",
+				"focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:border-transparent"
 			)}
 			onClick={onClick}
 		>
