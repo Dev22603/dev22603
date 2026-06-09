@@ -2,9 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Twitter, Github, Mail, Linkedin, FileText, MapPin, ArrowRight } from "lucide-react";
 import portfolioData from "../../portfolio.json";
+import ThreeParticleBackground from "./ThreeParticleBackground";
+import ThreeHeroScene from "./ThreeHeroScene";
 
 export default function Hero() {
-	const { name, role, location, bio, profileImage, email, socialLinks } =
+	const { name, role, location, bio, email, socialLinks } =
 		portfolioData.personalInfo;
 
 	const socialIcons = [
@@ -15,7 +17,8 @@ export default function Hero() {
 	];
 
 	return (
-		<section className="w-full mb-24 sm:mb-32 md:mb-40">
+		<section className="relative w-full mb-24 sm:mb-32 md:mb-40">
+			<ThreeParticleBackground />
 			<div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 				{/* Left side - Text content */}
 				<div className="lg:col-span-7 order-2 lg:order-1">
@@ -126,27 +129,17 @@ export default function Hero() {
 					</motion.div>
 				</div>
 
-				{/* Right side - Profile Image */}
+				{/* Right side - 3D Elements */}
 				<div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
 					<motion.div
 						initial={{ opacity: 0, scale: 0.9 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.8 }}
-						className="relative"
+						className="relative w-full max-w-[400px] aspect-square"
 					>
-						{/* Decorative frame */}
-						<div className="absolute -inset-4 border border-[var(--color-border-primary)] rounded-2xl transform rotate-3" />
-						<div className="absolute -inset-4 border border-[var(--color-primary-dim)] rounded-2xl transform -rotate-3" />
-
-						{/* Image container */}
-						<div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border-2 border-[var(--color-border-secondary)]">
-							<img
-								src={profileImage}
-								alt={`${name} - ${role}`}
-								className="w-full h-full object-cover"
-							/>
-							{/* Overlay gradient */}
-							<div className="absolute inset-0 bg-gradient-to-t from-[var(--color-background-primary)]/50 to-transparent" />
+						{/* 3D Scene Container */}
+						<div className="relative w-full h-full rounded-2xl overflow-visible border border-[var(--color-border-secondary)] bg-[var(--color-background-card)]/30 backdrop-blur-sm">
+							<ThreeHeroScene />
 						</div>
 
 						{/* Corner accents */}
@@ -160,11 +153,11 @@ export default function Hero() {
 							initial={{ opacity: 0, y: 10 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6, delay: 0.8 }}
-							className="absolute -bottom-4 -right-4 px-4 py-2 bg-[var(--color-background-card)] border border-[var(--color-border-secondary)] rounded-full flex items-center gap-2"
+							className="absolute -bottom-4 -right-4 px-4 py-2 bg-[var(--color-background-card)] border border-[var(--color-border-secondary)] rounded-full flex items-center gap-2 z-10 shadow-lg"
 						>
 							<span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
 							<span className="text-xs font-mono text-[var(--color-text-secondary)]">
-								Available for work
+								Interactive 3D
 							</span>
 						</motion.div>
 					</motion.div>
