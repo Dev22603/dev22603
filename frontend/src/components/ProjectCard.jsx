@@ -27,8 +27,18 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 
 	const status = statusColors[project.status] || statusColors.Active;
 
+	const handleKeyDown = (e) => {
+		if (e.key === "Enter" || e.key === " ") {
+			e.preventDefault();
+			handleCardClick();
+		}
+	};
+
 	return (
 		<motion.div
+			role="button"
+			tabIndex={0}
+			onKeyDown={handleKeyDown}
 			whileHover={{ y: -4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.3 }}
@@ -41,8 +51,10 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 				"transition-all duration-400",
 				"hover:border-[var(--color-border-secondary)]",
 				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background-primary)]",
 				featured && "md:flex md:items-stretch"
 			)}
+			aria-label={`View details for ${project.name}`}
 		>
 			{/* Hover gradient overlay */}
 			<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
