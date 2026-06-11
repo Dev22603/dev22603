@@ -36,7 +36,7 @@ export default function Header({ className }) {
 
 		document.addEventListener("keydown", handleKeyDown);
 		return () => document.removeEventListener("keydown", handleKeyDown);
-	}, []);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<header
