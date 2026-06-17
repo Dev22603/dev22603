@@ -3,15 +3,15 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import portfolioData from "../../portfolio.json";
 
+const navLinks = [
+	{ name: "Experience", shortcut: "e", sectionId: "experience" },
+	{ name: "Projects", shortcut: "p", sectionId: "projects" },
+	{ name: "Blogs", shortcut: "b", sectionId: "blogs" },
+];
+
 export default function Header({ className }) {
 	const { name } = portfolioData.personalInfo;
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-	const navLinks = [
-		{ name: "Experience", shortcut: "e", sectionId: "experience" },
-		{ name: "Projects", shortcut: "p", sectionId: "projects" },
-		{ name: "Blogs", shortcut: "b", sectionId: "blogs" },
-	];
 
 	const scrollToSection = (sectionId) => {
 		const section = document.getElementById(sectionId);
@@ -92,7 +92,9 @@ export default function Header({ className }) {
 				<button
 					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 					className="sm:hidden p-2 text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors"
-					aria-label="Toggle menu"
+					aria-expanded={mobileMenuOpen}
+					aria-controls="mobile-menu"
+					aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
 				>
 					{mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
 				</button>
@@ -103,7 +105,7 @@ export default function Header({ className }) {
 
 			{/* Mobile Navigation Menu */}
 			{mobileMenuOpen && (
-				<div className="sm:hidden border-t border-[var(--color-border-primary)] bg-[var(--color-background-primary)]/95 backdrop-blur-md">
+				<div id="mobile-menu" className="sm:hidden border-t border-[var(--color-border-primary)] bg-[var(--color-background-primary)]/95 backdrop-blur-md">
 					<nav className="flex flex-col py-2">
 						{navLinks.map((link) => (
 							<button
