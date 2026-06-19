@@ -3,15 +3,15 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import portfolioData from "../../portfolio.json";
 
+const navLinks = [
+	{ name: "Experience", shortcut: "e", sectionId: "experience" },
+	{ name: "Projects", shortcut: "p", sectionId: "projects" },
+	{ name: "Blogs", shortcut: "b", sectionId: "blogs" },
+];
+
 export default function Header({ className }) {
 	const { name } = portfolioData.personalInfo;
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-	const navLinks = [
-		{ name: "Experience", shortcut: "e", sectionId: "experience" },
-		{ name: "Projects", shortcut: "p", sectionId: "projects" },
-		{ name: "Blogs", shortcut: "b", sectionId: "blogs" },
-	];
 
 	const scrollToSection = (sectionId) => {
 		const section = document.getElementById(sectionId);

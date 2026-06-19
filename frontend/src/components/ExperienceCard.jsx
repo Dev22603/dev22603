@@ -7,6 +7,9 @@ import { cn } from "@/lib/utils";
 export default function ExperienceCard({ experience, onClick }) {
 	return (
 		<motion.div
+			role="button"
+			tabIndex={0}
+			aria-label={`View details for ${experience.role} at ${experience.company}`}
 			whileHover={{ x: 4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.2 }}
@@ -17,9 +20,16 @@ export default function ExperienceCard({ experience, onClick }) {
 				"rounded-xl overflow-hidden",
 				"transition-all duration-300",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-[0_10px_40px_-15px_var(--color-primary-dim)]"
+				"hover:shadow-[0_10px_40px_-15px_var(--color-primary-dim)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
 			)}
 			onClick={onClick}
+			onKeyDown={(e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					if (onClick) onClick(e);
+				}
+			}}
 		>
 			{/* Current status indicator bar */}
 			{experience.status === "Current" && (

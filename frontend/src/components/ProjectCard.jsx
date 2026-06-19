@@ -29,10 +29,19 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 
 	return (
 		<motion.div
+			role="button"
+			tabIndex={0}
+			aria-label={`View details for ${project.name}`}
 			whileHover={{ y: -4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.3 }}
 			onClick={handleCardClick}
+			onKeyDown={(e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					handleCardClick();
+				}
+			}}
 			className={cn(
 				"group relative cursor-pointer h-full",
 				"bg-[var(--color-background-card)]",
@@ -41,6 +50,7 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 				"transition-all duration-400",
 				"hover:border-[var(--color-border-secondary)]",
 				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]",
 				featured && "md:flex md:items-stretch"
 			)}
 		>
