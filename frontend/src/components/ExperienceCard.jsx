@@ -10,6 +10,16 @@ export default function ExperienceCard({ experience, onClick }) {
 			whileHover={{ x: 4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.2 }}
+			role="button"
+			tabIndex={0}
+			onKeyDown={(e) => {
+				if (e.key === "Enter") {
+					onClick();
+				} else if (e.key === " ") {
+					e.preventDefault();
+					onClick();
+				}
+			}}
 			className={cn(
 				"relative cursor-pointer group",
 				"bg-[var(--color-background-card)]",
@@ -17,7 +27,8 @@ export default function ExperienceCard({ experience, onClick }) {
 				"rounded-xl overflow-hidden",
 				"transition-all duration-300",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-[0_10px_40px_-15px_var(--color-primary-dim)]"
+				"hover:shadow-[0_10px_40px_-15px_var(--color-primary-dim)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background-primary)]"
 			)}
 			onClick={onClick}
 		>
