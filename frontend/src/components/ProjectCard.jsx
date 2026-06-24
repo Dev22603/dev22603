@@ -19,6 +19,15 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 		}
 	};
 
+	const handleKeyDown = (e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault(); // Prevent scrolling on space
+			if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') {
+				handleCardClick();
+			}
+		}
+	};
+
 	const statusColors = {
 		Paused: { bg: "bg-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30" },
 		Completed: { bg: "bg-[var(--color-primary-dim)]", text: "text-[var(--color-primary)]", border: "border-[var(--color-primary)]/30" },
@@ -29,6 +38,9 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 
 	return (
 		<motion.div
+			role="button"
+			tabIndex={0}
+			onKeyDown={handleKeyDown}
 			whileHover={{ y: -4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.3 }}
@@ -41,6 +53,7 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 				"transition-all duration-400",
 				"hover:border-[var(--color-border-secondary)]",
 				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]",
 				featured && "md:flex md:items-stretch"
 			)}
 		>
