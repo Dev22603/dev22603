@@ -24,7 +24,8 @@ export default function BlogCard({ blog, index }) {
 				"rounded-xl overflow-hidden",
 				"transition-all duration-400",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]"
+				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
 			)}
 		>
 			{/* Hover gradient overlay */}
