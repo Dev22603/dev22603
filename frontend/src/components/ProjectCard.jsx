@@ -29,6 +29,17 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 
 	return (
 		<motion.div
+			role="button"
+			tabIndex={0}
+			onKeyDown={(e) => {
+				// Ignore if the target is an anchor tag or button inside the card
+				if (e.target.closest('a') || e.target.closest('button')) return;
+
+				if (e.key === "Enter" || e.key === " ") {
+					if (e.key === " ") e.preventDefault(); // Prevent scrolling on Space
+					handleCardClick(e);
+				}
+			}}
 			whileHover={{ y: -4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.3 }}
@@ -41,6 +52,7 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 				"transition-all duration-400",
 				"hover:border-[var(--color-border-secondary)]",
 				"hover:shadow-[0_20px_50px_-20px_var(--color-primary-dim)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]",
 				featured && "md:flex md:items-stretch"
 			)}
 		>
