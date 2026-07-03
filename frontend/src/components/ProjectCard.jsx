@@ -27,16 +27,34 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 
 	const status = statusColors[project.status] || statusColors.Active;
 
+	const handleKeyDown = (e) => {
+		// Ignore events from inner interactive elements
+		if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+			return;
+		}
+
+		if (e.key === 'Enter' || e.key === ' ') {
+			if (e.key === ' ') {
+				e.preventDefault(); // Prevent page scroll on Space
+			}
+			handleCardClick();
+		}
+	};
+
 	return (
 		<motion.div
 			whileHover={{ y: -4 }}
 			whileTap={{ scale: 0.99 }}
 			transition={{ duration: 0.3 }}
 			onClick={handleCardClick}
+			onKeyDown={handleKeyDown}
+			role="button"
+			tabIndex={0}
 			className={cn(
 				"group relative cursor-pointer h-full",
 				"bg-[var(--color-background-card)]",
 				"border border-[var(--color-border-primary)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:border-transparent",
 				"rounded-xl overflow-hidden",
 				"transition-all duration-400",
 				"hover:border-[var(--color-border-secondary)]",
