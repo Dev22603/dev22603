@@ -5,6 +5,18 @@ import TechTag from "./TechTag";
 import { cn } from "@/lib/utils";
 
 export default function ExperienceCard({ experience, onClick }) {
+	const handleKeyDown = (e) => {
+		// Ignore events from inner interactive elements
+		if (e.target.tagName.toLowerCase() === 'a' || e.target.tagName.toLowerCase() === 'button') {
+			return;
+		}
+
+		if (e.key === "Enter" || e.key === " ") {
+			e.preventDefault();
+			onClick();
+		}
+	};
+
 	return (
 		<motion.div
 			whileHover={{ x: 4 }}
@@ -17,9 +29,14 @@ export default function ExperienceCard({ experience, onClick }) {
 				"rounded-xl overflow-hidden",
 				"transition-all duration-300",
 				"hover:border-[var(--color-border-secondary)]",
-				"hover:shadow-[0_10px_40px_-15px_var(--color-primary-dim)]"
+				"hover:shadow-[0_10px_40px_-15px_var(--color-primary-dim)]",
+				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)]"
 			)}
 			onClick={onClick}
+			role="button"
+			tabIndex={0}
+			onKeyDown={handleKeyDown}
+			aria-label={`View experience details for ${experience.role} at ${experience.company}`}
 		>
 			{/* Current status indicator bar */}
 			{experience.status === "Current" && (

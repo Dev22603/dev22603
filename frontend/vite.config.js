@@ -2,6 +2,9 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -28,6 +31,6 @@ export default defineConfig({
   },
   server: {
     host: "127.0.0.1",
-    port: 5173, // optional, defaults to 5173 anyway
+    port: 5173,
   },
 });
