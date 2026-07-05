@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import portfolioData from "../../portfolio.json";
@@ -7,11 +7,11 @@ export default function Header({ className }) {
 	const { name } = portfolioData.personalInfo;
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-	const navLinks = [
+	const navLinks = React.useMemo(() => [
 		{ name: "Experience", shortcut: "e", sectionId: "experience" },
 		{ name: "Projects", shortcut: "p", sectionId: "projects" },
 		{ name: "Blogs", shortcut: "b", sectionId: "blogs" },
-	];
+	], []);
 
 	const scrollToSection = (sectionId) => {
 		const section = document.getElementById(sectionId);
@@ -36,7 +36,7 @@ export default function Header({ className }) {
 
 		document.addEventListener("keydown", handleKeyDown);
 		return () => document.removeEventListener("keydown", handleKeyDown);
-	}, []);
+	}, [navLinks]);
 
 	return (
 		<header
