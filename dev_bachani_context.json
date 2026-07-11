@@ -1,0 +1,569 @@
+{
+  "basic_information": {
+    "full_name": "Dev Bachani",
+    "email": "devbachani08@gmail.com",
+    "phone": "+91 9173706507",
+    "location": "Ahmedabad, Gujarat, India",
+    "linkedin": "https://linkedin.com/in/devbachani",
+    "github": "https://github.com/dev22603",
+    "portfolio": "https://dev-bachani.netlify.app",
+    "medium": "https://medium.com/@devcodes2206",
+    "primary_purpose_of_this_file": "Job applications"
+  },
+  "professional_summary": {
+    "summary": "I am a software engineer with experience across mobile development, backend systems, full stack web development, real-time event-driven systems, and hardware-connected software. I prefer backend engineering the most, but I can work across the stack when needed. I learn quickly, adapt to new domains fast, and focus on building useful systems with measurable impact.",
+    "core_strengths": [
+      "Fast learning",
+      "Backend-first thinking",
+      "Execution focus",
+      "Adaptability across domains",
+      "Real-world problem solving",
+      "Comfort with ambiguity",
+      "AI-assisted development with technical ownership"
+    ]
+  },
+  "education": {
+    "btech": {
+      "degree": "Bachelor of Technology in Computer Science and Engineering",
+      "university": "Institute of Technology, Nirma University",
+      "location": "Ahmedabad, Gujarat, India",
+      "start_date": "2021-10-01",
+      "end_date": "2025-05-31",
+      "cgpa": "7.66/10",
+      "classification_context": "7.5+ considered First Class with Distinction",
+      "achievement": "Certificate of Scholar - 8th Semester"
+    },
+    "school_education": [
+      {
+        "school": "Shiv Ashish School",
+        "location": "Ahmedabad",
+        "class": "12",
+        "board": "CBSE",
+        "stream": "Science (PCM)",
+        "percentage": "89.8%"
+      },
+      {
+        "school": "Euro School",
+        "location": "Ahmedabad",
+        "class": "10",
+        "board": "CBSE",
+        "percentage": "92.6%"
+      }
+    ],
+    "exam_scores": {
+      "jee_main_2021": {
+        "overall_percentile": "92.74",
+        "mathematics_percentile": "97.53",
+        "physics_percentile": "88.71",
+        "chemistry_percentile": "79.44",
+        "all_india_rank": "63,918",
+        "top_percent_context": "Top 7%",
+        "qualified_for": "JEE Advanced"
+      },
+      "school_subject_scores": {
+        "class_10_mathematics": "96/100",
+        "class_10_english": "90/100",
+        "class_12_mathematics": "75/100",
+        "class_12_english": "95/100"
+      }
+    }
+  },
+  "career_timeline": [
+    {
+      "role": "Executive Member",
+      "organization": "Computer Society of India, Nirma University",
+      "type": "Extracurricular",
+      "start_date": "2022-11-01",
+      "end_date": "2023-11-30"
+    },
+    {
+      "role": "Frontend Developer Intern",
+      "organization": "SIXSIGMA TECHNOSOFT",
+      "type": "Internship",
+      "start_date": "2024-06-01",
+      "end_date": "2024-07-31"
+    },
+    {
+      "role": "Software Development Engineer Intern",
+      "organization": "Medkart Pharmacy Pvt. Ltd.",
+      "type": "Internship",
+      "start_date": "2025-01-06",
+      "end_date": "2025-06-30"
+    },
+    {
+      "role": "Software Engineer",
+      "organization": "Hyperlab Sportech Pvt Ltd",
+      "type": "Full-time",
+      "start_date": "2025-09-22",
+      "end_date": "2025-12-31"
+    },
+    {
+      "role": "Software Engineer Freelancer",
+      "organization": "Freelance",
+      "type": "Freelance",
+      "start_date": "2026-01-01",
+      "end_date": "2026-03-31"
+    },
+    {
+      "role": "Full Stack Developer",
+      "organization": "Hind Social",
+      "type": "Full-time",
+      "start_date": "2026-03-16",
+      "end_date": "2026-06-30"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "Hind Social",
+      "role": "Full Stack Developer",
+      "employment_type": "Full-time",
+      "include_in_resume": true,
+      "location": "Ahmedabad, India",
+      "start_date": "2026-03-01",
+      "end_date": "2026-06-30",
+      "experience_summary": "I work on a social media platform, building the feed ranking system and leading end-to-end development of a Causes module for cause-driven campaigns.",
+      "responsibilities": [
+        "Built the feed ranking algorithm, using OpenSearch to index and score posts on per-user signals for personalized content",
+        "Leading end-to-end development of Causes, a module letting cause owners launch campaigns (beach cleanups, reforestation, etc.) with configurable donation, volunteer, and supporter workflows",
+        "Owned the PostgreSQL schema, backend, and REST APIs for the Causes module"
+      ],
+      "key_learnings": [
+        "Search-based ranking and relevance scoring with OpenSearch",
+        "End-to-end ownership of a product module",
+        "Designing PostgreSQL schemas and REST APIs for configurable workflows"
+      ]
+    },
+    {
+      "company": "Freelance",
+      "role": "Software Engineer Freelancer",
+      "employment_type": "Freelance",
+      "include_in_resume": true,
+      "location": "Remote",
+      "start_date": "2026-01-01",
+      "end_date": "2026-03-31",
+      "experience_summary": "Built a marketing website for a print business as an independent freelancer.",
+      "responsibilities": [
+        "Built a Next.js + Supabase marketing site for a print business",
+        "Implemented SEO-optimized product pages and a protected admin CMS"
+      ],
+      "key_learnings": [
+        "Independent client delivery",
+        "SEO optimization",
+        "Building admin CMS workflows with Next.js and Supabase"
+      ]
+    },
+    {
+      "company": "Hyperlab Sportech Pvt Ltd",
+      "role": "Software Engineer",
+      "employment_type": "Full-time",
+      "include_in_resume": true,
+      "location": "Ahmedabad, India",
+      "start_date": "2025-09-22",
+      "end_date": "2025-12-31",
+      "experience_summary": "I worked on an intelligent exercise mat system and a full stack competition platform built for a competition called Burnhouse.",
+      "hardware_context": {
+        "product": "Exercise mat",
+        "components": [
+          "2 LiDAR sensors",
+          "2 force sensors",
+          "LED screen (320 x 240)",
+          "EC11 rotary encoder",
+          "BLE connectivity"
+        ]
+      },
+      "responsibilities": [
+        "Designed and implemented exercise detection algorithms in Lua using sensor data",
+        "Built logic for around 35 exercises",
+        "Improved algorithm accuracy so the mat became much harder to fool",
+        "Improved Mountain-Climb detection speed by 55%",
+        "Built a full stack competition platform using Next.js and Supabase for Burnhouse",
+        "Processed BLE event streams for real-time exercise tracking and leaderboards",
+        "Built a Lua-based multi-user UI flow using RFID or app-based events, retries, and time-based rules",
+        "Built an internal dashboard to upload LiDAR CSV logs, visualize sensor data, annotate anomalies, and export filtered datasets"
+      ],
+      "ai_usage": {
+        "tool_used": "Claude Code",
+        "positioning": "Used as a productivity and code generation tool, not as a replacement for problem solving",
+        "details": [
+          "I created detailed context documents for the exercise mat, sensors, and exercise logic",
+          "I designed the algorithms and the exercise detection rules myself",
+          "I used Claude Code to generate clean implementation faster",
+          "I kept ownership of logic, validation, decision making, and final quality"
+        ]
+      },
+      "key_learnings": [
+        "Learned Lua in a real production setting",
+        "Worked on hardware-connected software",
+        "Handled sensor-driven logic and strict exercise detection",
+        "Built real-time systems using BLE and Supabase",
+        "Worked across both low-level logic and full stack web development"
+      ]
+    },
+    {
+      "company": "Medkart Pharmacy Pvt. Ltd.",
+      "role": "Software Development Engineer Intern",
+      "employment_type": "Internship",
+      "include_in_resume": true,
+      "location": "Ahmedabad, India",
+      "start_date": "2025-01-06",
+      "end_date": "2025-06-30",
+      "experience_summary": "This was my first major production software experience. I worked on Medkart’s app revamp, learned Flutter from scratch, and delivered measurable product improvements.",
+      "onboarding_context": [
+        "Introduction and onboarding sessions",
+        "Visited real Medkart pharmacy stores",
+        "Observed POS usage, customer handling, billing, inventory flow, and business workflows"
+      ],
+      "intern_evaluation_project": {
+        "project_name": "E-Commerce Website",
+        "description": "All 16 interns built a complete e-commerce website individually as an evaluation task",
+        "constraints": [
+          "No payment integration",
+          "Two roles: Admin and Customer",
+          "Mandatory use of PostgreSQL"
+        ],
+        "tech_stack": [
+          "ReactJS",
+          "Node.js",
+          "Express.js",
+          "Tailwind CSS",
+          "PostgreSQL",
+          "Raw SQL"
+        ],
+        "impact_on_career_direction": "This project made me realize that backend engineering suited me more than frontend-heavy work"
+      },
+      "production_work": [
+        "Learned Flutter from scratch",
+        "Worked on app revamp screens like Order page, Cart page, Search page, and Filter pages",
+        "Revamped 9 core app screens in 12 weeks",
+        "Worked on an app serving 50,000+ users",
+        "Built the Contact Us module end to end in Flutter",
+        "Implemented Flutter intents to reduce a 4-step call workflow to 1 tap",
+        "Implemented deep links so shared product links opened inside the app",
+        "Built skeleton loaders to improve perceived loading speed",
+        "Built a scalable sorting and filtering system with 5+ criteria"
+      ],
+      "measurable_impact": [
+        "Reduced customer support response time by 30%",
+        "Decreased bounce rates by 28% across 12+ pages",
+        "Reduced user actions by 75% for a store-owner calling workflow"
+      ],
+      "key_learnings": [
+        "Importance of understanding business context before coding",
+        "Production mobile app maintenance",
+        "UX and perceived performance",
+        "Workflow efficiency improvements",
+        "Adapting fast even when the assigned role was not the preferred one"
+      ]
+    },
+    {
+      "company": "SIXSIGMA TECHNOSOFT",
+      "role": "Frontend Developer Intern",
+      "employment_type": "Internship",
+      "include_in_resume": false,
+      "location": "Ahmedabad, Gujarat, India",
+      "start_date": "2024-06-01",
+      "end_date": "2024-07-31",
+      "responsibilities": [
+        "Developed a responsive Drawer module for the CRM website",
+        "Worked with designers and backend developers for integration and functionality"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Competition Platform for Burnhouse",
+      "type": "Full stack platform",
+      "context": "Built at Hyperlab for a competition called Burnhouse",
+      "tech_stack": [
+        "Next.js",
+        "Supabase",
+        "BLE event processing",
+        "Lua",
+        "RFID",
+        "Real-time events"
+      ],
+      "highlights": [
+        "Multiple participants connected BLE-enabled exercise mats through their phones",
+        "Tracked repetitions and competition progress in real time",
+        "Updated live leaderboards using Supabase real-time events",
+        "Connected hardware events, exercise logic, backend state updates, and frontend competition views"
+      ]
+    },
+    {
+      "name": "DSA Progress Tracker",
+      "type": "Full stack web app",
+      "github": "https://github.com/Dev22603/DSA-Progress-Tracker",
+      "live_url": "https://track-your-dsa.netlify.app/",
+      "tech_stack": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Prisma"
+      ],
+      "highlights": [
+        "Aggregated problem data from multiple coding platforms",
+        "Used LLM-based query refinement and preprocessing",
+        "Managed 400+ problems with structured tracking and notes",
+        "Built responsive UI with infinite scroll and theme toggle"
+      ]
+    },
+    {
+      "name": "E-Commerce Website",
+      "type": "Full stack web app",
+      "github": "https://github.com/Dev22603/ecommerce",
+      "tech_stack": [
+        "Node.js",
+        "Express.js",
+        "React",
+        "Tailwind CSS",
+        "PostgreSQL"
+      ],
+      "highlights": [
+        "Admin and customer workflows",
+        "JWT-based authentication",
+        "RBAC",
+        "REST APIs",
+        "Pagination",
+        "Scalable relational schema"
+      ]
+    },
+    {
+      "name": "Mathex - Math Equation Editor Library",
+      "type": "React component library",
+      "tech_stack": [
+        "React",
+        "TypeScript",
+        "MathQuill",
+        "KaTeX",
+        "Vite"
+      ],
+      "highlights": [
+        "Built for creating math equation editors",
+        "Automatic keyboard routing",
+        "13 function categories including trigonometry, calculus, statistics, probability, and geometry",
+        "Packaged as a tree-shakeable npm library"
+      ]
+    },
+    {
+      "name": "Audio Language Classification Using Deep Learning",
+      "type": "Machine learning project",
+      "kaggle_url": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms",
+      "tech_stack": [
+        "Python",
+        "TensorFlow",
+        "Bidirectional LSTM"
+      ],
+      "highlights": [
+        "Achieved 75.46% test accuracy",
+        "Used MFCC features from 40,000 audio samples"
+      ]
+    },
+    {
+      "name": "CrispLogs",
+      "type": "Developer tooling / npm + Python library",
+      "github": "https://github.com/Dev22603",
+      "tech_stack": [
+        "Node.js",
+        "JavaScript",
+        "Python"
+      ],
+      "highlights": [
+        "Lightweight logging library providing structured, box-formatted logs for cleaner and more readable console and file output",
+        "Built as a lighter alternative to heavier tools like Winston for backend systems that rely on basic logging",
+        "Published as an npm package, with an equivalent Python version published on GitHub"
+      ]
+    },
+    {
+      "name": "QuizNinja",
+      "type": "Full stack web app",
+      "tech_stack": [
+        "Node.js",
+        "FastAPI",
+        "OpenCV",
+        "OCR"
+      ],
+      "highlights": [
+        "Full-stack quiz platform with a Node.js backend and a FastAPI microservice for OCR/OpenCV-based processing"
+      ]
+    },
+    {
+      "name": "AI Pneumonia Detection System",
+      "type": "Machine learning project",
+      "tech_stack": [
+        "Python",
+        "TensorFlow",
+        "CNN",
+        "Grad-CAM"
+      ],
+      "highlights": [
+        "CNN-based model to detect pneumonia from chest X-ray images",
+        "Used Grad-CAM visualization to highlight the regions influencing each prediction"
+      ]
+    },
+    {
+      "name": "Portfolio",
+      "type": "Personal website",
+      "live_url": "https://dev-bachani.netlify.app"
+    }
+  ],
+  "technical_skills": {
+    "languages": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C",
+      "C++",
+      "Lua",
+      "Dart",
+      "SQL"
+    ],
+    "backend": [
+      "FastAPI",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "Supabase"
+    ],
+    "frontend_and_app": [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Flutter",
+      "HTML",
+      "CSS",
+      "Recharts"
+    ],
+    "databases_and_data": [
+      "PostgreSQL",
+      "MongoDB",
+      "Prisma ORM",
+      "Jupyter Notebook"
+    ],
+    "authentication_and_access": [
+      "JWT",
+      "RBAC",
+      "SuperTokens"
+    ],
+    "other_proven_areas": [
+      "REST API design",
+      "Clean architecture",
+      "Layered architecture",
+      "Dependency injection",
+      "Repository pattern",
+      "BLE event processing",
+      "RFID-based flow handling",
+      "Real-time event-driven systems",
+      "Sensor data processing",
+      "Data Structures and Algorithms"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Linux",
+      "Cursor",
+      "Claude Code",
+      "VS Code",
+      "Windsurf"
+    ],
+    "learning_and_interests": [
+      "Golang (learning)",
+      "Solidity (learning)",
+      "Solana (interest)"
+    ]
+  },
+  "competitive_programming_and_profiles": {
+    "codeforces": {
+      "username": "Dev_Bachani",
+      "profile_url": "https://codeforces.com/profile/Dev_Bachani",
+      "problems_solved": "500+"
+    },
+    "leetcode": {
+      "username": "Dev22603",
+      "profile_url": "https://leetcode.com/u/Dev22603/",
+      "max_rating": 1538,
+      "problems_solved": "300+"
+    },
+    "hackerrank": {
+      "username": "dev22603",
+      "profile_url": "https://www.hackerrank.com/profile/dev22603"
+    },
+    "kaggle": {
+      "username": "devbachani",
+      "profile_url": "https://www.kaggle.com/devbachani",
+      "title": "Notebooks Legacy Expert"
+    }
+  },
+  "certifications": [
+    "Supervised Machine Learning: Regression and Classification",
+    "Introduction to Programming Using Python",
+    {
+      "name": "JavaScript Intermediate Certificate",
+      "issuer": "HackerRank",
+      "url": "https://www.hackerrank.com/certificates/692ea16532b2"
+    }
+  ],
+  "work_style_and_strengths": {
+    "preferred_direction": "Backend engineering",
+    "strengths": [
+      "Fast learning",
+      "Adaptability to new tech stacks",
+      "Practical execution",
+      "Understanding business context",
+      "System thinking",
+      "Comfort with ambiguity",
+      "Owning technical decisions while using AI tools wisely"
+    ],
+    "ai_usage_philosophy": "I use AI tools like Claude Code to speed up implementation and improve code quality, but I keep ownership of logic, architecture, validation, and decision making."
+  },
+  "job_preferences": {
+    "preferred_roles": [
+      "Backend Engineer",
+      "Full-Stack Developer",
+      "Software Engineer (Generalist)"
+    ],
+    "preferred_locations": [
+      "Ahmedabad",
+      "Remote",
+      "Pune",
+      "Bangalore"
+    ],
+    "salary_expectations": {
+      "ahmedabad_or_remote": "Minimum 5 LPA fixed",
+      "pune_or_bangalore": "Minimum 8 LPA fixed"
+    },
+    "job_types": [
+      "Full-time",
+      "Contract",
+      "Internship with PPO"
+    ],
+    "company_size": "Any",
+    "availability": "Immediate Joiner",
+    "notice_period": "Immediate",
+    "target_platforms": [
+      "LinkedIn",
+      "Naukri",
+      "Instahyre",
+      "Wellfound",
+      "JobFound"
+    ]
+  },
+  "measurable_impact": [
+    "Reduced customer support response time by 30%",
+    "Decreased bounce rates by 28% across 12+ pages",
+    "Reduced a 4-step workflow to 1 tap, a 75% reduction in user actions",
+    "Revamped 9 core app screens in an app serving 50,000+ users",
+    "Built algorithms for 35+ exercises",
+    "Improved Mountain-Climb detection speed by 55%",
+    "Built a real-time competition platform processing BLE event streams",
+    "Built a personalized feed ranking algorithm using OpenSearch at Hind Social"
+  ],
+  "application_ready_snippets": {
+    "what_makes_me_exceptional": "Within a short period of professional experience, I have delivered measurable impact across different domains, from reducing customer support response time by 30 percent and improving exercise detection speed by 55 percent, to building scalable backend foundations and real-time competition systems connected to hardware. I do well in fast-moving and unclear environments because I learn new technologies quickly, understand the real problem, and convert that understanding into working software.",
+    "project_i_am_proud_of": "At Hyperlab, I built a competition platform for Burnhouse, where multiple participants connected BLE-enabled exercise mats through their phones and competed in timed fitness challenges with live leaderboard updates. What made it special was the mix of hardware, Lua-based exercise logic, BLE events, backend updates, Supabase real-time flows, and a Next.js web interface working together as one system."
+  }
+}
