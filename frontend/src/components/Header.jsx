@@ -7,9 +7,12 @@ export default function Header({ className }) {
 	const { name } = portfolioData.personalInfo;
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+	const showCertificates = portfolioData.settings?.showCertificates !== false;
+
 	const navLinks = [
 		{ name: "Experience", shortcut: "e", sectionId: "experience" },
 		{ name: "Projects", shortcut: "p", sectionId: "projects" },
+		...(showCertificates ? [{ name: "Certificates", shortcut: "c", sectionId: "certificates" }] : []),
 		{ name: "Blogs", shortcut: "b", sectionId: "blogs" },
 	];
 

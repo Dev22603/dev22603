@@ -1,7 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap');
 
 @theme {
   /* Architectural Blueprint Color Palette */
@@ -274,6 +273,12 @@ html {
   border-color: var(--color-primary);
   color: var(--color-primary);
   box-shadow: 0 0 15px var(--color-primary-dim);
+}
+
+/* Spin animation (used in certificate loader) */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Section divider */

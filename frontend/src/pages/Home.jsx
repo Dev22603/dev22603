@@ -3,9 +3,13 @@ import Hero from "@/components/Hero";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import CertificatesSection from "@/components/CertificatesSection";
 import BlogsSection from "@/components/BlogsSection";
+import portfolioData from "../../portfolio.json";
 
 const Home = () => {
+	const showCertificates = portfolioData.settings?.showCertificates !== false;
+
 	return (
 		<div className="w-full">
 			{/* Hero Section */}
@@ -25,6 +29,9 @@ const Home = () => {
 			<section id="projects">
 				<ProjectsSection />
 			</section>
+
+			{/* Certificates Section */}
+			{showCertificates && <CertificatesSection />}
 
 			{/* Blogs Section */}
 			<BlogsSection />

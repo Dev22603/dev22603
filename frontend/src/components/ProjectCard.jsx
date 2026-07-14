@@ -101,7 +101,7 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 					"text-[var(--color-text-secondary)] leading-relaxed mb-4",
 					featured ? "text-base" : "text-sm line-clamp-3"
 				)}>
-					{project.description}
+					{Array.isArray(project.description) ? project.description.join(' ') : project.description}
 				</p>
 
 				{/* Tech Stack */}
