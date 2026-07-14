@@ -4,7 +4,7 @@ import CertificateCard from "./CertificateCard";
 import portfolioData from "../../portfolio.json";
 
 export default function CertificatesSection() {
-	const certificates = portfolioData.certificates.filter((cert) => cert.show !== false);
+	const certificates = portfolioData.certificates.filter((cert) => cert.show !== false); // updated
 
 	return (
 		<section id="certificates" className="w-full mb-24 md:mb-32">
@@ -23,7 +23,7 @@ export default function CertificatesSection() {
 
 			{/* Certificates Grid */}
 			{certificates && certificates.length > 0 ? (
-				<div className="grid grid-cols-1 gap-4 max-w-3xl">
+				<div className="grid grid-cols-1 gap-4 w-full">
 					{certificates.map((certificate, index) => (
 						<motion.div
 							key={index}
