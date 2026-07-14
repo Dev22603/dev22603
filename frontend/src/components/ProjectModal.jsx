@@ -91,9 +91,17 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 								<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-3">
 									About
 								</h3>
-								<p className="text-[var(--color-text-secondary)] leading-relaxed">
-									{project.description}
-								</p>
+								{Array.isArray(project.description) ? (
+									<ul className="list-disc pl-5 space-y-2 text-[var(--color-text-secondary)] leading-relaxed">
+										{project.description.map((point, index) => (
+											<li key={index}>{point}</li>
+										))}
+									</ul>
+								) : (
+									<p className="text-[var(--color-text-secondary)] leading-relaxed">
+										{project.description}
+									</p>
+								)}
 							</div>
 
 							{/* Tech Stack */}
