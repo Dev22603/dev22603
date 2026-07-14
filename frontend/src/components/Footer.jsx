@@ -47,7 +47,7 @@ export default function Footer() {
 							Quick Links
 						</h4>
 						<nav className="flex flex-col gap-2">
-							{["Experience", "Projects", "Skills", "Blogs"].map((link) => (
+							{["Experience", "Projects", "Skills", ...(portfolioData.settings?.showCertificates !== false ? ["Certificates"] : []), "Blogs"].map((link) => (
 								<a
 									key={link}
 									href={`#${link.toLowerCase()}`}

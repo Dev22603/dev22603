@@ -17,6 +17,9 @@
 			"website": "https://dev-bachani.xyz"
 		}
 	},
+	"settings": {
+		"showCertificates": true
+	},
 	"experience": [
 		{
 			"id": "hind-social",
@@ -344,19 +347,27 @@
 	"certificates": [
 		{
 			"title": "JavaScript (Intermediate) Certificate",
-			"link": "https://www.hackerrank.com/certificates/692ea16532b2"
+			"issuer": "HackerRank",
+			"link": "https://www.hackerrank.com/certificates/692ea16532b2",
+			"show": true
 		},
 		{
 			"title": "Python Language Course",
-			"link": "https://olympus1.mygreatlearning.com/course_certificate/BCEFFFJL"
+			"issuer": "Great Learning",
+			"link": "https://olympus1.mygreatlearning.com/course_certificate/BCEFFFJL",
+			"show": false
 		},
 		{
 			"title": "Supervised Machine Learning: Regression and Classification",
-			"link": null
+			"issuer": "DeepLearning.AI & Stanford University",
+			"link": null,
+			"show": true
 		},
 		{
 			"title": "Unsupervised Learning, Recommenders, Reinforcement Learning",
-			"link": null
+			"issuer": "DeepLearning.AI & Stanford University",
+			"link": null,
+			"show": true
 		}
 	]
 }
