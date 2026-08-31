@@ -97,6 +97,83 @@
 	"projects": {
 		"personal": [
 			{
+				"id": "chain-reaction",
+				"name": "Chain Reaction — Real-Time Multiplayer Platform",
+				"tagline": "A server-authoritative multiplayer game platform: a Node.js WebSocket server owns every board, turn and cascade, so the client can only ask — never decide.",
+				"status": "Active",
+				"role": "Solo — backend, frontend, infra",
+				"timeline": "Apr 2026 – Present",
+				"description": [
+					"Built a real-time multiplayer Chain Reaction platform where the backend is the single source of truth: a Node.js + TypeScript WebSocket server owns board state, turn order, cascading explosions, elimination and match teardown, while the Next.js 15 / React 19 client renders broadcasts and sends nothing but player intent.",
+					"Designed the rules engine as a pure, I/O-free TypeScript module (createBoard, getCriticalMass, getNeighbors, applyMove, isEliminated) so the identical code path runs inside the server, in a standalone smoke script, and later in replay or AI opponents.",
+					"Modeled matchmaking as per-configuration queue buckets keyed by board preset x player count (4 presets, 2–20 players per match), alongside private rooms joinable through ambiguity-free invite codes.",
+					"Persisted only completed matches — Supabase Postgres through Prisma behind a repository layer — and broadcast game_over to players before any write, so a database outage costs stats, never gameplay.",
+					"Shipped XP/level progression with per-mode leaderboards, JWT email/password auth plus Google OAuth via Supabase (accounts linked by email), a 30-second reconnect grace window, and a WebSocket protocol documented in lockstep with shared TypeScript types.",
+					"Hardened for production before launch: fail-closed config, per-IP and global rate budgets, connection caps, a room reaper, XP anti-farm velocity limits, and a Docker + Fly.io deployment gated by GitHub Actions CI."
+				],
+				"architecture": [
+					"Client: Next.js App Router with a four-state phase machine (lobby -> queued -> playing -> gameover) owned by a single useGameWebSocket hook. The client never computes a next board — it renders what the server broadcasts.",
+					"Server: ws gateway -> router -> typed handlers -> services -> repositories. Every inbound frame is validated by a Zod schema at the edge; malformed frames are dropped rather than trusted.",
+					"Live state: four module-level Maps (sockets, connection identities, queue buckets, rooms + player->room index). Nothing per-move touches the database.",
+					"Durable state: Postgres via Prisma in a strict repository pattern — Prisma is imported by repositories only, never by controllers, services, handlers or game logic. Schema covers players, matches, match participants and a per-mode stat projection for leaderboard reads.",
+					"Delivery: multi-stage Docker build on Fly.io for the long-lived WebSocket process, with GitHub Actions running Prisma generate, build and lint across both packages on every PR."
+				],
+				"highlights": [
+					{
+						"title": "Server-authoritative by construction",
+						"detail": "Clients can send only join_queue, make_move and leave_game. Every move is re-validated server-side for turn ownership, bounds and cell ownership and dropped silently when invalid, so a patched client cannot desync the room or forge a board."
+					},
+					{
+						"title": "A pure engine, enforced as a rule not a convention",
+						"detail": "game.logic.ts is forbidden from importing ws, http, fs, state, handlers or the DB. That constraint keeps the cascade algorithm testable in isolation and makes every rules bug reproducible in a script that runs without a server or a database."
+					},
+					{
+						"title": "Cascades resolved as a bounded fixed point",
+						"detail": "Explosions settle by repeatedly collecting every over-critical cell until none remain, guarded by a 2000-iteration safety break — so a rules bug degrades into a logged anomaly instead of an infinite loop that pins the event loop and takes every concurrent match down with it."
+					},
+					{
+						"title": "Persistence that cannot break the game",
+						"detail": "Match history and XP are written after game_over has already reached the players; repository errors are logged and contained. The documented invariant is that Postgres going down loses statistics, not matches — and it is the reason writes were deliberately kept off the per-move path."
+					},
+					{
+						"title": "Pre-launch hardening pass",
+						"detail": "Refuses to boot in production without a >=32-character JWT secret; WebSocket payload caps, ping/pong liveness, idle timeouts and global + per-IP connection caps; per-IP and global message-rate budgets; a reaper for abandoned rooms; helmet and a CORS allowlist; HS256-pinned JWTs with issuer/audience; and constant-work login that hashes a dummy password for unknown emails to close the user-enumeration timing channel."
+					},
+					{
+						"title": "Leaderboard integrity",
+						"detail": "XP accrues only to authenticated players, scales with board size factor and opponent count, and is bounded by a velocity cap (10 matches per 10 minutes) plus a lobby -> active -> finished room state machine — so two accounts cannot spin instant matches to farm rank."
+					},
+					{
+						"title": "Reconnection that does not freeze the room",
+						"detail": "A dropped authenticated player holds their seat for a 30-second grace window and resumes the same room on reconnect; when the window expires the server forfeits them cleanly and advances the turn, instead of stalling every other player on a move that will never arrive."
+					}
+				],
+				"challenges": [
+					{
+						"problem": "During a cascade, a single cell can change hands several times within one move, so attributing captured orbs to \"the player who clicked\" silently produces wrong boards.",
+						"approach": "Ownership propagates from the exploding cell's owner read at explosion time, re-evaluated on every iteration of the settle loop, and any cell drained to zero has its owner reset to null so a count-0 cell can never carry a stale owner.",
+						"outcome": "Captured as a written invariant in the game-logic doc, with the reproducing case pinned in the standalone smoke script that runs on every change to the engine."
+					},
+					{
+						"problem": "Elimination means \"owns zero cells\", which is trivially true for every player on an empty board — a naive check ends the match on the opening move.",
+						"approach": "The elimination sweep is gated behind turnCount >= players.length, giving every player a guaranteed first turn before anyone can be knocked out.",
+						"outcome": "A one-line guard, but it is the kind of boundary condition that only surfaces at 2-player and 20-player extremes; it is documented as a rule rather than left as a magic comparison."
+					},
+					{
+						"problem": "Supabase's pooler cannot serve the runtime and the Prisma CLI from one connection string: migrations need session-mode features the transaction pooler does not expose, and node-postgres reads sslmode=require as full CA verification, which fails against Supabase's self-signed certificate.",
+						"approach": "Split the concerns — runtime traffic on the transaction pooler (port 6543, sslmode=no-verify) and migrations on the session pooler (port 5432, sslmode=require) — with a plain-Postgres fallback so a clean checkout still runs fully offline.",
+						"outcome": "Documented as the project's connection model, which turned a recurring class of \"works locally, fails on migrate\" incidents into a decision someone can read in one page."
+					}
+				],
+				"techStack": ["TypeScript", "Node.js", "WebSockets (ws)", "Express.js", "Next.js", "React", "PostgreSQL", "Prisma", "Supabase", "Zod", "JWT", "Docker", "Fly.io", "Tailwind CSS", "GitHub Actions"],
+				"links": {
+					"github": "https://github.com/Dev22603/chain-reaction",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
 				"id": "dsa-tracker",
 				"name": "DSA Progress Tracker",
 				"description": [
@@ -261,12 +338,15 @@
 			"SuperTokens",
 			"Keycloak IAM",
 			"REST APIs",
+			"Prisma",
+			"WebSockets",
 			"Docker",
 			"Supabase",
 			"AWS (familiar)"
 		],
 		"frontend": [
 			"React.js",
+			"Next.js",
 			"Flutter",
 			"Tailwind CSS",
 			"HTML",
@@ -294,6 +374,7 @@
 		"tools": [
 			"Git",
 			"GitHub",
+			"GitHub Actions",
 			"Postman",
 			"Jupyter notebook",
 			"Linux",
