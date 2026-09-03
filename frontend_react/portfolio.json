@@ -98,13 +98,13 @@
 		"personal": [
 			{
 				"id": "chain-reaction",
-				"name": "Chain Reaction — Real-Time Multiplayer Platform",
-				"tagline": "A server-authoritative multiplayer game platform: a Node.js WebSocket server owns every board, turn and cascade, so the client can only ask — never decide.",
+				"name": "Chain Reaction — Real-Time Multiplayer Game",
+				"tagline": "A server-authoritative real-time multiplayer game: a Node.js WebSocket server owns every board, turn and cascade, so the client can only ask — never decide.",
 				"status": "Active",
 				"role": "Solo — backend, frontend, infra",
 				"timeline": "Apr 2026 – Present",
 				"description": [
-					"Built a real-time multiplayer Chain Reaction platform where the backend is the single source of truth: a Node.js + TypeScript WebSocket server owns board state, turn order, cascading explosions, elimination and match teardown, while the Next.js 15 / React 19 client renders broadcasts and sends nothing but player intent.",
+					"Built a real-time multiplayer Chain Reaction game where the backend is the single source of truth: a Node.js + TypeScript WebSocket server owns board state, turn order, cascading explosions, elimination and match teardown, while the Next.js 15 / React 19 client renders broadcasts and sends nothing but player intent.",
 					"Designed the rules engine as a pure, I/O-free TypeScript module (createBoard, getCriticalMass, getNeighbors, applyMove, isEliminated) so the identical code path runs inside the server, in a standalone smoke script, and later in replay or AI opponents.",
 					"Modeled matchmaking as per-configuration queue buckets keyed by board preset x player count (4 presets, 2–20 players per match), alongside private rooms joinable through ambiguity-free invite codes.",
 					"Persisted only completed matches — Supabase Postgres through Prisma behind a repository layer — and broadcast game_over to players before any write, so a database outage costs stats, never gameplay.",
