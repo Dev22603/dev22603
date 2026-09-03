@@ -84,7 +84,7 @@ export default function Hero() {
 					>
 						{/* Primary CTA */}
 						<a
-							href={resume || "https://drive.google.com/file/d/1PFDk6_TGlK5ZJTB-PYKuPuVXsnhrlDVO/view?usp=sharing"}
+							href={resume || "https://drive.google.com/file/d/10j_-2-a3LZzINDzBuMdBn8cj8g5T4cCz"}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="group relative inline-flex items-center gap-3 px-6 py-3.5 bg-[var(--color-primary)] font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_var(--color-primary-dim)]"
