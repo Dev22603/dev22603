@@ -1,5 +1,5 @@
 # 💫 About Me:
-Hi, I’m Dev<br>📍 Ahmedabad | 🖥️ Backend Engineer | 23<br><br>Backend-focused Full Stack Engineer experienced in building REST APIs, backend systems, and data-driven applications with Python, FastAPI, Node.js, and PostgreSQL. Skilled in database design, backend architecture, performance optimization, and end-to end feature development.
+Hi, I’m Dev<br>📍 Ahmedabad | 🖥️ Backend Engineer | 23<br>Backend-focused Full Stack Engineer experienced in building REST APIs, backend systems, and data-driven applications with Python, FastAPI, Node.js, and PostgreSQL. Skilled in database design, backend architecture, performance optimization, and end-to end feature development.
 
 
 ## 🌐 Socials:
