@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Github } from "lucide-react";
+import { X, ExternalLink, Github, CalendarDays, Users } from "lucide-react";
 import TechTag from "./TechTag";
 
 export default function ProjectModal({ project, isOpen, onClose }) {
@@ -84,12 +84,35 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 								<h2 className="text-2xl sm:text-3xl font-semibold text-[var(--color-text-primary)] mb-2">
 									{project.name}
 								</h2>
+
+								{project.tagline && (
+									<p className="text-[var(--color-text-secondary)] leading-relaxed">
+										{project.tagline}
+									</p>
+								)}
+
+								{(project.role || project.timeline) && (
+									<div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-xs font-mono text-[var(--color-text-tertiary)]">
+										{project.role && (
+											<span className="inline-flex items-center gap-1.5">
+												<Users className="w-3.5 h-3.5" />
+												{project.role}
+											</span>
+										)}
+										{project.timeline && (
+											<span className="inline-flex items-center gap-1.5">
+												<CalendarDays className="w-3.5 h-3.5" />
+												{project.timeline}
+											</span>
+										)}
+									</div>
+								)}
 							</div>
 
 							{/* Description */}
 							<div className="mb-6 pb-6 border-b border-[var(--color-border-primary)]">
 								<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-3">
-									About
+									Overview
 								</h3>
 								{Array.isArray(project.description) ? (
 									<ul className="list-disc pl-5 space-y-2 text-[var(--color-text-secondary)] leading-relaxed">
@@ -103,6 +126,86 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 									</p>
 								)}
 							</div>
+
+							{/* Architecture */}
+							{Array.isArray(project.architecture) && project.architecture.length > 0 && (
+								<div className="mb-6 pb-6 border-b border-[var(--color-border-primary)]">
+									<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-3">
+										Architecture
+									</h3>
+									<ul className="space-y-2.5">
+										{project.architecture.map((item, index) => (
+											<li
+												key={index}
+												className="pl-4 border-l-2 border-[var(--color-border-primary)] text-[var(--color-text-secondary)] leading-relaxed"
+											>
+												{item}
+											</li>
+										))}
+									</ul>
+								</div>
+							)}
+
+							{/* Engineering Highlights */}
+							{Array.isArray(project.highlights) && project.highlights.length > 0 && (
+								<div className="mb-6 pb-6 border-b border-[var(--color-border-primary)]">
+									<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-4">
+										Engineering Highlights
+									</h3>
+									<div className="space-y-4">
+										{project.highlights.map((highlight, index) => (
+											<div key={index}>
+												<h4
+													className="text-[15px] font-semibold text-[var(--color-text-primary)] mb-1.5"
+													style={{ fontFamily: "'Sora', system-ui, sans-serif" }}
+												>
+													<span className="font-mono text-[var(--color-primary)] mr-2">
+														{String(index + 1).padStart(2, "0")}
+													</span>
+													{highlight.title}
+												</h4>
+												<p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+													{highlight.detail}
+												</p>
+											</div>
+										))}
+									</div>
+								</div>
+							)}
+
+							{/* Challenges */}
+							{Array.isArray(project.challenges) && project.challenges.length > 0 && (
+								<div className="mb-6 pb-6 border-b border-[var(--color-border-primary)]">
+									<h3 className="text-sm font-mono uppercase tracking-wider text-[var(--color-text-tertiary)] mb-4">
+										Problems Solved
+									</h3>
+									<div className="space-y-5">
+										{project.challenges.map((challenge, index) => (
+											<div
+												key={index}
+												className="p-4 rounded-lg bg-[var(--color-background-tertiary)] border border-[var(--color-border-primary)] space-y-2.5"
+											>
+												{[
+													{ label: "Problem", value: challenge.problem },
+													{ label: "Approach", value: challenge.approach },
+													{ label: "Outcome", value: challenge.outcome },
+												]
+													.filter((row) => row.value)
+													.map((row) => (
+														<div key={row.label}>
+															<span className="block text-[11px] font-mono uppercase tracking-wider text-[var(--color-primary)] mb-1">
+																{row.label}
+															</span>
+															<p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+																{row.value}
+															</p>
+														</div>
+													))}
+											</div>
+										))}
+									</div>
+								</div>
+							)}
 
 							{/* Tech Stack */}
 							<div className="mb-6 pb-6 border-b border-[var(--color-border-primary)]">

@@ -90,6 +90,13 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 						)}>
 							{project.name}
 						</h3>
+
+						{/* Role / timeline meta */}
+						{(project.role || project.timeline) && (
+							<p className="mt-1.5 text-xs font-mono text-[var(--color-text-tertiary)]">
+								{[project.role, project.timeline].filter(Boolean).join("  ·  ")}
+							</p>
+						)}
 					</div>
 
 					{/* Arrow indicator */}
@@ -99,9 +106,14 @@ export default function ProjectCard({ project, useModal = false, onModalClick, f
 				{/* Description */}
 				<p className={cn(
 					"text-[var(--color-text-secondary)] leading-relaxed mb-4",
-					featured ? "text-base" : "text-sm line-clamp-3"
+					featured ? "text-base" : "text-sm",
+					"line-clamp-3"
 				)}>
-					{Array.isArray(project.description) ? project.description.join(' ') : project.description}
+					{project.tagline
+						? project.tagline
+						: Array.isArray(project.description)
+						? project.description.join(' ')
+						: project.description}
 				</p>
 
 				{/* Tech Stack */}
