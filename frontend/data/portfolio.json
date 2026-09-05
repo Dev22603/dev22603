@@ -1,0 +1,402 @@
+{
+	"personalInfo": {
+		"name": "Dev Bachani",
+		"role": "Full Stack Engineer",
+		"location": "Ahmedabad, Gujarat, India",
+		"bio": "I use code to solve real life problems. Delivering software solutions for real life problem statements.",
+		"profileImage": "/headshot.jpg",
+		"email": "devbachani08@gmail.com",
+		"phone": "+91-9173706507",
+		"resume": "https://drive.google.com/file/d/15d46UHDX0VjWiRFFH2mdtgjPKNJunViq/view?usp=drive_link",
+		"socialLinks": {
+			"twitter": "https://twitter.com/dev_by_dev_",
+			"github": "https://github.com/dev22603",
+			"linkedin": "https://linkedin.com/in/devbachani",
+			"blog": "#blogs",
+			"calendar": "https://calendly.com/devbachani08",
+			"website": "https://dev-bachani.xyz"
+		}
+	},
+	"settings": {
+		"showCertificates": true
+	},
+	"experience": [
+		{
+			"id": "hind-social",
+			"company": "Hind Social",
+			"role": "Full Stack Developer",
+			"startDate": "March 2026",
+			"endDate": "June 2026",
+			"status": "Completed",
+			"location": "Ahmedabad, India",
+			"shortDescription": "Built feed ranking algorithms using OpenSearch and led end-to-end development of the campaign-based Causes module.",
+			"icon": "HS",
+			"logo": "/hind_social_logo.png",
+			"techStack": ["Node.js", "Express.js", "PostgreSQL", "OpenSearch", "REST APIs", "Database Design"],
+			"keyAchievements": [
+				"Built the feed ranking algorithm, using OpenSearch to index and score posts on per-user signals for personalized content.",
+				"Led end-to-end development of Causes, a module letting cause owners launch campaigns (beach cleanups, reforestation, etc.) with configurable donation, volunteer, and supporter workflows; owned the PostgreSQL schema, backend, and REST APIs."
+			]
+		},
+		{
+			"id": "freelance",
+			"company": "Freelance",
+			"role": "Software Engineer Freelancer",
+			"startDate": "January 2026",
+			"endDate": "March 2026",
+			"status": "Completed",
+			"location": "Remote",
+			"shortDescription": "Built an SEO-optimized Next.js + Supabase marketing site and protected administrative CMS for a printing business.",
+			"icon": "FL",
+			"logo": null,
+			"techStack": ["Next.js", "Supabase", "SEO", "CMS", "Tailwind CSS"],
+			"keyAchievements": [
+				"Built a Next.js + Supabase based marketing site for a printing business with SEO-optimized product pages and a protected admin CMS."
+			]
+		},
+		{
+			"id": "hyperlab",
+			"company": "Hyperlab Sportech Pvt Ltd",
+			"role": "Software Engineer",
+			"startDate": "September 2025",
+			"endDate": "December 2025",
+			"status": "Completed",
+			"location": "Gandhinagar, India",
+			"shortDescription": "Built real-time exercise tracking platforms, detection algorithms for 35+ exercises, Lua UI flows, and interactive LiDAR sensor visualization dashboards.",
+			"icon": "HL",
+			"logo": "/hyperlab_logo.svg",
+			"techStack": ["Next.js", "Lua", "Recharts", "React", "Supabase", "BLE", "State Machines"],
+			"keyAchievements": [
+				"Built a full stack Next.js platform processing BLE event streams from exercise mats for real time exercise tracking and leaderboards.",
+				"Developed algorithms to detect 35+ exercises on exercise mats. Improved the Detection speed of Mountain-Climb exercise by 55%.",
+				"Built a Lua based UI flow managing multi user exercise sessions with RFID or app-based events, retries, and time-based rules.",
+				"Developed a React dashboard with CSV parsing and interactive Recharts visualizations for LiDAR sensor logs, enabling engineers to annotate anomalies at specific timestamps and export filtered datasets, reducing the debugging time."
+			]
+		},
+		{
+			"id": "medkart",
+			"company": "Medkart Pharmacy Pvt Ltd",
+			"role": "Software Developer Intern",
+			"startDate": "January 2025",
+			"endDate": "July 2025",
+			"status": "Completed",
+			"location": "Ahmedabad, India",
+			"shortDescription": "Revamped core app features and improved user engagement for 50,000+ users.",
+			"icon": "MK",
+			"logo": "/medkart_logo.jpeg",
+			"techStack": ["Flutter", "Dart", "Firebase", "REST APIs", "Intents", "Deep Linking"],
+			"keyAchievements": [
+				"Revamped 9 core app screens in 12 weeks, thus increasing screen engagement rates in the Medkart app serving 50,000+ users.",
+				"Engineered a scalable sorting and filtering system with 5+ criteria, improving product discovery and search to purchase conversion.",
+				"Reduced customer support response time by 30% by developing the Contact Us module end-to-end with form validation.",
+				"Decreased bounce rates by 28% by implementing responsive loading skeletons on 12+ pages, reducing perceived load time.",
+				"Achieved workflow efficiency with a 75% reduction in user actions by collapsing a 4-step task into 1 tap using Flutter intents."
+			]
+		}
+	],
+	"projects": {
+		"personal": [
+			{
+				"id": "chain-reaction",
+				"name": "Chain Reaction — Real-Time Multiplayer Game",
+				"description": [
+					"Built a server-authoritative multiplayer game supporting real-time rooms, matchmaking, private games, and reconnects for 2–20 players using Node.js, TypeScript, and WebSockets.",
+					"Designed a pure game engine to resolve cascading explosions and multi-step ownership changes, using a 2,000-iteration safety limit to prevent runaway cascades from blocking the server.",
+					"Implemented in-memory game state with PostgreSQL persistence for match history, XP, and per-mode leaderboards, keeping database operations off the real-time game path.",
+					"Hardened the backend with JWT authentication, Zod validation, HTTP/WebSocket rate limits, connection and room caps, and automatic cleanup for inactive rooms."
+				],
+				"status": "Active",
+				"techStack": ["Node.js", "TypeScript", "Express", "WebSockets", "Next.js", "React", "Tailwind CSS", "PostgreSQL", "Supabase", "Prisma", "Zod", "JWT", "Docker", "AWS EC2",  "Caddy"],
+				"links": {
+					"github": "https://github.com/Dev22603/chain-reaction",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
+				"id": "dsa-tracker",
+				"name": "DSA Progress Tracker",
+				"description": [
+					"Built a full stack DSA progress tracking platform using Next.js, TypeScript, Node.js, Express.js, PostgreSQL, and Prisma.",
+					"Automated dataset generation by aggregating TakeUForward sheets with LeetCode, GeeksforGeeks, and Code360 using search APIs and LLM based query refinement, and enriched questions with company tags extracted from LeetCode extension network responses. Built a preprocessing pipeline to deduplicate results and generate a structured JSON dataset for ingestion.",
+					"Designed a scalable relational schema managing 400 plus problems with multi source progress tracking and user editable notes.",
+					"Engineered a responsive UI with infinite scroll, theme toggle, detailed modals, and deployed the platform on Netlify."
+				],
+				"status": "Completed",
+				"techStack": ["Next.js", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
+				"links": {
+					"github": "https://github.com/Dev22603/DSA-Progress-Tracker",
+					"live": "https://track-your-dsa.netlify.app/",
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
+				"id": "ecommerce-personal",
+				"name": "E-Commerce Website",
+				"description": [
+					"Built an e-commerce platform with Admin Dashboards and Customer workflows using Node.js, Express, React, and PostgreSQL.",
+					"Secured user access with JWT-based authentication and enforced RBAC to restrict sensitive route access based on user roles.",
+					"Developed REST APIs for products, cart, orders, and addresses, users with input validation and server-side pagination.",
+					"Engineered the PostgreSQL schema from scratch to ensure referential integrity and scalability for future feature additions."
+				],
+				"status": "Completed",
+				"techStack": ["Node.js", "Express.js", "React", "PostgreSQL", "Tailwind CSS", "JWT", "RBAC"],
+				"links": {
+					"github": "https://github.com/Dev22603/ecommerce",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			},
+			{
+				"id": "mathex",
+				"name": "MathEx - Math Equation Editor Library",
+				"description": [
+					"Developed a React component library for building math equation editors with automatic keyboard routing to focused input fields.",
+					"Implemented 13 function categories including Trig, Calculus, Statistics, Probability, and Geometry with subscript/superscript mode.",
+					"Packaged as a tree-shakeable npm library with full TypeScript support using MathQuill, KaTeX, and Vite."
+				],
+				"status": "Completed",
+				"techStack": ["React", "TypeScript", "MathQuill", "KaTeX", "Vite"],
+				"links": {
+					"github": "https://github.com/Dev22603/MathEx",
+					"live": null,
+					"npm": "https://www.npmjs.com/package/mathex-editor",
+					"kaggle": null
+				}
+			},
+			{
+				"id": "audio-classification",
+				"name": "Audio Language Classification using Deep Learning",
+				"description": [
+					"Built a spoken language classification BiLSTM model in TensorFlow achieving 75.46% test accuracy.",
+					"Extracted MFCC features from 40,000+ audio samples."
+				],
+				"status": "Completed",
+				"techStack": ["Python", "TensorFlow", "Keras", "NumPy"],
+				"links": {
+					"github": null,
+					"live": null,
+					"npm": null,
+					"kaggle": "https://www.kaggle.com/code/devbachani/audio-language-classification-using-blstms"
+				}
+			},
+			{
+				"id": "crisplogs-py",
+				"name": "crisplogs (Python)",
+				"description": [
+					"A PyPI package that replaces Python's verbose logging setup with a single setup_logging() call.",
+					"Features ANSI-colored output per log level, 4 box styles (default, short-fixed, short-dynamic, long-boxed), structured extras rendered as inline/json/pretty, dual console+file logging with automatic ANSI stripping, named loggers with inherited config, and a configurable LogFormatter for custom handlers.",
+					"Zero runtime dependencies, supports Python 3.8–3.13."
+				],
+				"status": "Completed",
+				"techStack": ["Python", "PyPI"],
+				"links": {
+					"github": "https://github.com/dev22603/crisplogs",
+					"live": null,
+					"npm": null,
+					"pypi": "https://pypi.org/project/crisplogs/",
+					"kaggle": null
+				}
+			},
+			{
+				"id": "crisplogs-js",
+				"name": "crisplogs (Node.js)",
+				"description": [
+					"An npm package that brings Python-style structured logging to Node.js backends with a single setupLogging() call.",
+					"Features ANSI-colored output per log level, 4 box styles (default, short-fixed, short-dynamic, long-boxed), structured extras rendered as inline/json/pretty, async file logging via WriteStream with automatic ANSI stripping, named loggers, pluggable custom handlers, and full TypeScript types.",
+					"Zero runtime dependencies, ships ESM + CJS builds."
+				],
+				"status": "Completed",
+				"techStack": ["TypeScript", "Node.js", "npm"],
+				"links": {
+					"github": "https://github.com/dev22603/crisplogs-js",
+					"live": null,
+					"npm": "https://www.npmjs.com/package/crisplogs",
+					"kaggle": null
+				}
+			},
+			{
+				"id": "eduscraper",
+				"name": "EduScraper",
+				"description": [
+					"Used Beautiful Soup to extract Aptitude MCQs from IndiaBix and stored them in a JSON file.",
+					"Built a React app to display/download MCQ PDFs."
+				],
+				"status": "Completed",
+				"techStack": ["Python", "Beautiful Soup", "React", "JavaScript"],
+				"links": {
+					"github": "https://github.com/Dev22603/EduScraper",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			}
+		],
+		"client": [
+			{
+				"id": "ecommerce",
+				"name": "E-Commerce Platform",
+				"description": "Designed and built a role-based e-commerce platform (Admin, Customer) using Node.js, Express.js, React.js, Tailwind CSS, PostgreSQL. Secured with JWT, RBAC; developed REST APIs.",
+				"status": "Completed",
+				"techStack": ["Node.js", "Express.js", "React", "Tailwind CSS", "PostgreSQL"],
+				"links": {
+					"github": "https://github.com/Dev22603/ecommerce",
+					"live": null,
+					"npm": null,
+					"kaggle": null
+				}
+			}
+		]
+	},
+	"blogs": [
+		{
+			"id": "python-logging",
+			"title": "Python Logging: Colored and Boxed Loggers for Readable Outputs",
+			"excerpt": "A comprehensive guide to creating visually appealing and readable Python loggers with colored and boxed formatting for better debugging and monitoring.",
+			"date": "2025-09-23",
+			"slug": "https://medium.com/@devcodes2206/python-logging-colored-and-boxed-loggers-for-readable-outputs-4e57102a3ec5",
+			"tags": ["Python", "Logging", "Development"]
+		},
+		{
+			"id": "nodejs-backend",
+			"title": "Modern Node.js Backend: Build It Like a Pro",
+			"excerpt": "Build a professional-grade REST API with Node.js, Express, and MongoDB using clean architecture patterns. From JWT authentication to Zod validation, learn the exact structure and conventions that make backends maintainable, secure, and production-ready.",
+			"date": "2025-12-09",
+			"slug": "https://medium.com/@devcodes2206/modern-node-js-backend-build-it-like-a-pro-6c5cdcab918f",
+			"tags": ["NodeJS", "Backend", "Good Coding Practices"]
+		}
+	],
+	"skills": {
+		"backend": [
+			"Node.js",
+			"Express.js",
+			"FastAPI",
+			"MongoDB",
+			"PostgreSQL",
+			"SuperTokens",
+			"Keycloak IAM",
+			"REST APIs",
+			"Prisma",
+			"WebSockets",
+			"Docker",
+			"Supabase",
+			"AWS (familiar)"
+		],
+		"frontend": [
+			"React.js",
+			"Next.js",
+			"Flutter",
+			"Tailwind CSS",
+			"HTML",
+			"CSS",
+			"Recharts"
+		],
+		"languages": [
+			"C",
+			"C++",
+			"Python",
+			"JavaScript",
+			"TypeScript",
+			"Java",
+			"Dart",
+			"Lua",
+			"SQL"
+		],
+		"mlDl": [
+			"TensorFlow",
+			"PyTorch",
+			"NumPy",
+			"Pandas",
+			"Scikit-learn"
+		],
+		"tools": [
+			"Git",
+			"GitHub",
+			"GitHub Actions",
+			"Postman",
+			"Jupyter notebook",
+			"Linux",
+			"Cursor",
+			"Claude Code",
+			"VS Code",
+			"Windsurf",
+			"Docker"
+		]
+	},
+	"education": [
+		{
+			"institution": "Institute of Technology, Nirma University, Ahmedabad",
+			"degree": "B.Tech in Computer Science and Engineering",
+			"startYear": 2021,
+			"endYear": 2025,
+			"gpa": "7.66/10",
+			"achievements": [
+				"Certificate of Scholar (8th Semester)"
+			]
+		}
+	],
+	"programmingProfiles": {
+		"codeforces": {
+			"handle": "Dev_Bachani",
+			"link": "https://codeforces.com/profile/Dev_Bachani",
+			"maxRating": 1018,
+			"problemsSolved": 500
+		},
+		"leetcode": {
+			"handle": "Dev22603",
+			"link": "https://leetcode.com/Dev22603/",
+			"maxRating": 1538,
+			"problemsSolved": 300
+		},
+		"hackerrank": {
+			"handle": "Dev22603",
+			"link": "https://www.hackerrank.com/profile/Dev22603",
+			"stars": {
+				"problemSolving": 5,
+				"python": 5
+			}
+		},
+		"codechef": {
+			"handle": "Dev22603",
+			"link": "https://www.codechef.com/users/dev22603",
+			"stars": 2,
+			"maxRating": 1476
+		}
+	},
+	"certificates": [
+		{
+			"title": "JavaScript (Intermediate) Certificate",
+			"issuer": "HackerRank",
+			"link": "https://drive.google.com/file/d/1rj-r6Lzp5hSQpmPdyy9evo2DuTda5ckp/view?usp=drive_link",
+			"verifyUrl": "https://www.hackerrank.com/certificates/692ea16532b2",
+			"preview": "link",
+			"show": true
+		},
+		{
+			"title": "Python Language Course",
+			"issuer": "Great Learning",
+			"link": "https://olympus1.mygreatlearning.com/course_certificate/BCEFFFJL",
+			"preview": "link",
+			"show": false
+		},
+		{
+			"title": "Supervised Machine Learning: Regression and Classification",
+			"issuer": "DeepLearning.AI & Stanford University",
+			"link": "https://drive.google.com/file/d/1zBmCK6st8q3_-A5ik8xWielRAjt4bhtM/view?usp=drive_link",
+			"verifyUrl": "https://coursera.org/share/61d7a9a236a035c55b68311c325922af",
+			"preview": "link",
+			"show": true
+		},
+		{
+			"title": "Unsupervised Learning, Recommenders, Reinforcement Learning",
+			"issuer": "DeepLearning.AI & Stanford University",
+			"link": "https://drive.google.com/file/d/1keixlZiWQlegWeaUjFIiVWFJSPQpTRwC/view?usp=drive_link",
+			"verifyUrl": "https://www.coursera.org/account/accomplishments/verify/P66KAF2E7N3Z",
+			"preview": "link",
+			"show": true
+		}
+	]
+}
